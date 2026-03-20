@@ -1,0 +1,158 @@
+.course-detail-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #22c55e;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.course-content {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.course-hero {
+  background: linear-gradient(135deg, #22c55e 0%, #eab308 100%);
+  color: white;
+  padding: 40px;
+}
+
+.course-hero h1 {
+  font-size: 32px;
+  margin: 0 0 8px 0;
+}
+
+.course-code {
+  opacity: 0.95;
+  margin: 0;
+  font-size: 14px;
+}
+
+.course-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  padding: 40px;
+}
+
+.course-info h3 {
+  color: #1f2937;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.course-info p {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.course-details {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.detail-item strong {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.exams-section h3 {
+  color: #1f2937;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.exams-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.exam-item {
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #eab308;
+}
+
+.exam-item h4 {
+  color: #1f2937;
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.exam-info {
+  color: #6b7280;
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+.exam-pass {
+  color: #22c55e;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 4px 0 12px 0;
+}
+
+.btn-take-exam {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.btn-take-exam:hover {
+  transform: translateY(-2px);
+}
+
+.no-exams {
+  color: #6b7280;
+  font-size: 14px;
+  text-align: center;
+  padding: 20px;
+  background: #f3f4f6;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .course-main {
+    grid-template-columns: 1fr;
+  }
+  
+  .course-hero {
+    padding: 24px;
+  }
+  
+  .course-main {
+    padding: 24px;
+  }
+}

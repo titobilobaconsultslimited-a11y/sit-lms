@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "course_code": "SIT-101",
+    "course_name": "Introduction to Information Technology",
+    "description": "Learn the fundamentals of IT including hardware, software, networking, and security basics. This foundational course covers essential concepts needed for IT professionals.",
+    "duration": 40
+  },
+  {
+    "id": 2,
+    "course_code": "SIT-102",
+    "course_name": "Web Development Basics",
+    "description": "Master HTML, CSS, and JavaScript to build interactive web applications. Create responsive and modern websites from scratch.",
+    "duration": 50
+  },
+  {
+    "id": 3,
+    "course_code": "SIT-103",
+    "course_name": "Database Management",
+    "description": "Understand relational databases, SQL queries, and data management principles. Learn to design efficient databases for business applications.",
+    "duration": 45
+  },
+  {
+    "id": 4,
+    "course_code": "SIT-104",
+    "course_name": "Cybersecurity Essentials",
+    "description": "Discover security threats, protection mechanisms, and best practices. Essential knowledge for protecting systems and data.",
+    "duration": 35
+  },
+  {
+    "id": 5,
+    "course_code": "SIT-105",
+    "course_name": "Cloud Computing Fundamentals",
+    "description": "Explore cloud services, infrastructure, and deployment models. Learn how organizations leverage cloud for scalability.",
+    "duration": 42
+  }
+]

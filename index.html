@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIT LMS - Learning Management System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #22c55e;
+      --secondary: #eab308;
+      --white: #ffffff;
+      --dark: #1f2937;
+      --light: #f9fafb;
+      --border: #e5e7eb;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, #16a34a 100%);
+      color: white;
+      padding: 20px 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      margin-bottom: 30px;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .logo-icon {
+      font-size: 28px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      flex: 1;
+    }
+
+    nav a, nav button {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+      transition: color 0.2s;
+      font-size: 16px;
+    }
+
+    nav a:hover, nav button:hover {
+      color: white;
+    }
+
+    .user-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .user-info {
+      text-align: right;
+    }
+
+    .user-name {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .enrollment-id {
+      font-size: 11px;
+      opacity: 0.8;
+    }
+
+    /* Auth Pages */
+    .auth-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh;
+      padding: 20px;
+    }
+
+    .auth-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .auth-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .auth-header h1 {
+      font-size: 32px;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .auth-header p {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 4px;
+      color: #374151;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid var(--border);
+      border-radius: 6px;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.2);
+    }
+
+    button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #16a34a;
+    }
+
+    .btn-secondary {
+      background-color: var(--secondary);
+      color: var(--dark);
+    }
+
+    .btn-secondary:hover {
+      background-color: #ca8a04;
+    }
+
+    .auth-link {
+      text-align: center;
+      margin-top: 20px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .auth-link a {
+      color: var(--primary);
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Dashboard */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      border-left: 5px solid var(--primary);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .stat-card {
+      text-align: center;
+      border-left: none;
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(234, 179, 8, 0.1));
+    }
+
+    .stat-card h3 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .stat-card p {
+      color: #6b7280;
+      font-size: 13px;
+    }
+
+    /* Courses */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .course-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-top: 4px solid var(--secondary);
+    }
+
+    .course-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .course-card h4 {
+      color: #1f2937;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .course-card p {
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #dcfce7;
+      color: #16a34a;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .btn-enroll {
+      width: 100%;
+      margin-top: 16px;
+      background: linear-gradient(135deg, var(--secondary), #ca8a04);
+      color: var(--dark);
+    }
+
+    .btn-enroll:hover {
+      background: linear-gradient(135deg, #ca8a04, #b8860b);
+    }
+
+    /* Exam */
+    .exam-container {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 24px;
+      margin: 30px 0;
+    }
+
+    .question-nav {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      height: fit-content;
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .nav-button {
+      width: 100%;
+      aspect-ratio: 1;
+      border: 2px solid var(--border);
+      background: white;
+      color: #6b7280;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .nav-button.current {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .nav-button.answered {
+      background: #dcfce7;
+      border-color: var(--primary);
+      color: #16a34a;
+    }
+
+    .question-display {
+      background: white;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .question-text {
+      font-size: 18px;
+      color: #1f2937;
+      margin: 20px 0;
+      font-weight: 500;
+    }
+
+    .options {
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .option {
+      display: flex;
+      align-items: flex-start;
+      padding: 16px;
+      background: #f9fafb;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .option:hover {
+      background: #f3f4f6;
+      border-color: var(--primary);
+    }
+
+    .option input[type="radio"] {
+      margin-right: 12px;
+      margin-top: 2px;
+      accent-color: var(--primary);
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .option input:checked ~ label {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .option:has(input:checked) {
+      background: #f0fdf4;
+      border-color: var(--primary);
+    }
+
+    .option label {
+      cursor: pointer;
+      flex: 1;
+      color: #6b7280;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+      margin-top: 32px;
+    }
+
+    .btn-prev, .btn-next, .btn-submit {
+      flex: 1;
+      padding: 12px;
+    }
+
+    .btn-prev {
+      background: #f3f4f6;
+      color: #6b7280;
+    }
+
+    .btn-prev:hover {
+      background: #e5e7eb;
+    }
+
+    .btn-next, .btn-submit {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* Results */
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .results-table thead {
+      background: #f3f4f6;
+    }
+
+    .results-table th {
+      padding: 12px;
+      text-align: left;
+      color: #374151;
+      font-weight: 600;
+      font-size: 13px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .results-table td {
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .results-table tr.passed {
+      background: #f0fdf4;
+    }
+
+    .results-table tr.failed {
+      background: #fef2f2;
+    }
+
+    .status-badge {
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .status-passed {
+      background: #dcfce7;
+      color: #16a34a;
+    }
+
+    .status-failed {
+      background: #fee2e2;
+      color: #dc2626;
+    }
+
+    .error {
+      color: #dc2626;
+      background-color: #fee2e2;
+      padding: 12px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      border-left: 4px solid #dc2626;
+    }
+
+    .success {
+      color: #16a34a;
+      background-color: #dcfce7;
+      padding: 12px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      border-left: 4px solid #16a34a;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .exam-container {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-grid {
+        grid-template-columns: repeat(8, 1fr);
+      }
+
+      .courses-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header id="header" class="hidden">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-icon">📚</span>
+        <span>SIT LMS</span>
+      </div>
+      <nav>
+        <a onclick="showPage('dashboard')">Dashboard</a>
+        <a onclick="showPage('courses')">Courses</a>
+        <a onclick="showPage('results')">Results</a>
+      </nav>
+      <div class="user-section">
+        <div class="user-info">
+          <div class="user-name" id="userName">User</div>
+          <div class="enrollment-id" id="userEnrollmentId">SIT/001/2026</div>
+        </div>
+        <button onclick="logout()" style="background: #ef4444; width: auto; padding: 8px 16px;">Logout</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Login Page -->
+<div id="loginPage" class="auth-container">
+  <div class="auth-card">
+    <div class="auth-header">
+      <h1>SIT LMS</h1>
+      <p>Learning Management System</p>
+    </div>
+    <div id="loginError" class="error hidden"></div>
+    <form onsubmit="handleLogin(event)">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="loginEmail" required>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="loginPassword" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <p class="auth-link">Don't have an account? <a onclick="showPage('signup')">Sign up here</a></p>
+  </div>
+</div>
+
+<!-- Signup Page -->
+<div id="signupPage" class="auth-container hidden">
+  <div class="auth-card">
+    <div class="auth-header">
+      <h1>SIT LMS</h1>
+      <p>Create Your Account</p>
+    </div>
+    <div id="signupError" class="error hidden"></div>
+    <form onsubmit="handleSignup(event)">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="signupName" required>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="signupEmail" required>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="signupPassword" required>
+      </div>
+      <div class="form-group">
+        <label>Confirm Password</label>
+        <input type="password" id="signupConfirmPassword" required>
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p class="auth-link">Already have an account? <a onclick="showPage('login')">Login here</a></p>
+  </div>
+</div>
+
+<!-- Dashboard Page -->
+<div id="dashboardPage" class="hidden">
+  <div class="container">
+    <h1>Welcome to SIT LMS! 👋</h1>
+    <div class="dashboard-grid" style="margin-bottom: 30px;">
+      <div class="card">
+        <h3 id="coursesCount">0</h3>
+        <p>Courses Enrolled</p>
+      </div>
+      <div class="card">
+        <h3 id="examsCount">0</h3>
+        <p>Exams Taken</p>
+      </div>
+      <div class="card">
+        <h3 id="passedCount">0</h3>
+        <p>Exams Passed</p>
+      </div>
+    </div>
+    <button onclick="showPage('courses')" style="width: auto; padding: 12px 24px; margin-bottom: 30px;">Explore Courses</button>
+  </div>
+</div>
+
+<!-- Courses Page -->
+<div id="coursesPage" class="container hidden">
+  <h1>Courses</h1>
+  <div class="courses-grid" id="coursesList"></div>
+</div>
+
+<!-- Exam Page -->
+<div id="examPage" class="container hidden">
+  <button onclick="showPage('courses')" style="width: auto; padding: 8px 16px; margin-bottom: 20px;">← Back</button>
+  <div class="exam-container">
+    <div class="question-nav">
+      <h3>Questions</h3>
+      <div class="nav-grid" id="navGrid"></div>
+      <div class="progress-info" id="progressInfo">Answered: 0/10</div>
+    </div>
+    <div class="question-display">
+      <div id="examContent"></div>
+      <div class="nav-buttons">
+        <button class="btn-prev" onclick="previousQuestion()" id="btnPrev">← Previous</button>
+        <button class="btn-next" onclick="nextQuestion()" id="btnNext">Next →</button>
+        <button class="btn-submit hidden" onclick="submitExam()" id="btnSubmit">Submit Exam</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Results Page -->
+<div id="resultsPage" class="container hidden">
+  <h1>Exam Results</h1>
+  <div id="resultsList"></div>
+</div>
+
+<script>
+  // Data store (localStorage)
+  let currentUser = null;
+  let courses = [];
+  let exams = [];
+  let results = [];
+  let currentExamIndex = 0;
+  let examAnswers = {};
+  let currentExamId = null;
+
+  // Initialize
+  window.addEventListener('load', () => {
+    const user = localStorage.getItem('currentUser');
+    if (user) {
+      currentUser = JSON.parse(user);
+      loadAllData();
+      showPage('dashboard');
+    } else {
+      showPage('login');
+    }
+  });
+
+  function showPage(page) {
+    // Hide all pages
+    document.querySelectorAll('[id$="Page"]').forEach(el => el.classList.add('hidden'));
+    
+    // Show selected page
+    document.getElementById(page + 'Page').classList.remove('hidden');
+    document.getElementById('header').classList.toggle('hidden', !currentUser);
+
+    if (page === 'dashboard') {
+      loadDashboard();
+    } else if (page === 'courses') {
+      loadCourses();
+    } else if (page === 'results') {
+      loadResults();
+    }
+  }
+
+  function handleLogin(e) {
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    const user = users.find(u => u.email === email && u.password === password);
+
+    if (user) {
+      currentUser = user;
+      localStorage.setItem('currentUser', JSON.stringify(user));
+      loadAllData();
+      showPage('dashboard');
+    } else {
+      document.getElementById('loginError').textContent = 'Invalid email or password';
+      document.getElementById('loginError').classList.remove('hidden');
+    }
+  }
+
+  function handleSignup(e) {
+    e.preventDefault();
+    const name = document.getElementById('signupName').value;
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+    const confirmPassword = document.getElementById('signupConfirmPassword').value;
+
+    if (password !== confirmPassword) {
+      document.getElementById('signupError').textContent = 'Passwords do not match';
+      document.getElementById('signupError').classList.remove('hidden');
+      return;
+    }
+
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    if (users.find(u => u.email === email)) {
+      document.getElementById('signupError').textContent = 'Email already exists';
+      document.getElementById('signupError').classList.remove('hidden');
+      return;
+    }
+
+    const year = new Date().getFullYear();
+    const enrollmentNum = String(users.length + 1).padStart(3, '0');
+    const enrollmentId = `SIT/${enrollmentNum}/${year}`;
+
+    const newUser = { id: Date.now(), name, email, password, enrollmentId };
+    users.push(newUser);
+    localStorage.setItem('users', JSON.stringify(users));
+
+    currentUser = newUser;
+    localStorage.setItem('currentUser', JSON.stringify(newUser));
+    
+    initializeSampleData();
+    loadAllData();
+    showPage('dashboard');
+  }
+
+  function initializeSampleData() {
+    if (localStorage.getItem('coursesInitialized')) return;
+
+    const sampleCourses = [
+      { id: 1, code: 'SIT-101', name: 'Introduction to Information Technology', description: 'Learn fundamentals of IT', duration: 40 },
+      { id: 2, code: 'SIT-102', name: 'Web Development Basics', description: 'Master HTML, CSS, JavaScript', duration: 50 },
+      { id: 3, code: 'SIT-103', name: 'Database Management', description: 'Understand databases and SQL', duration: 45 },
+      { id: 4, code: 'SIT-104', name: 'Cybersecurity Essentials', description: 'Learn security basics', duration: 35 },
+      { id: 5, code: 'SIT-105', name: 'Cloud Computing Fundamentals', description: 'Explore cloud services', duration: 42 }
+    ];
+
+    const sampleExams = [];
+    sampleCourses.forEach(course => {
+      sampleExams.push({
+        id: course.id * 10 + 1,
+        courseId: course.id,
+        name: 'Mid-Term Exam',
+        questions: 20,
+        passingScore: 60,
+        duration: 60
+      });
+      sampleExams.push({
+        id: course.id * 10 + 2,
+        courseId: course.id,
+        name: 'Final Exam',
+        questions: 30,
+        passingScore: 70,
+        duration: 90
+      });
+    });
+
+    localStorage.setItem('courses', JSON.stringify(sampleCourses));
+    localStorage.setItem('exams', JSON.stringify(sampleExams));
+    localStorage.setItem('coursesInitialized', 'true');
+  }
+
+  function loadAllData() {
+    courses = JSON.parse(localStorage.getItem('courses') || '[]');
+    exams = JSON.parse(localStorage.getItem('exams') || '[]');
+    results = JSON.parse(localStorage.getItem('results') || '[]');
+
+    if (!courses.length) {
+      initializeSampleData();
+      courses = JSON.parse(localStorage.getItem('courses'));
+      exams = JSON.parse(localStorage.getItem('exams'));
+    }
+
+    if (currentUser) {
+      document.getElementById('userName').textContent = currentUser.name;
+      document.getElementById('userEnrollmentId').textContent = currentUser.enrollmentId;
+    }
+  }
+
+  function loadDashboard() {
+    const userResults = results.filter(r => r.userId === currentUser.id);
+    const userCourses = JSON.parse(localStorage.getItem('userCourses') || '[]').filter(uc => uc.userId === currentUser.id);
+    const passedCount = userResults.filter(r => r.status === 'PASSED').length;
+
+    document.getElementById('coursesCount').textContent = userCourses.length;
+    document.getElementById('examsCount').textContent = userResults.length;
+    document.getElementById('passedCount').textContent = passedCount;
+  }
+
+  function loadCourses() {
+    const coursesList = document.getElementById('coursesList');
+    coursesList.innerHTML = '';
+
+    courses.forEach(course => {
+      const courseExams = exams.filter(e => e.courseId === course.id);
+      const html = `
+        <div class="course-card">
+          <div class="badge">Available</div>
+          <h4>${course.name}</h4>
+          <p>${course.description}</p>
+          <small>Duration: ${course.duration} hours</small>
+          <button class="btn-enroll" onclick="enrollCourse(${course.id})">Enroll Now</button>
+          ${courseExams.map(exam => `
+            <button style="width: 100%; margin-top: 8px;" onclick="startExam(${exam.id})">${exam.name}</button>
+          `).join('')}
+        </div>
+      `;
+      coursesList.innerHTML += html;
+    });
+  }
+
+  function enrollCourse(courseId) {
+    const userCourses = JSON.parse(localStorage.getItem('userCourses') || '[]');
+    if (!userCourses.find(uc => uc.userId === currentUser.id && uc.courseId === courseId)) {
+      userCourses.push({ userId: currentUser.id, courseId });
+      localStorage.setItem('userCourses', JSON.stringify(userCourses));
+    }
+    alert('Enrolled successfully!');
+  }
+
+  function startExam(examId) {
+    currentExamId = examId;
+    const exam = exams.find(e => e.id === examId);
+    examAnswers = {};
+    currentExamIndex = 0;
+
+    // Create sample questions
+    const questions = generateQuestions(exam.questions);
+    localStorage.setItem(`exam_${examId}_questions`, JSON.stringify(questions));
+
+    displayExamQuestion();
+    showPage('exam');
+  }
+
+  function generateQuestions(count) {
+    const questionList = [
+      { text: 'What does IT stand for?', a: 'Internet Technology', b: 'Information Technology', c: 'Interactive Tools', d: 'Information Transformer', correct: 'B' },
+      { text: 'Which is a function of OS?', a: 'Running applications', b: 'Creating documents', c: 'Browsing internet', d: 'Playing music', correct: 'A' },
+      { text: 'Most common programming language?', a: 'Python', b: 'JavaScript', c: 'Java', d: 'C++', correct: 'B' },
+      { text: 'Database query language?', a: 'XML', b: 'HTML', c: 'SQL', d: 'CSS', correct: 'C' },
+      { text: 'Purpose of firewall?', a: 'Speed up internet', b: 'Protect networks', c: 'Store files', d: 'Manage passwords', correct: 'B' },
+      { text: 'Cloud provider?', a: 'Windows', b: 'AWS', c: 'Linux', d: 'Android', correct: 'B' },
+      { text: 'Purpose of encryption?', a: 'Make files smaller', b: 'Protect data', c: 'Speed up', d: 'Delete files', correct: 'B' },
+      { text: 'Secure browsing protocol?', a: 'HTTP', b: 'FTP', c: 'HTTPS', d: 'SMTP', correct: 'C' },
+      { text: 'RAM used for?', a: 'Permanent storage', b: 'Temporary storage', c: 'Backing up', d: 'Internet', correct: 'B' },
+      { text: 'Malware that replicates?', a: 'Trojan', b: 'Virus', c: 'Spyware', d: 'Adware', correct: 'B' }
+    ];
+
+    const result = [];
+    for (let i = 0; i < count; i++) {
+      result.push({ ...questionList[i % questionList.length], id: i + 1 });
+    }
+    return result;
+  }
+
+  function displayExamQuestion() {
+    const exam = exams.find(e => e.id === currentExamId);
+    const questions = JSON.parse(localStorage.getItem(`exam_${currentExamId}_questions`) || '[]');
+    const question = questions[currentExamIndex];
+
+    let html = `
+      <div style="margin-bottom: 20px; padding-bottom: 16px; border-bottom: 2px solid var(--primary);">
+        <h3>Question ${currentExamIndex + 1} of ${questions.length}</h3>
+        <span style="background: ${examAnswers[question.id] ? '#dcfce7' : '#fee2e2'}; color: ${examAnswers[question.id] ? '#16a34a' : '#dc2626'}; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">
+          ${examAnswers[question.id] ? '✓ Answered' : '◯ Not Answered'}
+        </span>
+      </div>
+      <div class="question-text">${question.text}</div>
+      <div class="options">
+    `;
+
+    ['a', 'b', 'c', 'd'].forEach((opt, idx) => {
+      const letter = String.fromCharCode(65 + idx);
+      const isSelected = examAnswers[question.id] === letter;
+      html += `
+        <div class="option">
+          <input type="radio" id="opt${idx}" name="answer" value="${letter}" ${isSelected ? 'checked' : ''} onchange="selectAnswer('${letter}')">
+          <label for="opt${idx}">${letter}. ${question[opt]}</label>
+        </div>
+      `;
+    });
+
+    html += '</div>';
+    document.getElementById('examContent').innerHTML = html;
+
+    // Update nav buttons
+    document.getElementById('btnPrev').style.display = currentExamIndex > 0 ? 'block' : 'none';
+    document.getElementById('btnNext').classList.toggle('hidden', currentExamIndex === questions.length - 1);
+    document.getElementById('btnSubmit').classList.toggle('hidden', currentExamIndex !== questions.length - 1);
+
+    // Update nav grid
+    updateNavGrid(questions);
+  }
+
+  function updateNavGrid(questions) {
+    const navGrid = document.getElementById('navGrid');
+    navGrid.innerHTML = '';
+    questions.forEach((q, idx) => {
+      const btn = document.createElement('button');
+      btn.className = `nav-button ${idx === currentExamIndex ? 'current' : ''} ${examAnswers[q.id] ? 'answered' : ''}`;
+      btn.textContent = idx + 1;
+      btn.onclick = () => { currentExamIndex = idx; displayExamQuestion(); };
+      navGrid.appendChild(btn);
+    });
+
+    const answered = Object.keys(examAnswers).length;
+    document.getElementById('progressInfo').textContent = `Answered: ${answered}/${questions.length}`;
+  }
+
+  function selectAnswer(letter) {
+    const questions = JSON.parse(localStorage.getItem(`exam_${currentExamId}_questions`) || '[]');
+    const question = questions[currentExamIndex];
+    examAnswers[question.id] = letter;
+  }
+
+  function nextQuestion() {
+    const questions = JSON.parse(localStorage.getItem(`exam_${currentExamId}_questions`) || '[]');
+    if (currentExamIndex < questions.length - 1) {
+      currentExamIndex++;
+      displayExamQuestion();
+    }
+  }
+
+  function previousQuestion() {
+    if (currentExamIndex > 0) {
+      currentExamIndex--;
+      displayExamQuestion();
+    }
+  }
+
+  function submitExam() {
+    const exam = exams.find(e => e.id === currentExamId);
+    const questions = JSON.parse(localStorage.getItem(`exam_${currentExamId}_questions`) || '[]');
+
+    let correctCount = 0;
+    questions.forEach(q => {
+      if (examAnswers[q.id] === q.correct) correctCount++;
+    });
+
+    const percentage = (correctCount / questions.length) * 100;
+    const status = percentage >= exam.passingScore ? 'PASSED' : 'FAILED';
+
+    const result = {
+      id: Date.now(),
+      userId: currentUser.id,
+      examId: currentExamId,
+      examName: exam.name,
+      score: correctCount,
+      total: questions.length,
+      percentage: percentage.toFixed(2),
+      status,
+      date: new Date().toLocaleDateString()
+    };
+
+    results.push(result);
+    localStorage.setItem('results', JSON.stringify(results));
+
+    alert(`Exam Submitted!\nScore: ${correctCount}/${questions.length} (${percentage.toFixed(2)}%)\nStatus: ${status}`);
+    showPage('results');
+  }
+
+  function loadResults() {
+    const resultsList = document.getElementById('resultsList');
+    const userResults = results.filter(r => r.userId === currentUser.id).sort((a, b) => b.id - a.id);
+
+    if (!userResults.length) {
+      resultsList.innerHTML = '<p>No exam results yet. Take your first exam!</p>';
+      return;
+    }
+
+    let html = `
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th>Exam</th>
+            <th>Score</th>
+            <th>Percentage</th>
+            <th>Status</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+
+    userResults.forEach(r => {
+      html += `
+        <tr class="${r.status.toLowerCase()}">
+          <td>${r.examName}</td>
+          <td>${r.score}/${r.total}</td>
+          <td>${r.percentage}%</td>
+          <td><span class="status-badge status-${r.status.toLowerCase()}">${r.status}</span></td>
+          <td>${r.date}</td>
+        </tr>
+      `;
+    });
+
+    html += '</tbody></table>';
+    resultsList.innerHTML = html;
+  }
+
+  function logout() {
+    currentUser = null;
+    localStorage.removeItem('currentUser');
+    showPage('login');
+  }
+</script>
+
+</body>
+</html>

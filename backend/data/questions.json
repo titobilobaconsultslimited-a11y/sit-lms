@@ -1,0 +1,2502 @@
+[
+  {
+    "id": 1,
+    "exam_id": 1,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 2,
+    "exam_id": 1,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 3,
+    "exam_id": 1,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 4,
+    "exam_id": 1,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 5,
+    "exam_id": 1,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 6,
+    "exam_id": 1,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 7,
+    "exam_id": 1,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 8,
+    "exam_id": 1,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 9,
+    "exam_id": 1,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 10,
+    "exam_id": 1,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 11,
+    "exam_id": 1,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 12,
+    "exam_id": 1,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 13,
+    "exam_id": 1,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 14,
+    "exam_id": 1,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 15,
+    "exam_id": 1,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 16,
+    "exam_id": 1,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 17,
+    "exam_id": 1,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 18,
+    "exam_id": 1,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 19,
+    "exam_id": 1,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 20,
+    "exam_id": 1,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 21,
+    "exam_id": 2,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 22,
+    "exam_id": 2,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 23,
+    "exam_id": 2,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 24,
+    "exam_id": 2,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 25,
+    "exam_id": 2,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 26,
+    "exam_id": 2,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 27,
+    "exam_id": 2,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 28,
+    "exam_id": 2,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 29,
+    "exam_id": 2,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 30,
+    "exam_id": 2,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 31,
+    "exam_id": 2,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 32,
+    "exam_id": 2,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 33,
+    "exam_id": 2,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 34,
+    "exam_id": 2,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 35,
+    "exam_id": 2,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 36,
+    "exam_id": 2,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 37,
+    "exam_id": 2,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 38,
+    "exam_id": 2,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 39,
+    "exam_id": 2,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 40,
+    "exam_id": 2,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 41,
+    "exam_id": 2,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 42,
+    "exam_id": 2,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 43,
+    "exam_id": 2,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 44,
+    "exam_id": 2,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 45,
+    "exam_id": 2,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 46,
+    "exam_id": 2,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 47,
+    "exam_id": 2,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 48,
+    "exam_id": 2,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 49,
+    "exam_id": 2,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 50,
+    "exam_id": 2,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 51,
+    "exam_id": 3,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 52,
+    "exam_id": 3,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 53,
+    "exam_id": 3,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 54,
+    "exam_id": 3,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 55,
+    "exam_id": 3,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 56,
+    "exam_id": 3,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 57,
+    "exam_id": 3,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 58,
+    "exam_id": 3,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 59,
+    "exam_id": 3,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 60,
+    "exam_id": 3,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 61,
+    "exam_id": 3,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 62,
+    "exam_id": 3,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 63,
+    "exam_id": 3,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 64,
+    "exam_id": 3,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 65,
+    "exam_id": 3,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 66,
+    "exam_id": 3,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 67,
+    "exam_id": 3,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 68,
+    "exam_id": 3,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 69,
+    "exam_id": 3,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 70,
+    "exam_id": 3,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 71,
+    "exam_id": 4,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 72,
+    "exam_id": 4,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 73,
+    "exam_id": 4,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 74,
+    "exam_id": 4,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 75,
+    "exam_id": 4,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 76,
+    "exam_id": 4,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 77,
+    "exam_id": 4,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 78,
+    "exam_id": 4,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 79,
+    "exam_id": 4,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 80,
+    "exam_id": 4,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 81,
+    "exam_id": 4,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 82,
+    "exam_id": 4,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 83,
+    "exam_id": 4,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 84,
+    "exam_id": 4,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 85,
+    "exam_id": 4,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 86,
+    "exam_id": 4,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 87,
+    "exam_id": 4,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 88,
+    "exam_id": 4,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 89,
+    "exam_id": 4,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 90,
+    "exam_id": 4,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 91,
+    "exam_id": 4,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 92,
+    "exam_id": 4,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 93,
+    "exam_id": 4,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 94,
+    "exam_id": 4,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 95,
+    "exam_id": 4,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 96,
+    "exam_id": 4,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 97,
+    "exam_id": 4,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 98,
+    "exam_id": 4,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 99,
+    "exam_id": 4,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 100,
+    "exam_id": 4,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 101,
+    "exam_id": 5,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 102,
+    "exam_id": 5,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 103,
+    "exam_id": 5,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 104,
+    "exam_id": 5,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 105,
+    "exam_id": 5,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 106,
+    "exam_id": 5,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 107,
+    "exam_id": 5,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 108,
+    "exam_id": 5,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 109,
+    "exam_id": 5,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 110,
+    "exam_id": 5,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 111,
+    "exam_id": 5,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 112,
+    "exam_id": 5,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 113,
+    "exam_id": 5,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 114,
+    "exam_id": 5,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 115,
+    "exam_id": 5,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 116,
+    "exam_id": 5,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 117,
+    "exam_id": 5,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 118,
+    "exam_id": 5,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 119,
+    "exam_id": 5,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 120,
+    "exam_id": 5,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 121,
+    "exam_id": 6,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 122,
+    "exam_id": 6,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 123,
+    "exam_id": 6,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 124,
+    "exam_id": 6,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 125,
+    "exam_id": 6,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 126,
+    "exam_id": 6,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 127,
+    "exam_id": 6,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 128,
+    "exam_id": 6,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 129,
+    "exam_id": 6,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 130,
+    "exam_id": 6,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 131,
+    "exam_id": 6,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 132,
+    "exam_id": 6,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 133,
+    "exam_id": 6,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 134,
+    "exam_id": 6,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 135,
+    "exam_id": 6,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 136,
+    "exam_id": 6,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 137,
+    "exam_id": 6,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 138,
+    "exam_id": 6,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 139,
+    "exam_id": 6,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 140,
+    "exam_id": 6,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 141,
+    "exam_id": 6,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 142,
+    "exam_id": 6,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 143,
+    "exam_id": 6,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 144,
+    "exam_id": 6,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 145,
+    "exam_id": 6,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 146,
+    "exam_id": 6,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 147,
+    "exam_id": 6,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 148,
+    "exam_id": 6,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 149,
+    "exam_id": 6,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 150,
+    "exam_id": 6,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 151,
+    "exam_id": 7,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 152,
+    "exam_id": 7,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 153,
+    "exam_id": 7,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 154,
+    "exam_id": 7,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 155,
+    "exam_id": 7,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 156,
+    "exam_id": 7,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 157,
+    "exam_id": 7,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 158,
+    "exam_id": 7,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 159,
+    "exam_id": 7,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 160,
+    "exam_id": 7,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 161,
+    "exam_id": 7,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 162,
+    "exam_id": 7,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 163,
+    "exam_id": 7,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 164,
+    "exam_id": 7,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 165,
+    "exam_id": 7,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 166,
+    "exam_id": 7,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 167,
+    "exam_id": 7,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 168,
+    "exam_id": 7,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 169,
+    "exam_id": 7,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 170,
+    "exam_id": 7,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 171,
+    "exam_id": 8,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 172,
+    "exam_id": 8,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 173,
+    "exam_id": 8,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 174,
+    "exam_id": 8,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 175,
+    "exam_id": 8,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 176,
+    "exam_id": 8,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 177,
+    "exam_id": 8,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 178,
+    "exam_id": 8,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 179,
+    "exam_id": 8,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 180,
+    "exam_id": 8,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 181,
+    "exam_id": 8,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 182,
+    "exam_id": 8,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 183,
+    "exam_id": 8,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 184,
+    "exam_id": 8,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 185,
+    "exam_id": 8,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 186,
+    "exam_id": 8,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 187,
+    "exam_id": 8,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 188,
+    "exam_id": 8,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 189,
+    "exam_id": 8,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 190,
+    "exam_id": 8,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 191,
+    "exam_id": 8,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 192,
+    "exam_id": 8,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 193,
+    "exam_id": 8,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 194,
+    "exam_id": 8,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 195,
+    "exam_id": 8,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 196,
+    "exam_id": 8,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 197,
+    "exam_id": 8,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 198,
+    "exam_id": 8,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 199,
+    "exam_id": 8,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 200,
+    "exam_id": 8,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 201,
+    "exam_id": 9,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 202,
+    "exam_id": 9,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 203,
+    "exam_id": 9,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 204,
+    "exam_id": 9,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 205,
+    "exam_id": 9,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 206,
+    "exam_id": 9,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 207,
+    "exam_id": 9,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 208,
+    "exam_id": 9,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 209,
+    "exam_id": 9,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 210,
+    "exam_id": 9,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 211,
+    "exam_id": 9,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 212,
+    "exam_id": 9,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 213,
+    "exam_id": 9,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 214,
+    "exam_id": 9,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 215,
+    "exam_id": 9,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 216,
+    "exam_id": 9,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 217,
+    "exam_id": 9,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 218,
+    "exam_id": 9,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 219,
+    "exam_id": 9,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 220,
+    "exam_id": 9,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 221,
+    "exam_id": 10,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 222,
+    "exam_id": 10,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 223,
+    "exam_id": 10,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 224,
+    "exam_id": 10,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 225,
+    "exam_id": 10,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 226,
+    "exam_id": 10,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 227,
+    "exam_id": 10,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 228,
+    "exam_id": 10,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 229,
+    "exam_id": 10,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 230,
+    "exam_id": 10,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 231,
+    "exam_id": 10,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 232,
+    "exam_id": 10,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 233,
+    "exam_id": 10,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 234,
+    "exam_id": 10,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 235,
+    "exam_id": 10,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 236,
+    "exam_id": 10,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 237,
+    "exam_id": 10,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 238,
+    "exam_id": 10,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 239,
+    "exam_id": 10,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 240,
+    "exam_id": 10,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  },
+  {
+    "id": 241,
+    "exam_id": 10,
+    "question_text": "What does IT stand for?",
+    "option_a": "Internet Technology",
+    "option_b": "Information Technology",
+    "option_c": "Interactive Tools",
+    "option_d": "Information Transformer",
+    "correct_answer": "B"
+  },
+  {
+    "id": 242,
+    "exam_id": 10,
+    "question_text": "Which of the following is a primary function of an operating system?",
+    "option_a": "Running applications and managing hardware",
+    "option_b": "Creating documents",
+    "option_c": "Browsing the internet",
+    "option_d": "Playing music",
+    "correct_answer": "A"
+  },
+  {
+    "id": 243,
+    "exam_id": 10,
+    "question_text": "What is the most commonly used programming language?",
+    "option_a": "Python",
+    "option_b": "JavaScript",
+    "option_c": "Java",
+    "option_d": "C++",
+    "correct_answer": "B"
+  },
+  {
+    "id": 244,
+    "exam_id": 10,
+    "question_text": "Which database language is used for querying?",
+    "option_a": "XML",
+    "option_b": "HTML",
+    "option_c": "SQL",
+    "option_d": "CSS",
+    "correct_answer": "C"
+  },
+  {
+    "id": 245,
+    "exam_id": 10,
+    "question_text": "What is the primary purpose of a firewall?",
+    "option_a": "To speed up internet",
+    "option_b": "To protect networks from unauthorized access",
+    "option_c": "To store files",
+    "option_d": "To manage passwords",
+    "correct_answer": "B"
+  },
+  {
+    "id": 246,
+    "exam_id": 10,
+    "question_text": "Which of the following is a cloud service provider?",
+    "option_a": "Windows",
+    "option_b": "AWS",
+    "option_c": "Linux",
+    "option_d": "Android",
+    "correct_answer": "B"
+  },
+  {
+    "id": 247,
+    "exam_id": 10,
+    "question_text": "What is the purpose of encryption?",
+    "option_a": "To make files smaller",
+    "option_b": "To protect data from unauthorized access",
+    "option_c": "To speed up processing",
+    "option_d": "To delete files",
+    "correct_answer": "B"
+  },
+  {
+    "id": 248,
+    "exam_id": 10,
+    "question_text": "Which protocol is used for secure web browsing?",
+    "option_a": "HTTP",
+    "option_b": "FTP",
+    "option_c": "HTTPS",
+    "option_d": "SMTP",
+    "correct_answer": "C"
+  },
+  {
+    "id": 249,
+    "exam_id": 10,
+    "question_text": "What is RAM used for?",
+    "option_a": "Permanent storage",
+    "option_b": "Temporary storage for running programs",
+    "option_c": "Backing up files",
+    "option_d": "Internet connection",
+    "correct_answer": "B"
+  },
+  {
+    "id": 250,
+    "exam_id": 10,
+    "question_text": "Which type of malware replicates itself?",
+    "option_a": "Trojan",
+    "option_b": "Virus",
+    "option_c": "Spyware",
+    "option_d": "Adware",
+    "correct_answer": "B"
+  }
+]
