@@ -1,1043 +1,813 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIT LMS - Learning Management System</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --primary: #22c55e;
-      --secondary: #eab308;
-      --white: #ffffff;
-      --dark: #1f2937;
-      --light: #f9fafb;
-      --border: #e5e7eb;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--light);
-      color: var(--dark);
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--primary) 0%, #16a34a 100%);
-      color: white;
-      padding: 20px 0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      margin-bottom: 30px;
-    }
-
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 24px;
-      font-weight: 700;
-    }
-
-    .logo-icon {
-      font-size: 28px;
-    }
-
-    nav {
-      display: flex;
-      gap: 30px;
-      flex: 1;
-    }
-
-    nav a, nav button {
-      color: rgba(255, 255, 255, 0.9);
-      text-decoration: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-weight: 500;
-      transition: color 0.2s;
-      font-size: 16px;
-    }
-
-    nav a:hover, nav button:hover {
-      color: white;
-    }
-
-    .user-section {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .user-info {
-      text-align: right;
-    }
-
-    .user-name {
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .enrollment-id {
-      font-size: 11px;
-      opacity: 0.8;
-    }
-
-    /* Auth Pages */
-    .auth-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 80vh;
-      padding: 20px;
-    }
-
-    .auth-card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-      padding: 40px;
-      width: 100%;
-      max-width: 400px;
-    }
-
-    .auth-header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .auth-header h1 {
-      font-size: 32px;
-      color: var(--primary);
-      margin-bottom: 5px;
-    }
-
-    .auth-header p {
-      color: #6b7280;
-      font-size: 14px;
-    }
-
-    .form-group {
-      margin-bottom: 16px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 4px;
-      color: #374151;
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-      width: 100%;
-      padding: 12px;
-      border: 2px solid var(--border);
-      border-radius: 6px;
-      font-size: 14px;
-      transition: border-color 0.3s;
-    }
-
-    input:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 8px rgba(34, 197, 94, 0.2);
-    }
-
-    button {
-      background-color: var(--primary);
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: 600;
-      transition: background-color 0.3s;
-      width: 100%;
-    }
-
-    button:hover {
-      background-color: #16a34a;
-    }
-
-    .btn-secondary {
-      background-color: var(--secondary);
-      color: var(--dark);
-    }
-
-    .btn-secondary:hover {
-      background-color: #ca8a04;
-    }
-
-    .auth-link {
-      text-align: center;
-      margin-top: 20px;
-      color: #6b7280;
-      font-size: 14px;
-    }
-
-    .auth-link a {
-      color: var(--primary);
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    /* Dashboard */
-    .dashboard-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-bottom: 40px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-      border-left: 5px solid var(--primary);
-    }
-
-    .card h3 {
-      color: var(--primary);
-      margin-bottom: 15px;
-      font-size: 20px;
-    }
-
-    .stat-card {
-      text-align: center;
-      border-left: none;
-      background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(234, 179, 8, 0.1));
-    }
-
-    .stat-card h3 {
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
-
-    .stat-card p {
-      color: #6b7280;
-      font-size: 13px;
-    }
-
-    /* Courses */
-    .courses-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 25px;
-      margin-bottom: 40px;
-    }
-
-    .course-card {
-      background: white;
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s, box-shadow 0.3s;
-      border-top: 4px solid var(--secondary);
-    }
-
-    .course-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    }
-
-    .course-card h4 {
-      color: #1f2937;
-      margin-bottom: 8px;
-      font-size: 18px;
-    }
-
-    .course-card p {
-      color: #6b7280;
-      font-size: 14px;
-      margin-bottom: 16px;
-      line-height: 1.5;
-    }
-
-    .badge {
-      display: inline-block;
-      background: #dcfce7;
-      color: #16a34a;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    .btn-enroll {
-      width: 100%;
-      margin-top: 16px;
-      background: linear-gradient(135deg, var(--secondary), #ca8a04);
-      color: var(--dark);
-    }
-
-    .btn-enroll:hover {
-      background: linear-gradient(135deg, #ca8a04, #b8860b);
-    }
-
-    /* Exam */
-    .exam-container {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 24px;
-      margin: 30px 0;
-    }
-
-    .question-nav {
-      background: white;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-      height: fit-content;
-    }
-
-    .nav-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-
-    .nav-button {
-      width: 100%;
-      aspect-ratio: 1;
-      border: 2px solid var(--border);
-      background: white;
-      color: #6b7280;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
-
-    .nav-button.current {
-      background: var(--primary);
-      color: white;
-      border-color: var(--primary);
-    }
-
-    .nav-button.answered {
-      background: #dcfce7;
-      border-color: var(--primary);
-      color: #16a34a;
-    }
-
-    .question-display {
-      background: white;
-      padding: 32px;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    }
-
-    .question-text {
-      font-size: 18px;
-      color: #1f2937;
-      margin: 20px 0;
-      font-weight: 500;
-    }
-
-    .options {
-      margin: 20px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .option {
-      display: flex;
-      align-items: flex-start;
-      padding: 16px;
-      background: #f9fafb;
-      border: 2px solid var(--border);
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .option:hover {
-      background: #f3f4f6;
-      border-color: var(--primary);
-    }
-
-    .option input[type="radio"] {
-      margin-right: 12px;
-      margin-top: 2px;
-      accent-color: var(--primary);
-      width: 20px;
-      height: 20px;
-      cursor: pointer;
-    }
-
-    .option input:checked ~ label {
-      font-weight: 600;
-      color: var(--primary);
-    }
-
-    .option:has(input:checked) {
-      background: #f0fdf4;
-      border-color: var(--primary);
-    }
-
-    .option label {
-      cursor: pointer;
-      flex: 1;
-      color: #6b7280;
-    }
-
-    .nav-buttons {
-      display: flex;
-      gap: 12px;
-      justify-content: space-between;
-      margin-top: 32px;
-    }
-
-    .btn-prev, .btn-next, .btn-submit {
-      flex: 1;
-      padding: 12px;
-    }
-
-    .btn-prev {
-      background: #f3f4f6;
-      color: #6b7280;
-    }
-
-    .btn-prev:hover {
-      background: #e5e7eb;
-    }
-
-    .btn-next, .btn-submit {
-      background: var(--primary);
-      color: white;
-    }
-
-    /* Results */
-    .results-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    .results-table thead {
-      background: #f3f4f6;
-    }
-
-    .results-table th {
-      padding: 12px;
-      text-align: left;
-      color: #374151;
-      font-weight: 600;
-      font-size: 13px;
-      border-bottom: 2px solid var(--border);
-    }
-
-    .results-table td {
-      padding: 12px;
-      border-bottom: 1px solid var(--border);
-      font-size: 14px;
-      color: #6b7280;
-    }
-
-    .results-table tr.passed {
-      background: #f0fdf4;
-    }
-
-    .results-table tr.failed {
-      background: #fef2f2;
-    }
-
-    .status-badge {
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .status-passed {
-      background: #dcfce7;
-      color: #16a34a;
-    }
-
-    .status-failed {
-      background: #fee2e2;
-      color: #dc2626;
-    }
-
-    .error {
-      color: #dc2626;
-      background-color: #fee2e2;
-      padding: 12px;
-      border-radius: 4px;
-      margin-bottom: 16px;
-      border-left: 4px solid #dc2626;
-    }
-
-    .success {
-      color: #16a34a;
-      background-color: #dcfce7;
-      padding: 12px;
-      border-radius: 4px;
-      margin-bottom: 16px;
-      border-left: 4px solid #16a34a;
-    }
-
-    .hidden {
-      display: none !important;
-    }
-
-    @media (max-width: 768px) {
-      .exam-container {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-grid {
-        grid-template-columns: repeat(8, 1fr);
-      }
-
-      .courses-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .dashboard-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENVOYS SIT - Exam Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #22c55e;
+            --secondary: #eab308;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --border: #e5e7eb;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: var(--dark);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        header p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: #16a34a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            color: var(--dark);
+        }
+
+        .btn-secondary:hover {
+            background: #d4a206;
+        }
+
+        #loginSection,
+#examSection,
+        #resultsSection,
+        #dashboardSection {
+            display: none;
+        }
+
+        .question-number {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .question-text {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: white;
+        }
+
+        .option:hover {
+            border-color: var(--primary);
+            background: #f0fdf4;
+        }
+
+        .option input[type="radio"] {
+            margin-right: 15px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .option.selected {
+            background: #dbeafe;
+            border-color: var(--primary);
+        }
+
+        .exam-progress {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .time-remaining {
+            display: inline-block;
+            background: var(--warning);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-box {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid var(--primary);
+        }
+
+        .stat-box h3 {
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .stat-box .value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .score-display {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .score-display .large {
+            font-size: 72px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .score-display .percentage {
+            font-size: 24px;
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+
+        .enrollment-info {
+            background: #dbeafe;
+            border-left: 4px solid #0ea5e9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .enrollment-info strong {
+            color: var(--dark);
+        }
+
+        .topic-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .button-group .btn {
+            flex: 1;
+        }
+
+        .hidden { display: none !important; }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            header h1 {
+                font-size: 20px;
+            }
+
+            .question-text {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>🎓 ENVOYS SIT EXAM PORTAL</h1>
+            <p>ENVOYS Starter Pack Module 1 - 100 Objective Questions on Biblical Studies</p>
+        </header>
 
-<header id="header" class="hidden">
-  <div class="container">
-    <div class="header-content">
-      <div class="logo">
-        <span class="logo-icon">📚</span>
-        <span>SIT LMS</span>
-      </div>
-      <nav>
-        <a onclick="showPage('dashboard')">Dashboard</a>
-        <a onclick="showPage('courses')">Courses</a>
-        <a onclick="showPage('results')">Results</a>
-      </nav>
-      <div class="user-section">
-        <div class="user-info">
-          <div class="user-name" id="userName">User</div>
-          <div class="enrollment-id" id="userEnrollmentId">SIT/001/2026</div>
+        <!-- Login Section -->
+        <div id="loginSection" class="card">
+            <h2 style="margin-bottom: 30px; color: var(--primary);">Create Account / Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Full Name:</label>
+                    <input type="text" id="fullName" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+                <button type="submit" class="btn">Create Account & Get Enrollment ID</button>
+            </form>
         </div>
-        <button onclick="logout()" style="background: #ef4444; width: auto; padding: 8px 16px;">Logout</button>
-      </div>
-    </div>
-  </div>
-</header>
 
-<!-- Login Page -->
-<div id="loginPage" class="auth-container">
-  <div class="auth-card">
-    <div class="auth-header">
-      <h1>SIT LMS</h1>
-      <p>Learning Management System</p>
-    </div>
-    <div id="loginError" class="error hidden"></div>
-    <form onsubmit="handleLogin(event)">
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" id="loginEmail" required>
-      </div>
-      <div class="form-group">
-        <label>Password</label>
-        <input type="password" id="loginPassword" required>
-      </div>
-      <button type="submit">Login</button>
-    </form>
-    <p class="auth-link">Don't have an account? <a onclick="showPage('signup')">Sign up here</a></p>
-  </div>
-</div>
+        <!-- Dashboard Section -->
+        <div id="dashboardSection" class="card">
+            <div id="enrollmentCard" class="enrollment-info">
+                <strong>Enrollment ID:</strong> <span id="enrollmentDisplay"></span>
+            </div>
+            <h2 style="margin-bottom: 20px; color: var(--primary);">Welcome, <span id="displayName"></span>!</h2>
+            <p style="margin-bottom: 30px; color: #6b7280;">Ready to take the exam?</p>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>Total Questions</h3>
+                    <div class="value">100</div>
+                </div>
+                <div class="stat-box">
+                    <h3>Duration</h3>
+                    <div class="value">120</div>
+                    <div style="font-size: 12px; color: #6b7280; margin-top: 5px;">minutes</div>
+                </div>
+                <div class="stat-box">
+                    <h3>Your Score</h3>
+                    <div class="value" id="currentScore">-</div>
+                    <div style="font-size: 12px; color: #6b7280; margin-top: 5px;">Best attempt</div>
+                </div>
+            </div>
 
-<!-- Signup Page -->
-<div id="signupPage" class="auth-container hidden">
-  <div class="auth-card">
-    <div class="auth-header">
-      <h1>SIT LMS</h1>
-      <p>Create Your Account</p>
-    </div>
-    <div id="signupError" class="error hidden"></div>
-    <form onsubmit="handleSignup(event)">
-      <div class="form-group">
-        <label>Full Name</label>
-        <input type="text" id="signupName" required>
-      </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" id="signupEmail" required>
-      </div>
-      <div class="form-group">
-        <label>Password</label>
-        <input type="password" id="signupPassword" required>
-      </div>
-      <div class="form-group">
-        <label>Confirm Password</label>
-        <input type="password" id="signupConfirmPassword" required>
-      </div>
-      <button type="submit">Sign Up</button>
-    </form>
-    <p class="auth-link">Already have an account? <a onclick="showPage('login')">Login here</a></p>
-  </div>
-</div>
-
-<!-- Dashboard Page -->
-<div id="dashboardPage" class="hidden">
-  <div class="container">
-    <h1>Welcome to SIT LMS! 👋</h1>
-    <div class="dashboard-grid" style="margin-bottom: 30px;">
-      <div class="card">
-        <h3 id="coursesCount">0</h3>
-        <p>Courses Enrolled</p>
-      </div>
-      <div class="card">
-        <h3 id="examsCount">0</h3>
-        <p>Exams Taken</p>
-      </div>
-      <div class="card">
-        <h3 id="passedCount">0</h3>
-        <p>Exams Passed</p>
-      </div>
-    </div>
-    <button onclick="showPage('courses')" style="width: auto; padding: 12px 24px; margin-bottom: 30px;">Explore Courses</button>
-  </div>
-</div>
-
-<!-- Courses Page -->
-<div id="coursesPage" class="container hidden">
-  <h1>Courses</h1>
-  <div class="courses-grid" id="coursesList"></div>
-</div>
-
-<!-- Exam Page -->
-<div id="examPage" class="container hidden">
-  <button onclick="showPage('courses')" style="width: auto; padding: 8px 16px; margin-bottom: 20px;">← Back</button>
-  <div class="exam-container">
-    <div class="question-nav">
-      <h3>Questions</h3>
-      <div class="nav-grid" id="navGrid"></div>
-      <div class="progress-info" id="progressInfo">Answered: 0/10</div>
-    </div>
-    <div class="question-display">
-      <div id="examContent"></div>
-      <div class="nav-buttons">
-        <button class="btn-prev" onclick="previousQuestion()" id="btnPrev">← Previous</button>
-        <button class="btn-next" onclick="nextQuestion()" id="btnNext">Next →</button>
-        <button class="btn-submit hidden" onclick="submitExam()" id="btnSubmit">Submit Exam</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Results Page -->
-<div id="resultsPage" class="container hidden">
-  <h1>Exam Results</h1>
-  <div id="resultsList"></div>
-</div>
-
-<script>
-  // Data store (localStorage)
-  let currentUser = null;
-  let courses = [];
-  let exams = [];
-  let results = [];
-  let currentExamIndex = 0;
-  let examAnswers = {};
-  let currentExamId = null;
-
-  // Initialize
-  window.addEventListener('load', () => {
-    const user = localStorage.getItem('currentUser');
-    if (user) {
-      currentUser = JSON.parse(user);
-      loadAllData();
-      showPage('dashboard');
-    } else {
-      showPage('login');
-    }
-  });
-
-  function showPage(page) {
-    // Hide all pages
-    document.querySelectorAll('[id$="Page"]').forEach(el => el.classList.add('hidden'));
-    
-    // Show selected page
-    document.getElementById(page + 'Page').classList.remove('hidden');
-    document.getElementById('header').classList.toggle('hidden', !currentUser);
-
-    if (page === 'dashboard') {
-      loadDashboard();
-    } else if (page === 'courses') {
-      loadCourses();
-    } else if (page === 'results') {
-      loadResults();
-    }
-  }
-
-  function handleLogin(e) {
-    e.preventDefault();
-    const email = document.getElementById('loginEmail').value;
-    const password = document.getElementById('loginPassword').value;
-
-    const users = JSON.parse(localStorage.getItem('users') || '[]');
-    const user = users.find(u => u.email === email && u.password === password);
-
-    if (user) {
-      currentUser = user;
-      localStorage.setItem('currentUser', JSON.stringify(user));
-      loadAllData();
-      showPage('dashboard');
-    } else {
-      document.getElementById('loginError').textContent = 'Invalid email or password';
-      document.getElementById('loginError').classList.remove('hidden');
-    }
-  }
-
-  function handleSignup(e) {
-    e.preventDefault();
-    const name = document.getElementById('signupName').value;
-    const email = document.getElementById('signupEmail').value;
-    const password = document.getElementById('signupPassword').value;
-    const confirmPassword = document.getElementById('signupConfirmPassword').value;
-
-    if (password !== confirmPassword) {
-      document.getElementById('signupError').textContent = 'Passwords do not match';
-      document.getElementById('signupError').classList.remove('hidden');
-      return;
-    }
-
-    const users = JSON.parse(localStorage.getItem('users') || '[]');
-    if (users.find(u => u.email === email)) {
-      document.getElementById('signupError').textContent = 'Email already exists';
-      document.getElementById('signupError').classList.remove('hidden');
-      return;
-    }
-
-    const year = new Date().getFullYear();
-    const enrollmentNum = String(users.length + 1).padStart(3, '0');
-    const enrollmentId = `SIT/${enrollmentNum}/${year}`;
-
-    const newUser = { id: Date.now(), name, email, password, enrollmentId };
-    users.push(newUser);
-    localStorage.setItem('users', JSON.stringify(users));
-
-    currentUser = newUser;
-    localStorage.setItem('currentUser', JSON.stringify(newUser));
-    
-    initializeSampleData();
-    loadAllData();
-    showPage('dashboard');
-  }
-
-  function initializeSampleData() {
-    if (localStorage.getItem('coursesInitialized')) return;
-
-    const sampleCourses = [
-      { id: 1, code: 'SIT-101', name: 'Introduction to Information Technology', description: 'Learn fundamentals of IT', duration: 40 },
-      { id: 2, code: 'SIT-102', name: 'Web Development Basics', description: 'Master HTML, CSS, JavaScript', duration: 50 },
-      { id: 3, code: 'SIT-103', name: 'Database Management', description: 'Understand databases and SQL', duration: 45 },
-      { id: 4, code: 'SIT-104', name: 'Cybersecurity Essentials', description: 'Learn security basics', duration: 35 },
-      { id: 5, code: 'SIT-105', name: 'Cloud Computing Fundamentals', description: 'Explore cloud services', duration: 42 }
-    ];
-
-    const sampleExams = [];
-    sampleCourses.forEach(course => {
-      sampleExams.push({
-        id: course.id * 10 + 1,
-        courseId: course.id,
-        name: 'Mid-Term Exam',
-        questions: 20,
-        passingScore: 60,
-        duration: 60
-      });
-      sampleExams.push({
-        id: course.id * 10 + 2,
-        courseId: course.id,
-        name: 'Final Exam',
-        questions: 30,
-        passingScore: 70,
-        duration: 90
-      });
-    });
-
-    localStorage.setItem('courses', JSON.stringify(sampleCourses));
-    localStorage.setItem('exams', JSON.stringify(sampleExams));
-    localStorage.setItem('coursesInitialized', 'true');
-  }
-
-  function loadAllData() {
-    courses = JSON.parse(localStorage.getItem('courses') || '[]');
-    exams = JSON.parse(localStorage.getItem('exams') || '[]');
-    results = JSON.parse(localStorage.getItem('results') || '[]');
-
-    if (!courses.length) {
-      initializeSampleData();
-      courses = JSON.parse(localStorage.getItem('courses'));
-      exams = JSON.parse(localStorage.getItem('exams'));
-    }
-
-    if (currentUser) {
-      document.getElementById('userName').textContent = currentUser.name;
-      document.getElementById('userEnrollmentId').textContent = currentUser.enrollmentId;
-    }
-  }
-
-  function loadDashboard() {
-    const userResults = results.filter(r => r.userId === currentUser.id);
-    const userCourses = JSON.parse(localStorage.getItem('userCourses') || '[]').filter(uc => uc.userId === currentUser.id);
-    const passedCount = userResults.filter(r => r.status === 'PASSED').length;
-
-    document.getElementById('coursesCount').textContent = userCourses.length;
-    document.getElementById('examsCount').textContent = userResults.length;
-    document.getElementById('passedCount').textContent = passedCount;
-  }
-
-  function loadCourses() {
-    const coursesList = document.getElementById('coursesList');
-    coursesList.innerHTML = '';
-
-    courses.forEach(course => {
-      const courseExams = exams.filter(e => e.courseId === course.id);
-      const html = `
-        <div class="course-card">
-          <div class="badge">Available</div>
-          <h4>${course.name}</h4>
-          <p>${course.description}</p>
-          <small>Duration: ${course.duration} hours</small>
-          <button class="btn-enroll" onclick="enrollCourse(${course.id})">Enroll Now</button>
-          ${courseExams.map(exam => `
-            <button style="width: 100%; margin-top: 8px;" onclick="startExam(${exam.id})">${exam.name}</button>
-          `).join('')}
+            <button id="startExamBtn" class="btn" style="margin-bottom: 10px;">Start Exam</button>
+            <button id="logoutBtn" class="btn btn-secondary">Logout</button>
         </div>
-      `;
-      coursesList.innerHTML += html;
-    });
-  }
 
-  function enrollCourse(courseId) {
-    const userCourses = JSON.parse(localStorage.getItem('userCourses') || '[]');
-    if (!userCourses.find(uc => uc.userId === currentUser.id && uc.courseId === courseId)) {
-      userCourses.push({ userId: currentUser.id, courseId });
-      localStorage.setItem('userCourses', JSON.stringify(userCourses));
-    }
-    alert('Enrolled successfully!');
-  }
+        <!-- Exam Section -->
+        <div id="examSection" class="card">
+            <div class="exam-progress">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="font-weight: 600; color: var(--dark);">Progress</span>
+                    <span id="questionCounter">1 / 100</span>
+                    <span class="time-remaining" id="timerDisplay">2:00</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+            </div>
 
-  function startExam(examId) {
-    currentExamId = examId;
-    const exam = exams.find(e => e.id === examId);
-    examAnswers = {};
-    currentExamIndex = 0;
+            <div id="questionContainer">
+                <!-- Questions will be rendered here -->
+            </div>
 
-    // Create sample questions
-    const questions = generateQuestions(exam.questions);
-    localStorage.setItem(`exam_${examId}_questions`, JSON.stringify(questions));
-
-    displayExamQuestion();
-    showPage('exam');
-  }
-
-  function generateQuestions(count) {
-    const questionList = [
-      { text: 'What does IT stand for?', a: 'Internet Technology', b: 'Information Technology', c: 'Interactive Tools', d: 'Information Transformer', correct: 'B' },
-      { text: 'Which is a function of OS?', a: 'Running applications', b: 'Creating documents', c: 'Browsing internet', d: 'Playing music', correct: 'A' },
-      { text: 'Most common programming language?', a: 'Python', b: 'JavaScript', c: 'Java', d: 'C++', correct: 'B' },
-      { text: 'Database query language?', a: 'XML', b: 'HTML', c: 'SQL', d: 'CSS', correct: 'C' },
-      { text: 'Purpose of firewall?', a: 'Speed up internet', b: 'Protect networks', c: 'Store files', d: 'Manage passwords', correct: 'B' },
-      { text: 'Cloud provider?', a: 'Windows', b: 'AWS', c: 'Linux', d: 'Android', correct: 'B' },
-      { text: 'Purpose of encryption?', a: 'Make files smaller', b: 'Protect data', c: 'Speed up', d: 'Delete files', correct: 'B' },
-      { text: 'Secure browsing protocol?', a: 'HTTP', b: 'FTP', c: 'HTTPS', d: 'SMTP', correct: 'C' },
-      { text: 'RAM used for?', a: 'Permanent storage', b: 'Temporary storage', c: 'Backing up', d: 'Internet', correct: 'B' },
-      { text: 'Malware that replicates?', a: 'Trojan', b: 'Virus', c: 'Spyware', d: 'Adware', correct: 'B' }
-    ];
-
-    const result = [];
-    for (let i = 0; i < count; i++) {
-      result.push({ ...questionList[i % questionList.length], id: i + 1 });
-    }
-    return result;
-  }
-
-  function displayExamQuestion() {
-    const exam = exams.find(e => e.id === currentExamId);
-    const questions = JSON.parse(localStorage.getItem(`exam_${currentExamId}_questions`) || '[]');
-    const question = questions[currentExamIndex];
-
-    let html = `
-      <div style="margin-bottom: 20px; padding-bottom: 16px; border-bottom: 2px solid var(--primary);">
-        <h3>Question ${currentExamIndex + 1} of ${questions.length}</h3>
-        <span style="background: ${examAnswers[question.id] ? '#dcfce7' : '#fee2e2'}; color: ${examAnswers[question.id] ? '#16a34a' : '#dc2626'}; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">
-          ${examAnswers[question.id] ? '✓ Answered' : '◯ Not Answered'}
-        </span>
-      </div>
-      <div class="question-text">${question.text}</div>
-      <div class="options">
-    `;
-
-    ['a', 'b', 'c', 'd'].forEach((opt, idx) => {
-      const letter = String.fromCharCode(65 + idx);
-      const isSelected = examAnswers[question.id] === letter;
-      html += `
-        <div class="option">
-          <input type="radio" id="opt${idx}" name="answer" value="${letter}" ${isSelected ? 'checked' : ''} onchange="selectAnswer('${letter}')">
-          <label for="opt${idx}">${letter}. ${question[opt]}</label>
+            <div class="button-group">
+                <button id="prevBtn" class="btn btn-secondary" disabled>← Previous</button>
+                <button id="nextBtn" class="btn">Next →</button>
+                <button id="submitExamBtn" class="btn" style="background: var(--success);">Submit Exam</button>
+            </div>
         </div>
-      `;
-    });
 
-    html += '</div>';
-    document.getElementById('examContent').innerHTML = html;
+        <!-- Results Section -->
+        <div id="resultsSection" class="card">
+            <h2 style="text-align: center; margin-bottom: 30px; color: var(--primary);">Exam Results</h2>
+            
+            <div class="score-display">
+                <div id="finalScore" class="large">0</div>
+                <div id="scorePercentage" class="percentage">0%</div>
+                <div id="scoreMessage" style="font-size: 18px; color: #6b7280; font-weight: 600; margin-bottom: 20px;"></div>
+            </div>
 
-    // Update nav buttons
-    document.getElementById('btnPrev').style.display = currentExamIndex > 0 ? 'block' : 'none';
-    document.getElementById('btnNext').classList.toggle('hidden', currentExamIndex === questions.length - 1);
-    document.getElementById('btnSubmit').classList.toggle('hidden', currentExamIndex !== questions.length - 1);
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>Correct Answers</h3>
+                    <div class="value" id="correctCount">0</div>
+                </div>
+                <div class="stat-box">
+                    <h3>Incorrect Answers</h3>
+                    <div class="value" id="incorrectCount">0</div>
+                </div>
+                <div class="stat-box">
+                    <h3>Unanswered</h3>
+                    <div class="value" id="unansweredCount">0</div>
+                </div>
+            </div>
 
-    // Update nav grid
-    updateNavGrid(questions);
-  }
+            <div id="detailedResults" style="margin-bottom: 30px;"></div>
 
-  function updateNavGrid(questions) {
-    const navGrid = document.getElementById('navGrid');
-    navGrid.innerHTML = '';
-    questions.forEach((q, idx) => {
-      const btn = document.createElement('button');
-      btn.className = `nav-button ${idx === currentExamIndex ? 'current' : ''} ${examAnswers[q.id] ? 'answered' : ''}`;
-      btn.textContent = idx + 1;
-      btn.onclick = () => { currentExamIndex = idx; displayExamQuestion(); };
-      navGrid.appendChild(btn);
-    });
+            <div class="button-group">
+                <button id="retakeExamBtn" class="btn">Retake Exam</button>
+                <button id="backToDashboardBtn" class="btn btn-secondary">Back to Dashboard</button>
+            </div>
+        </div>
+    </div>
 
-    const answered = Object.keys(examAnswers).length;
-    document.getElementById('progressInfo').textContent = `Answered: ${answered}/${questions.length}`;
-  }
+    <script>
+        // All 100 questions embedded inline
+        const allQuestions = [{"id": 1, "topic": "The Bible", "question": "According to 2 Timothy 3:16-17, all scripture is given by inspiration of:", "options": [{"letter": "A", "text": "God"}, {"letter": "B", "text": "Man"}, {"letter": "C", "text": "The Church"}, {"letter": "D", "text": "The Apostles"}], "correctAnswer": "A"},
+            {"id": 2, "topic": "The Bible", "question": "How many books are contained in the Bible in total?", "options": [{"letter": "A", "text": "39"}, {"letter": "B", "text": "27"}, {"letter": "C", "text": "66"}, {"letter": "D", "text": "73"}], "correctAnswer": "C"},
+            {"id": 3, "topic": "The Bible", "question": "How many books are in the Old Testament?", "options": [{"letter": "A", "text": "27"}, {"letter": "B", "text": "39"}, {"letter": "C", "text": "46"}, {"letter": "D", "text": "66"}], "correctAnswer": "B"},
+            {"id": 4, "topic": "The Bible", "question": "The Bible is described as the CONSTITUTION of every believer because:", "options": [{"letter": "A", "text": "It was written by kings"}, {"letter": "B", "text": "It is the oldest book"}, {"letter": "C", "text": "It was approved by the church"}, {"letter": "D", "text": "The teachings and conducts of every believer are established in it"}], "correctAnswer": "D"},
+            {"id": 5, "topic": "The Bible", "question": "According to Psalm 119:105, the word of God is described as:", "options": [{"letter": "A", "text": "A lamp to my feet and a light to my path"}, {"letter": "B", "text": "A sword in my hands"}, {"letter": "C", "text": "A shield and buckler"}, {"letter": "D", "text": "A river of life"}], "correctAnswer": "A"},
+            {"id": 6, "topic": "The Bible", "question": "Which scripture warns against adding to or subtracting from the word of God?", "options": [{"letter": "A", "text": "John 3:16"}, {"letter": "B", "text": "Matthew 5:17"}, {"letter": "C", "text": "Deuteronomy 4:2 and Revelation 22:18-19"}, {"letter": "D", "text": "Romans 1:16"}], "correctAnswer": "C"},
+            {"id": 7, "topic": "The Bible", "question": "The New Testament is described as the revelation of:", "options": [{"letter": "A", "text": "Future prophecies only"}, {"letter": "B", "text": "The mysteries contained in the Old Testament"}, {"letter": "C", "text": "The laws of Moses"}, {"letter": "D", "text": "The history of Israel"}], "correctAnswer": "B"},
+            {"id": 8, "topic": "The Bible", "question": "To be approved of God, a believer is instructed to:", "options": [{"letter": "A", "text": "Read the Bible casually"}, {"letter": "B", "text": "Attend church regularly"}, {"letter": "C", "text": "Give tithes and offerings"}, {"letter": "D", "text": "Study the Bible diligently — 2 Timothy 2:15"}], "correctAnswer": "D"},
+            {"id": 9, "topic": "The Bible", "question": "The doctrines of the Bible are described as all of the following EXCEPT:", "options": [{"letter": "A", "text": "Holy"}, {"letter": "B", "text": "True"}, {"letter": "C", "text": "Changeable"}, {"letter": "D", "text": "Immutable"}], "correctAnswer": "C"},
+            {"id": 10, "topic": "The Bible", "question": "According to John 1:1, the word of God is identified with:", "options": [{"letter": "A", "text": "Jesus Christ"}, {"letter": "B", "text": "The Holy Spirit"}, {"letter": "C", "text": "The angels"}, {"letter": "D", "text": "The prophets"}], "correctAnswer": "A"},
+            {"id": 11, "topic": "About God & Trinity", "question": "Trinity means the union of:", "options": [{"letter": "A", "text": "God and His angels"}, {"letter": "B", "text": "Three divine persons in one unified Godhead"}, {"letter": "C", "text": "The Father and the Son only"}, {"letter": "D", "text": "God and all believers"}], "correctAnswer": "B"},
+            {"id": 12, "topic": "About God & Trinity", "question": "Which scripture records God saying 'Let us make man in our image'?", "options": [{"letter": "A", "text": "Genesis 1:26"}, {"letter": "B", "text": "Genesis 2:7"}, {"letter": "C", "text": "John 1:1"}, {"letter": "D", "text": "Isaiah 6:8"}], "correctAnswer": "A"},
+            {"id": 13, "topic": "About God & Trinity", "question": "The Holy Spirit is described as:", "options": [{"letter": "A", "text": "A force or energy"}, {"letter": "B", "text": "An angel"}, {"letter": "C", "text": "The third person in the Trinity"}, {"letter": "D", "text": "A created being"}], "correctAnswer": "C"},
+            {"id": 14, "topic": "About God & Trinity", "question": "Which scripture is used to support the doctrine of the Trinity at the baptism of Jesus?", "options": [{"letter": "A", "text": "John 3:16"}, {"letter": "B", "text": "Romans 8:11"}, {"letter": "C", "text": "Acts 2:4"}, {"letter": "D", "text": "Matthew 3:13-17"}], "correctAnswer": "D"},
+            {"id": 15, "topic": "About God & Trinity", "question": "According to John 5:26, every creature receives life from:", "options": [{"letter": "A", "text": "God"}, {"letter": "B", "text": "The angels"}, {"letter": "C", "text": "Nature"}, {"letter": "D", "text": "The Holy Spirit alone"}], "correctAnswer": "A"},
+            {"id": 16, "topic": "About God & Trinity", "question": "The work of the Holy Spirit DOES NOT include:", "options": [{"letter": "A", "text": "Regeneration of man"}, {"letter": "B", "text": "Sanctification of born-again souls"}, {"letter": "C", "text": "Creating the physical universe alone"}, {"letter": "D", "text": "Empowering believers — Acts 1:8"}], "correctAnswer": "C"},
+            {"id": 17, "topic": "About God & Trinity", "question": "Jesus Christ is described in the course material as:", "options": [{"letter": "A", "text": "A great prophet only"}, {"letter": "B", "text": "God revealed in flesh — John 1:14"}, {"letter": "C", "text": "An angel sent from heaven"}, {"letter": "D", "text": "A created being"}], "correctAnswer": "B"},
+            {"id": 18, "topic": "About God & Trinity", "question": "The benediction in 2 Corinthians 13:14 references all three persons of the Trinity. Which is CORRECTLY listed?", "options": [{"letter": "A", "text": "The Lord Jesus Christ, God, and the Holy Spirit"}, {"letter": "B", "text": "The Father, Moses, and the Holy Spirit"}, {"letter": "C", "text": "Jesus, the angels, and the church"}, {"letter": "D", "text": "God, the prophets, and the apostles"}], "correctAnswer": "A"},
+            {"id": 19, "topic": "About God & Trinity", "question": "According to the course, the doctrine of the Trinity is described as:", "options": [{"letter": "A", "text": "A simple truth that everyone understands"}, {"letter": "B", "text": "A man-made doctrine"}, {"letter": "C", "text": "Only relevant to theologians"}, {"letter": "D", "text": "A great mystery and a revealed truth — Deuteronomy 29:29"}], "correctAnswer": "D"},
+            {"id": 20, "topic": "About God & Trinity", "question": "How many books are in the New Testament?", "options": [{"letter": "A", "text": "39"}, {"letter": "B", "text": "20"}, {"letter": "C", "text": "27"}, {"letter": "D", "text": "33"}], "correctAnswer": "C"},
+            {"id": 21, "topic": "About the Devil", "question": "What was the original name of the devil when he was an archangel in Heaven?", "options": [{"letter": "A", "text": "Beelzebub"}, {"letter": "B", "text": "Lucifer"}, {"letter": "C", "text": "Apollyon"}, {"letter": "D", "text": "Abaddon"}], "correctAnswer": "B"},
+            {"id": 22, "topic": "About the Devil", "question": "According to the course, the devil was expelled from Heaven because of:", "options": [{"letter": "A", "text": "Pride"}, {"letter": "B", "text": "Lying"}, {"letter": "C", "text": "Stealing"}, {"letter": "D", "text": "Disobedience to creation orders"}], "correctAnswer": "A"},
+            {"id": 23, "topic": "About the Devil", "question": "According to Revelation 20:1-3, the devil will be chained in the bottomless pit for:", "options": [{"letter": "A", "text": "7 years"}, {"letter": "B", "text": "100 years"}, {"letter": "C", "text": "1,000 years"}, {"letter": "D", "text": "Eternity immediately"}], "correctAnswer": "C"},
+            {"id": 24, "topic": "About the Devil", "question": "The Bible describes the devil as all of the following EXCEPT:", "options": [{"letter": "A", "text": "A murderer"}, {"letter": "B", "text": "A deceiver"}, {"letter": "C", "text": "A tempter"}, {"letter": "D", "text": "An all-powerful being"}], "correctAnswer": "D"},
+            {"id": 25, "topic": "About the Devil", "question": "According to James 4:7, how should a believer deal with the devil?", "options": [{"letter": "A", "text": "Submit to God and resist the devil"}, {"letter": "B", "text": "Ignore the devil completely"}, {"letter": "C", "text": "Pray and fast for 40 days"}, {"letter": "D", "text": "Consult a spiritual leader"}], "correctAnswer": "A"},
+            {"id": 26, "topic": "About the Devil", "question": "According to 1 Peter 5:8, the devil walks about as:", "options": [{"letter": "A", "text": "A wolf in sheep's clothing"}, {"letter": "B", "text": "A roaring lion seeking whom he may devour"}, {"letter": "C", "text": "A thief in the night"}, {"letter": "D", "text": "A snake in the grass"}], "correctAnswer": "B"},
+            {"id": 27, "topic": "About the Devil", "question": "The devil is described as the author of:", "options": [{"letter": "A", "text": "Death only"}, {"letter": "B", "text": "Sin only"}, {"letter": "C", "text": "Sin, sickness, and death — John 10:10"}, {"letter": "D", "text": "Poverty and failure only"}], "correctAnswer": "C"},
+            {"id": 28, "topic": "About the Devil", "question": "What fraction of the angels rebelled with Lucifer in Heaven?", "options": [{"letter": "A", "text": "A third part"}, {"letter": "B", "text": "Half"}, {"letter": "C", "text": "A quarter"}, {"letter": "D", "text": "Two thirds"}], "correctAnswer": "A"},
+            {"id": 29, "topic": "About Man", "question": "According to Genesis 2:7, man is made up of which three parts?", "options": [{"letter": "A", "text": "Mind, heart, and body"}, {"letter": "B", "text": "Body, soul, and spirit"}, {"letter": "C", "text": "Flesh, blood, and bone"}, {"letter": "D", "text": "Reason, emotion, and will"}], "correctAnswer": "B"},
+            {"id": 30, "topic": "About Man", "question": "Man is described in the course as God's ambassador on earth to:", "options": [{"letter": "A", "text": "Worship God alone"}, {"letter": "B", "text": "Build the church"}, {"letter": "C", "text": "Write the scriptures"}, {"letter": "D", "text": "Take control over all other creatures on God's behalf — Genesis 1:26-28"}], "correctAnswer": "D"},
+            {"id": 31, "topic": "About Man", "question": "According to the course, a child should be named on which day after birth?", "options": [{"letter": "A", "text": "First day"}, {"letter": "B", "text": "Third day"}, {"letter": "C", "text": "Eighth day — Luke 2:21"}, {"letter": "D", "text": "Fortieth day"}], "correctAnswer": "C"},
+            {"id": 32, "topic": "Personal Transformation", "question": "Repentance is defined in the course as:", "options": [{"letter": "A", "text": "Godly sorrow for sin with a decision to abstain from them"}, {"letter": "B", "text": "Going to confession in church"}, {"letter": "C", "text": "Performing religious rituals"}, {"letter": "D", "text": "Reading the Bible daily"}], "correctAnswer": "A"},
+            {"id": 33, "topic": "Personal Transformation", "question": "Justification means being declared righteous such that we stand before God:", "options": [{"letter": "A", "text": "As saints who have suffered"}, {"letter": "B", "text": "As though we have never sinned"}, {"letter": "C", "text": "With our good works as evidence"}, {"letter": "D", "text": "Through the merit of our ancestors"}], "correctAnswer": "B"},
+            {"id": 34, "topic": "Personal Transformation", "question": "Sanctification means:", "options": [{"letter": "A", "text": "Water baptism in a river"}, {"letter": "B", "text": "Attending Bible school"}, {"letter": "C", "text": "Total separation from sin and worldliness unto God"}, {"letter": "D", "text": "Becoming a church elder"}], "correctAnswer": "C"},
+            {"id": 35, "topic": "Personal Transformation", "question": "According to the course, ALL of the following are UNSCRIPTURAL meanings of the New Birth EXCEPT:", "options": [{"letter": "A", "text": "Being religious or churchy"}, {"letter": "B", "text": "Keeping the Law"}, {"letter": "C", "text": "Being educated and cultured"}, {"letter": "D", "text": "Receiving God's life and righteousness by faith"}], "correctAnswer": "D"},
+            {"id": 36, "topic": "Personal Transformation", "question": "The memory verse for Understanding the New Birth (Study II) is found in:", "options": [{"letter": "A", "text": "2 Corinthians 5:17"}, {"letter": "B", "text": "John 3:16"}, {"letter": "C", "text": "Romans 8:1"}, {"letter": "D", "text": "Acts 4:12"}], "correctAnswer": "A"},
+            {"id": 37, "topic": "Personal Transformation", "question": "According to Romans 5:12, the fall of man through Adam resulted in:", "options": [{"letter": "A", "text": "Only physical death entering the world"}, {"letter": "B", "text": "Sin entering into all men"}, {"letter": "C", "text": "The loss of the scriptures"}, {"letter": "D", "text": "The creation of angels"}], "correctAnswer": "B"},
+            {"id": 38, "topic": "Personal Transformation", "question": "Which of the following is NOT listed as an evidence of the New Birth?", "options": [{"letter": "A", "text": "A changed life"}, {"letter": "B", "text": "An overcoming life"}, {"letter": "C", "text": "Witness of the Spirit"}, {"letter": "D", "text": "Speaking in tongues immediately at conversion"}], "correctAnswer": "D"},
+            {"id": 39, "topic": "Baptism", "question": "How many types of baptism must every true believer undergo according to the course?", "options": [{"letter": "A", "text": "One"}, {"letter": "B", "text": "Two"}, {"letter": "C", "text": "Three"}, {"letter": "D", "text": "Four"}], "correctAnswer": "C"},
+            {"id": 40, "topic": "Baptism", "question": "The agent who carries out baptism INTO CHRIST at salvation is:", "options": [{"letter": "A", "text": "The Holy Spirit"}, {"letter": "B", "text": "The pastor"}, {"letter": "C", "text": "The elders of the church"}, {"letter": "D", "text": "The believer himself"}], "correctAnswer": "A"},
+            {"id": 41, "topic": "Baptism", "question": "The Greek word for baptism 'Baptizo' means:", "options": [{"letter": "A", "text": "To sprinkle"}, {"letter": "B", "text": "To submerge or immerse"}, {"letter": "C", "text": "To pour"}, {"letter": "D", "text": "To anoint"}], "correctAnswer": "B"},
+            {"id": 42, "topic": "Baptism", "question": "Water baptism is to be carried out in the name of:", "options": [{"letter": "A", "text": "Jesus only"}, {"letter": "B", "text": "The Holy Spirit only"}, {"letter": "C", "text": "The Father, the Son, and the Holy Spirit — Matthew 28:19"}, {"letter": "D", "text": "The local church authority"}], "correctAnswer": "C"},
+            {"id": 43, "topic": "Baptism", "question": "What is the immediate outward sign of Holy Spirit baptism according to Acts 2:4?", "options": [{"letter": "A", "text": "Falling under the power"}, {"letter": "B", "text": "Weeping and crying"}, {"letter": "C", "text": "Visions and dreams"}, {"letter": "D", "text": "Speaking in tongues"}], "correctAnswer": "D"},
+            {"id": 44, "topic": "Baptism", "question": "The agent of the Holy Spirit baptism is:", "options": [{"letter": "A", "text": "Jesus Christ — John 14:16-17"}, {"letter": "B", "text": "The pastor"}, {"letter": "C", "text": "The elders"}, {"letter": "D", "text": "The angels"}], "correctAnswer": "A"},
+            {"id": 45, "topic": "Baptism", "question": "According to Acts 5:32, the Holy Spirit is given to those who:", "options": [{"letter": "A", "text": "Fast for 40 days"}, {"letter": "B", "text": "Obey God"}, {"letter": "C", "text": "Pay their tithes"}, {"letter": "D", "text": "Attend church consistently"}], "correctAnswer": "B"},
+            {"id": 46, "topic": "Baptism", "question": "Water baptism is described in the course as:", "options": [{"letter": "A", "text": "Optional for believers"}, {"letter": "B", "text": "A means of salvation"}, {"letter": "C", "text": "A command — not optional so long as a believer is alive after conversion"}, {"letter": "D", "text": "Only for ordained ministers"}], "correctAnswer": "C"},
+            {"id": 47, "topic": "Prayer & Fasting", "question": "Prayer is defined in the course as:", "options": [{"letter": "A", "text": "Divine communication and fellowship with God"}, {"letter": "B", "text": "A religious ceremony in church"}, {"letter": "C", "text": "Repeating memorised words"}, {"letter": "D", "text": "Singing hymns and praises only"}], "correctAnswer": "A"},
+            {"id": 48, "topic": "Prayer & Fasting", "question": "According to Mark 9:29, some things can only come forth by:", "options": [{"letter": "A", "text": "Fasting only"}, {"letter": "B", "text": "Prayer and fasting"}, {"letter": "C", "text": "Prayer alone"}, {"letter": "D", "text": "The laying on of hands"}], "correctAnswer": "B"},
+            {"id": 49, "topic": "Prayer & Fasting", "question": "Which of the following is NOT listed as a type of prayer in the course?", "options": [{"letter": "A", "text": "Intercession"}, {"letter": "B", "text": "Thanksgiving"}, {"letter": "C", "text": "Supplication"}, {"letter": "D", "text": "Meditation"}], "correctAnswer": "D"},
+            {"id": 50, "topic": "Prayer & Fasting", "question": "Biblical fasting means:", "options": [{"letter": "A", "text": "Reducing food intake"}, {"letter": "B", "text": "Eating only fruits and vegetables"}, {"letter": "C", "text": "Abstaining from food and drinks for a period"}, {"letter": "D", "text": "Fasting from social media"}], "correctAnswer": "C"},
+            {"id": 51, "topic": "Prayer & Fasting", "question": "According to Isaiah 40:31, one of the advantages of fasting and waiting on the Lord is:", "options": [{"letter": "A", "text": "Renewing of strength"}, {"letter": "B", "text": "Instant answers to all prayers"}, {"letter": "C", "text": "Healing of all diseases"}, {"letter": "D", "text": "Financial breakthrough"}], "correctAnswer": "A"},
+            {"id": 52, "topic": "Prayer & Fasting", "question": "During fasting, married couples are instructed to abstain from sexual relations based on:", "options": [{"letter": "A", "text": "Church tradition"}, {"letter": "B", "text": "1 Corinthians 7:5"}, {"letter": "C", "text": "Leviticus 27:30"}, {"letter": "D", "text": "Genesis 2:24"}], "correctAnswer": "B"},
+            {"id": 53, "topic": "Prayer & Fasting", "question": "According to 1 Thessalonians 5:17, believers are commanded to pray:", "options": [{"letter": "A", "text": "Only on Sundays"}, {"letter": "B", "text": "Three times a day"}, {"letter": "C", "text": "During crises only"}, {"letter": "D", "text": "Without ceasing"}], "correctAnswer": "D"},
+            {"id": 54, "topic": "Prayer & Fasting", "question": "Which requirement for effective prayer involves praying in other tongues?", "options": [{"letter": "A", "text": "1 Corinthians 14:2,4,14-18 and Jude 20"}, {"letter": "B", "text": "James 5:14"}, {"letter": "C", "text": "Romans 10:9"}, {"letter": "D", "text": "Acts 2:38"}], "correctAnswer": "A"},
+            {"id": 55, "topic": "Prayer & Fasting", "question": "An 'Absolute Fast' is defined as:", "options": [{"letter": "A", "text": "Eating only once a day"}, {"letter": "B", "text": "Abstaining from meat only"}, {"letter": "C", "text": "Abstaining from food and water for a stipulated period"}, {"letter": "D", "text": "Fasting for 40 days without exception"}], "correctAnswer": "C"},
+            {"id": 56, "topic": "Divine Healing", "question": "According to 1 Peter 2:24, our healing was purchased through:", "options": [{"letter": "A", "text": "Our prayers and fasting"}, {"letter": "B", "text": "The stripes of Jesus Christ"}, {"letter": "C", "text": "The anointing oil"}, {"letter": "D", "text": "The laying on of hands by elders"}], "correctAnswer": "B"},
+            {"id": 57, "topic": "Divine Healing", "question": "The force behind sickness according to the course is:", "options": [{"letter": "A", "text": "Satan — Job 2:1-9; Luke 13:16"}, {"letter": "B", "text": "God's judgment only"}, {"letter": "C", "text": "Natural causes alone"}, {"letter": "D", "text": "Generational curses only"}], "correctAnswer": "A"},
+            {"id": 58, "topic": "Divine Healing", "question": "Which of the following is NOT listed as a source of illness in the course?", "options": [{"letter": "A", "text": "Sin"}, {"letter": "B", "text": "Curses and demonic attack"}, {"letter": "C", "text": "Malnutrition"}, {"letter": "D", "text": "Failure to attend church regularly"}], "correctAnswer": "D"},
+            {"id": 59, "topic": "Divine Healing", "question": "The course instructs that healing should be received free of charge based on:", "options": [{"letter": "A", "text": "Church policy"}, {"letter": "B", "text": "Common sense"}, {"letter": "C", "text": "Matthew 10:8 — 'Freely you have received, freely give'"}, {"letter": "D", "text": "The decision of church elders"}], "correctAnswer": "C"},
+            {"id": 60, "topic": "Divine Healing", "question": "Anointing the sick with oil and prayer of faith by elders is based on:", "options": [{"letter": "A", "text": "Mark 16:18 only"}, {"letter": "B", "text": "James 5:14-15"}, {"letter": "C", "text": "Acts 28:8 only"}, {"letter": "D", "text": "1 Corinthians 12:9"}], "correctAnswer": "B"},
+            {"id": 61, "topic": "Divine Healing", "question": "Healing without medicine is described in the course as:", "options": [{"letter": "A", "text": "Biblical — Matthew 4:23; Psalm 103:3"}, {"letter": "B", "text": "Dangerous and unscriptural"}, {"letter": "C", "text": "Only for special ministers"}, {"letter": "D", "text": "Limited to the apostolic age"}], "correctAnswer": "A"},
+            {"id": 62, "topic": "Divine Healing", "question": "Restitution in the course context is described as:", "options": [{"letter": "A", "text": "Receiving healing from God"}, {"letter": "B", "text": "Paying offerings in the church"}, {"letter": "C", "text": "Breaking evil covenants"}, {"letter": "D", "text": "A mark of true repentance — payment or restoration of what is damaged"}], "correctAnswer": "D"},
+            {"id": 63, "topic": "Deliverance", "question": "Deliverance is described as including all of the following EXCEPT:", "options": [{"letter": "A", "text": "Setting someone free"}, {"letter": "B", "text": "Breaking of yokes"}, {"letter": "C", "text": "Performing elaborate rituals with water and candles"}, {"letter": "D", "text": "Expelling demons"}], "correctAnswer": "C"},
+            {"id": 64, "topic": "Deliverance", "question": "According to the course, can a Christian's SPIRIT be inhabited by demons?", "options": [{"letter": "A", "text": "Yes, if the Christian is weak"}, {"letter": "B", "text": "No — the spirit is recreated at new birth and is the abode of God"}, {"letter": "C", "text": "Only under severe spiritual attack"}, {"letter": "D", "text": "Yes, if the Christian is backslidden"}], "correctAnswer": "B"},
+            {"id": 65, "topic": "Deliverance", "question": "The three major doorways that give Satan authority in a person's life are:", "options": [{"letter": "A", "text": "Covenants, curses, and sins"}, {"letter": "B", "text": "Poverty, sickness, and ignorance"}, {"letter": "C", "text": "Pride, envy, and hatred"}, {"letter": "D", "text": "Unbelief, doubt, and fear"}], "correctAnswer": "A"},
+            {"id": 66, "topic": "Deliverance", "question": "According to Proverbs 26:2, demons cannot possess or oppress a man without:", "options": [{"letter": "A", "text": "Permission from God"}, {"letter": "B", "text": "The man being very sinful"}, {"letter": "C", "text": "A cause"}, {"letter": "D", "text": "The man being unaware"}], "correctAnswer": "C"},
+            {"id": 67, "topic": "Deliverance", "question": "To stay delivered, the course recommends all of the following EXCEPT:", "options": [{"letter": "A", "text": "Living a holy life"}, {"letter": "B", "text": "Studying the Bible"}, {"letter": "C", "text": "Fellowship with Christians"}, {"letter": "D", "text": "Isolating yourself from other people"}], "correctAnswer": "D"},
+            {"id": 68, "topic": "Deliverance", "question": "The soul of a Christian CAN be oppressed by demons because:", "options": [{"letter": "A", "text": "The blood of Jesus wears off over time"}, {"letter": "B", "text": "The new birth is a rebirth of the spirit, not the soul"}, {"letter": "C", "text": "Christians are not fully protected"}, {"letter": "D", "text": "Prayer is not always effective"}], "correctAnswer": "B"},
+            {"id": 69, "topic": "Deliverance", "question": "Which of the following methods of deliverance is listed in the course?", "options": [{"letter": "A", "text": "Pleading the blood of Jesus and speaking in tongues"}, {"letter": "B", "text": "Special ritual washing in a river"}, {"letter": "C", "text": "Burning candles and holy water"}, {"letter": "D", "text": "Wearing a cross or special garment"}], "correctAnswer": "A"},
+            {"id": 70, "topic": "Deliverance", "question": "The memory verse for Deliverance II is found in:", "options": [{"letter": "A", "text": "John 8:32"}, {"letter": "B", "text": "Obadiah 1:17"}, {"letter": "C", "text": "Romans 12:1-2"}, {"letter": "D", "text": "Isaiah 10:27"}], "correctAnswer": "C"},
+            {"id": 71, "topic": "Quiet Time", "question": "Quiet time is defined as:", "options": [{"letter": "A", "text": "Silent prayer in church"}, {"letter": "B", "text": "Time set aside regularly to meet with God and communicate through the Living Word"}, {"letter": "C", "text": "Reading the Bible in bed at night"}, {"letter": "D", "text": "Attending midweek service"}], "correctAnswer": "B"},
+            {"id": 72, "topic": "Quiet Time", "question": "According to Daniel 6:10, how often should a believer observe quiet time at minimum?", "options": [{"letter": "A", "text": "At least once a day"}, {"letter": "B", "text": "Once a week"}, {"letter": "C", "text": "Every Sunday"}, {"letter": "D", "text": "Whenever convenient"}], "correctAnswer": "A"},
+            {"id": 73, "topic": "Quiet Time", "question": "The memory verse for Quiet Time is 1 Peter 2:2, which describes the desire for:", "options": [{"letter": "A", "text": "The power of God"}, {"letter": "B", "text": "Spiritual gifts"}, {"letter": "C", "text": "The sincere milk of the word to grow"}, {"letter": "D", "text": "Eternal life"}], "correctAnswer": "C"},
+            {"id": 74, "topic": "Quiet Time", "question": "Which of the following is NOT listed as a material required for quiet time?", "options": [{"letter": "A", "text": "A Holy Bible"}, {"letter": "B", "text": "A notebook and biro"}, {"letter": "C", "text": "A list of prayer points"}, {"letter": "D", "text": "A special prayer garment"}], "correctAnswer": "D"},
+            {"id": 75, "topic": "Quiet Time", "question": "The best time of day recommended for quiet time according to Psalm 63:1 is:", "options": [{"letter": "A", "text": "Early in the morning"}, {"letter": "B", "text": "At midday"}, {"letter": "C", "text": "In the evening"}, {"letter": "D", "text": "At midnight"}], "correctAnswer": "A"},
+            {"id": 76, "topic": "Quiet Time", "question": "Which of the following is described as an obstacle to effective quiet time?", "options": [{"letter": "A", "text": "Reading too much of the Bible"}, {"letter": "B", "text": "Haste, disturbance, and laziness"}, {"letter": "C", "text": "Praying in tongues"}, {"letter": "D", "text": "Having too many prayer points"}], "correctAnswer": "B"},
+            {"id": 77, "topic": "Character & Discipline", "question": "Malice is defined in the course as:", "options": [{"letter": "A", "text": "Telling lies about others"}, {"letter": "B", "text": "Being arrogant and proud"}, {"letter": "C", "text": "Having a desire to harm others or ill will"}, {"letter": "D", "text": "Failing to pay tithes"}], "correctAnswer": "C"},
+            {"id": 78, "topic": "Character & Discipline", "question": "Which scripture says 'It is a honour for a man to desist from strife'?", "options": [{"letter": "A", "text": "Proverbs 20:3"}, {"letter": "B", "text": "Proverbs 17:14"}, {"letter": "C", "text": "2 Timothy 2:24"}, {"letter": "D", "text": "Titus 3:9"}], "correctAnswer": "A"},
+            {"id": 79, "topic": "Character & Discipline", "question": "Unforgiveness can result in all the following EXCEPT:", "options": [{"letter": "A", "text": "Hindrance to prayers"}, {"letter": "B", "text": "Exposure to the devil the tormentor"}, {"letter": "C", "text": "Bitterness and revenge"}, {"letter": "D", "text": "Increased anointing and spiritual power"}], "correctAnswer": "D"},
+            {"id": 80, "topic": "Character & Discipline", "question": "According to Ecclesiastes 7:9, a person who is easily angry is described as:", "options": [{"letter": "A", "text": "Spiritually weak"}, {"letter": "B", "text": "Foolish"}, {"letter": "C", "text": "Under a curse"}, {"letter": "D", "text": "Backslidden"}], "correctAnswer": "B"},
+            {"id": 81, "topic": "Character & Discipline", "question": "The memory verse for Christian Conduct is 1 Corinthians 14:40 which says:", "options": [{"letter": "A", "text": "Love never fails"}, {"letter": "B", "text": "Pray without ceasing"}, {"letter": "C", "text": "Let all things be done decently and in order"}, {"letter": "D", "text": "Be sober and vigilant"}], "correctAnswer": "C"},
+            {"id": 82, "topic": "Character & Discipline", "question": "Which of the following is NOT listed as a cause of pride in the course?", "options": [{"letter": "A", "text": "Status and position"}, {"letter": "B", "text": "Knowledge and physical endowments"}, {"letter": "C", "text": "Spiritual gifts"}, {"letter": "D", "text": "Poverty and lack"}], "correctAnswer": "D"},
+            {"id": 83, "topic": "Character & Discipline", "question": "Gossip is described in the course as having all the following consequences EXCEPT:", "options": [{"letter": "A", "text": "Building stronger relationships"}, {"letter": "B", "text": "Betrayal of confidence"}, {"letter": "C", "text": "Character assassination"}, {"letter": "D", "text": "Separation of friends"}], "correctAnswer": "A"},
+            {"id": 84, "topic": "Character & Discipline", "question": "According to Ephesians 4:28, the instruction given to those who used to steal is to:", "options": [{"letter": "A", "text": "Make restitution to those they stole from"}, {"letter": "B", "text": "Fast and pray for forgiveness"}, {"letter": "C", "text": "Repent and steal no more but rather work"}, {"letter": "D", "text": "Publicly confess in the church"}], "correctAnswer": "C"},
+            {"id": 85, "topic": "Money, Tithes & Offering", "question": "Tithe is defined as:", "options": [{"letter": "A", "text": "Half of your income"}, {"letter": "B", "text": "One tenth of your total or gross income"}, {"letter": "C", "text": "A freewill offering"}, {"letter": "D", "text": "Whatever amount you choose to give"}], "correctAnswer": "B"},
+            {"id": 86, "topic": "Money, Tithes & Offering", "question": "According to Malachi 3:9, failure to pay tithes places a person:", "options": [{"letter": "A", "text": "Under a curse from the highest authority"}, {"letter": "B", "text": "Under church discipline only"}, {"letter": "C", "text": "In financial difficulty only"}, {"letter": "D", "text": "At risk of losing their job"}], "correctAnswer": "A"},
+            {"id": 87, "topic": "Money, Tithes & Offering", "question": "The difference between tithes and offerings is that:", "options": [{"letter": "A", "text": "Tithes are voluntary while offerings are compulsory"}, {"letter": "B", "text": "Offerings are ten percent of income"}, {"letter": "C", "text": "Tithe is a fixed tenth while offering is a gift given in addition to tithe"}, {"letter": "D", "text": "There is no difference"}], "correctAnswer": "C"},
+            {"id": 88, "topic": "Money, Tithes & Offering", "question": "According to the course, the only Bible-recommended debt for a Christian is:", "options": [{"letter": "A", "text": "A mortgage for a home"}, {"letter": "B", "text": "A business loan"}, {"letter": "C", "text": "Church building fund contributions"}, {"letter": "D", "text": "The debt of love — Romans 13:8"}], "correctAnswer": "D"},
+            {"id": 89, "topic": "Money, Tithes & Offering", "question": "Paying of tithes is described in the course as:", "options": [{"letter": "A", "text": "An optional act of worship"}, {"letter": "B", "text": "Not a sacrifice but returning to God what belongs to Him"}, {"letter": "C", "text": "A means of earning God's favour"}, {"letter": "D", "text": "Only relevant under the Old Testament law"}], "correctAnswer": "B"},
+            {"id": 90, "topic": "Money, Tithes & Offering", "question": "Fornication is defined in the course material as a sin that:", "options": [{"letter": "A", "text": "Is common but not acceptable to God"}, {"letter": "B", "text": "Is permissible before marriage"}, {"letter": "C", "text": "Is only physical and has no spiritual consequences"}, {"letter": "D", "text": "Is covered by God's grace automatically"}], "correctAnswer": "A"},
+            {"id": 91, "topic": "Relationship & Marriage", "question": "According to the course, divorce is permissible ONLY when:", "options": [{"letter": "A", "text": "There is persistent poverty or hardship"}, {"letter": "B", "text": "The couple no longer loves each other"}, {"letter": "C", "text": "A life partner has committed adultery — Matthew 5:31-32"}, {"letter": "D", "text": "The marriage was contracted outside the church"}], "correctAnswer": "C"},
+            {"id": 92, "topic": "Relationship & Marriage", "question": "The course states that no marriage should be contracted with:", "options": [{"letter": "A", "text": "Someone from a different tribe"}, {"letter": "B", "text": "Unbelievers — 2 Corinthians 6:14-17"}, {"letter": "C", "text": "Someone of a different denomination"}, {"letter": "D", "text": "Someone without a university degree"}], "correctAnswer": "B"},
+            {"id": 93, "topic": "Relationship & Marriage", "question": "According to Hebrews 13:4, marriage is described as:", "options": [{"letter": "A", "text": "Honourable in all"}, {"letter": "B", "text": "A necessary obligation"}, {"letter": "C", "text": "A secular arrangement"}, {"letter": "D", "text": "Optional for ministers"}], "correctAnswer": "A"},
+            {"id": 94, "topic": "End Times", "question": "The second coming of Christ will occur in how many stages?", "options": [{"letter": "A", "text": "One stage"}, {"letter": "B", "text": "Two stages"}, {"letter": "C", "text": "Three stages"}, {"letter": "D", "text": "Four stages"}], "correctAnswer": "B"},
+            {"id": 95, "topic": "End Times", "question": "The first phase of Christ's return involves:", "options": [{"letter": "A", "text": "The battle of Armageddon"}, {"letter": "B", "text": "The White Throne Judgment"}, {"letter": "C", "text": "The rapture of the saints to meet Christ in the sky"}, {"letter": "D", "text": "The millennial reign beginning immediately"}], "correctAnswer": "C"},
+            {"id": 96, "topic": "End Times", "question": "The Great Tribulation following the rapture will last for how long?", "options": [{"letter": "A", "text": "Seven years"}, {"letter": "B", "text": "Three and a half years"}, {"letter": "C", "text": "One thousand years"}, {"letter": "D", "text": "Forty-two days"}], "correctAnswer": "A"},
+            {"id": 97, "topic": "End Times", "question": "The Millennial Reign of Christ will last for:", "options": [{"letter": "A", "text": "7 years"}, {"letter": "B", "text": "100 years"}, {"letter": "C", "text": "Forever"}, {"letter": "D", "text": "1,000 years — Revelation 20:1-6"}], "correctAnswer": "D"},
+            {"id": 98, "topic": "End Times", "question": "The Great White Throne Judgment is for:", "options": [{"letter": "A", "text": "The angels who fell"}, {"letter": "B", "text": "All the wicked dead from Adam to the end of the millennium"}, {"letter": "C", "text": "Believers who did not tithe"}, {"letter": "D", "text": "Church leaders who failed in ministry"}], "correctAnswer": "B"},
+            {"id": 99, "topic": "End Times", "question": "The judgment seat of Christ (for believers) takes place:", "options": [{"letter": "A", "text": "After the millennial reign"}, {"letter": "B", "text": "At the moment of death"}, {"letter": "C", "text": "During the 7-year period between rapture and the second advent"}, {"letter": "D", "text": "At the Great White Throne"}], "correctAnswer": "C"},
+            {"id": 100, "topic": "End Times", "question": "According to 2 Peter 3:10-13, after the final judgment God will create:", "options": [{"letter": "A", "text": "A new Heaven and a new Earth"}, {"letter": "B", "text": "A restored version of the current earth"}, {"letter": "C", "text": "An improved Garden of Eden"}, {"letter": "D", "text": "A spiritual realm only"}], "correctAnswer": "A"}
+        ];
 
-  function selectAnswer(letter) {
-    const questions = JSON.parse(localStorage.getItem(`exam_${currentExamId}_questions`) || '[]');
-    const question = questions[currentExamIndex];
-    examAnswers[question.id] = letter;
-  }
+        // Exam Data
+        const examData = {
+            "examTitle": "ENVOYS SIT — STARTER PACK",
+            "totalQuestions": 100,
+            "duration": 120,
+            "questions": allQuestions
+        };
 
-  function nextQuestion() {
-    const questions = JSON.parse(localStorage.getItem(`exam_${currentExamId}_questions`) || '[]');
-    if (currentExamIndex < questions.length - 1) {
-      currentExamIndex++;
-      displayExamQuestion();
-    }
-  }
+        let currentUser = null;
+        let currentQuestionIndex = 0;
+        let answers = {};
+        let examStartTime = null;
+        let timerInterval = null;
+        let examSubmitted = false;
 
-  function previousQuestion() {
-    if (currentExamIndex > 0) {
-      currentExamIndex--;
-      displayExamQuestion();
-    }
-  }
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadUser();
+            setupEventListeners();
+            // Note: In production, load all 100 questions
+        });
 
-  function submitExam() {
-    const exam = exams.find(e => e.id === currentExamId);
-    const questions = JSON.parse(localStorage.getItem(`exam_${currentExamId}_questions`) || '[]');
+        function loadUser() {
+            const saved = localStorage.getItem('sitUser');
+            if (saved) {
+                currentUser = JSON.parse(saved);
+                showDashboard();
+            } else {
+                showLogin();
+            }
+        }
 
-    let correctCount = 0;
-    questions.forEach(q => {
-      if (examAnswers[q.id] === q.correct) correctCount++;
-    });
+        function setupEventListeners() {
+            document.getElementById('loginForm').addEventListener('submit', createAccount);
+            document.getElementById('startExamBtn').addEventListener('click', startExam);
+            document.getElementById('logoutBtn').addEventListener('click', logout);
+            document.getElementById('nextBtn').addEventListener('click', nextQuestion);
+            document.getElementById('prevBtn').addEventListener('click', previousQuestion);
+            document.getElementById('submitExamBtn').addEventListener('click', submitExam);
+            document.getElementById('retakeExamBtn').addEventListener('click', startExam);
+            document.getElementById('backToDashboardBtn').addEventListener('click', showDashboard);
+        }
 
-    const percentage = (correctCount / questions.length) * 100;
-    const status = percentage >= exam.passingScore ? 'PASSED' : 'FAILED';
+        function generateEnrollmentId() {
+            const year = new Date().getFullYear();
+            let counter = parseInt(localStorage.getItem('enrollmentCounter') || '0') + 1;
+            localStorage.setItem('enrollmentCounter', counter);
+            const enrollmentId = `SIT/${String(counter).padStart(3, '0')}/${year}`;
+            return enrollmentId;
+        }
 
-    const result = {
-      id: Date.now(),
-      userId: currentUser.id,
-      examId: currentExamId,
-      examName: exam.name,
-      score: correctCount,
-      total: questions.length,
-      percentage: percentage.toFixed(2),
-      status,
-      date: new Date().toLocaleDateString()
-    };
+        function createAccount(e) {
+            e.preventDefault();
+            const name = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
 
-    results.push(result);
-    localStorage.setItem('results', JSON.stringify(results));
+            if (!name || !email) {
+                alert('Please fill in all fields');
+                return;
+            }
 
-    alert(`Exam Submitted!\nScore: ${correctCount}/${questions.length} (${percentage.toFixed(2)}%)\nStatus: ${status}`);
-    showPage('results');
-  }
+            currentUser = {
+                id: Date.now(),
+                name: name,
+                email: email,
+                enrollmentId: generateEnrollmentId(),
+                createdAt: new Date().toISOString(),
+                attempts: [],
+                bestScore: 0
+            };
 
-  function loadResults() {
-    const resultsList = document.getElementById('resultsList');
-    const userResults = results.filter(r => r.userId === currentUser.id).sort((a, b) => b.id - a.id);
+            localStorage.setItem('sitUser', JSON.stringify(currentUser));
+            showDashboard();
+        }
 
-    if (!userResults.length) {
-      resultsList.innerHTML = '<p>No exam results yet. Take your first exam!</p>';
-      return;
-    }
+        function logout() {
+            currentUser = null;
+            localStorage.removeItem('sitUser');
+            answers = {};
+            currentQuestionIndex = 0;
+            showLogin();
+        }
 
-    let html = `
-      <table class="results-table">
-        <thead>
-          <tr>
-            <th>Exam</th>
-            <th>Score</th>
-            <th>Percentage</th>
-            <th>Status</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody>
-    `;
+        function showLogin() {
+            hide('#dashboardSection', '#examSection', '#resultsSection');
+            show('#loginSection');
+            document.getElementById('loginForm').reset();
+        }
 
-    userResults.forEach(r => {
-      html += `
-        <tr class="${r.status.toLowerCase()}">
-          <td>${r.examName}</td>
-          <td>${r.score}/${r.total}</td>
-          <td>${r.percentage}%</td>
-          <td><span class="status-badge status-${r.status.toLowerCase()}">${r.status}</span></td>
-          <td>${r.date}</td>
-        </tr>
-      `;
-    });
+        function showDashboard() {
+            hide('#loginSection', '#examSection', '#resultsSection');
+            show('#dashboardSection');
+            document.getElementById('displayName').textContent = currentUser.name.split(' ')[0];
+            document.getElementById('enrollmentDisplay').textContent = currentUser.enrollmentId;
+            if (currentUser.bestScore > 0) {
+                document.getElementById('currentScore').textContent = currentUser.bestScore;
+            }
+        }
 
-    html += '</tbody></table>';
-    resultsList.innerHTML = html;
-  }
+        function startExam() {
+            examSubmitted = false;
+            currentQuestionIndex = 0;
+            answers = {};
+            examStartTime = Date.now();
+            show('#examSection');
+            hide('#loginSection', '#dashboardSection', '#resultsSection');
+            document.getElementById('submitExamBtn').classList.remove('hidden');
+            renderQuestion();
+            startTimer();
+        }
 
-  function logout() {
-    currentUser = null;
-    localStorage.removeItem('currentUser');
-    showPage('login');
-  }
-</script>
+        function renderQuestion() {
+            const question = examData.questions[currentQuestionIndex];
+            const container = document.getElementById('questionContainer');
 
+            let html = `
+                <div class="topic-badge">${question.topic}</div>
+                <div class="question-number">Question ${question.id} of ${examData.questions.length}</div>
+                <div class="question-text">${question.question}</div>
+                <div class="options">
+            `;
+
+            question.options.forEach(option => {
+                const isSelected = answers[currentQuestionIndex] === option.letter;
+                html += `
+                    <label class="option ${isSelected ? 'selected' : ''}">
+                        <input type="radio" name="answer" value="${option.letter}" ${isSelected ? 'checked' : ''}>
+                        <span><strong>${option.letter}.</strong> ${option.text}</span>
+                    </label>
+                `;
+            });
+
+            html += '</div>';
+            container.innerHTML = html;
+
+            // Add event listeners to radio buttons
+            container.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    answers[currentQuestionIndex] = this.value;
+                    renderQuestion(); // Re-render to show selection
+                });
+            });
+
+            updateProgress();
+            updateButtons();
+        }
+
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestionIndex === 0;
+            document.getElementById('nextBtn').disabled = currentQuestionIndex === examData.questions.length - 1;
+        }
+
+        function updateProgress() {
+            const progress = ((currentQuestionIndex + 1) / examData.questions.length) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+            document.getElementById('questionCounter').textContent = `${currentQuestionIndex + 1} / ${examData.questions.length}`;
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < examData.questions.length - 1) {
+                currentQuestionIndex++;
+                renderQuestion();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                renderQuestion();
+            }
+        }
+
+        function startTimer() {
+            let timeRemaining = examData.duration * 60;
+            updateTimerDisplay(timeRemaining);
+
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                updateTimerDisplay(timeRemaining);
+
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    submitExam();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            document.getElementById('timerDisplay').textContent = 
+                `${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }
+
+        function submitExam() {
+            clearInterval(timerInterval);
+            examSubmitted = true;
+
+            let correct = 0;
+            let unanswered = 0;
+            const detailedResults = [];
+
+            examData.questions.forEach((question, index) => {
+                const answer = answers[index];
+                const isCorrect = answer === question.correctAnswer;
+                
+                if (!answer) {
+                    unanswered++;
+                } else if (isCorrect) {
+                    correct++;
+                }
+
+                detailedResults.push({
+                    id: question.id,
+                    question: question.question,
+                    userAnswer: answer || 'No Answer',
+                    correctAnswer: question.correctAnswer,
+                    isCorrect: isCorrect
+                });
+            });
+
+            const incorrect = examData.questions.length - correct - unanswered;
+            const percentage = Math.round((correct / examData.questions.length) * 100);
+
+            // Save attempt
+            const attempt = {
+                date: new Date().toISOString(),
+                score: correct,
+                percentage: percentage,
+                duration: examData.duration
+            };
+            currentUser.attempts.push(attempt);
+            if (percentage > currentUser.bestScore) {
+                currentUser.bestScore = percentage;
+            }
+            localStorage.setItem('sitUser', JSON.stringify(currentUser));
+
+            showResults(correct, incorrect, unanswered, percentage, detailedResults);
+        }
+
+        function showResults(correct, incorrect, unanswered, percentage, details) {
+            hide('#loginSection', '#dashboardSection', '#examSection');
+            show('#resultsSection');
+
+            document.getElementById('finalScore').textContent = correct;
+            document.getElementById('scorePercentage').textContent = `${percentage}% Correct`;
+            document.getElementById('correctCount').textContent = correct;
+            document.getElementById('incorrectCount').textContent = incorrect;
+            document.getElementById('unansweredCount').textContent = unanswered;
+
+            let message = '';
+            if (percentage >= 80) {
+                message = '🎉 Excellent! You passed with flying colors!';
+            } else if (percentage >= 70) {
+                message = '👍 Great job! You passed the exam.';
+            } else if (percentage >= 60) {
+                message = '✅ You passed! But review the material for improvement.';
+            } else {
+                message = '📚 Keep studying. Retake the exam after reviewing the material.';
+            }
+            document.getElementById('scoreMessage').textContent = message;
+
+            // Show detailed results (limited)
+            const resultsHtml = '<h3 style="margin-bottom: 20px; color: var(--primary);">Review Your Answers</h3>' + 
+                details.slice(0, 10).map((d, i) => `
+                    <div style="margin-bottom: 15px; padding: 15px; background: ${d.isCorrect ? '#dcfce7' : '#fee2e2'}; border-radius: 8px;">
+                        <strong>Q${d.id}:</strong> ${d.question}<br>
+                        Your answer: ${d.userAnswer} ${d.isCorrect ? '✓' : '✗'}<br>
+                        Correct answer: ${d.correctAnswer}
+                    </div>
+                `).join('') + (details.length > 10 ? `<p style="text-align: center; color: #6b7280; margin-top: 20px;">+ ${details.length - 10} more questions</p>` : '');
+            document.getElementById('detailedResults').innerHTML = resultsHtml;
+        }
+
+        function show(...elements) {
+            elements.forEach(el => document.querySelector(el).style.display = 'block');
+        }
+
+        function hide(...elements) {
+            elements.forEach(el => document.querySelector(el).style.display = 'none');
+        }
+    </script>
 </body>
 </html>

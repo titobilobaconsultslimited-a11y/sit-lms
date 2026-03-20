@@ -1,0 +1,2424 @@
+﻿{
+    "topics":  [
+                   "The Bible",
+                   "God \u0026 Trinity",
+                   "About the Devil",
+                   "About Man",
+                   "Personal Transformation",
+                   "Baptism",
+                   "Prayer \u0026 Fasting",
+                   "Divine Healing",
+                   "Deliverance",
+                   "Quiet Time",
+                   "Character \u0026 Discipline",
+                   "Money \u0026 Tithes",
+                   "Marriage",
+                   "End Times"
+               ],
+    "totalQuestions":  100,
+    "duration":  120,
+    "examDescription":  "100 Objective Questions on Biblical Studies",
+    "questions":  [
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "God",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Man",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "The Church",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "The Apostles",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  1,
+                          "question":  "According to 2 Timothy 3:16-17, all scripture is given by inspiration of:",
+                          "topic":  "The Bible"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "39",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "27",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "66",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "73",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  2,
+                          "question":  "How many books are contained in the Bible in total?",
+                          "topic":  "The Bible"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "27",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "39",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "46",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "66",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  3,
+                          "question":  "How many books are in the Old Testament?",
+                          "topic":  "The Bible"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "It was written by kings",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "It is the oldest book",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "It was approved by the church",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "The teachings and conducts of every believer are established in it",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  4,
+                          "question":  "The Bible is described as the CONSTITUTION of every believer because:",
+                          "topic":  "The Bible"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "A lamp to my feet and a light to my path",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "A sword in my hands",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "A shield and buckler",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "A river of life",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  5,
+                          "question":  "According to Psalm 119:105, the word of God is described as:",
+                          "topic":  "The Bible"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "John 3:16",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Matthew 5:17",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Deuteronomy 4:2 and Revelation 22:18-19",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Romans 1:16",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  6,
+                          "question":  "Which scripture warns against adding to or subtracting from the word of God?",
+                          "topic":  "The Bible"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Future prophecies only",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "The mysteries contained in the Old Testament",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "The laws of Moses",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "The history of Israel",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  7,
+                          "question":  "The New Testament is described as the revelation of:",
+                          "topic":  "The Bible"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Read the Bible casually",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Attend church regularly",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Give tithes and offerings",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Study the Bible diligently — 2 Timothy 2:15",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  8,
+                          "question":  "To be approved of God, a believer is instructed to:",
+                          "topic":  "The Bible"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Holy",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "True",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Changeable",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Immutable",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  9,
+                          "question":  "The doctrines of the Bible are described as all of the following EXCEPT:",
+                          "topic":  "The Bible"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Jesus Christ",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "The Holy Spirit",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "The angels",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "The prophets",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  10,
+                          "question":  "According to John 1:1, the word of God is identified with:",
+                          "topic":  "The Bible"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "God and His angels",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Three divine persons in one unified Godhead",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "The Father and the Son only",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "God and all believers",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  11,
+                          "question":  "Trinity means the union of:",
+                          "topic":  "About God \u0026 Trinity"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Genesis 1:26",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Genesis 2:7",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "John 1:1",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Isaiah 6:8",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  12,
+                          "question":  "Which scripture records God saying \u0027Let us make man in our image\u0027?",
+                          "topic":  "About God \u0026 Trinity"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "A force or energy",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "An angel",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "The third person in the Trinity",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "A created being",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  13,
+                          "question":  "The Holy Spirit is described as:",
+                          "topic":  "About God \u0026 Trinity"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "John 3:16",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Romans 8:11",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Acts 2:4",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Matthew 3:13-17",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  14,
+                          "question":  "Which scripture is used to support the doctrine of the Trinity at the baptism of Jesus?",
+                          "topic":  "About God \u0026 Trinity"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "God",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "The angels",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Nature",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "The Holy Spirit alone",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  15,
+                          "question":  "According to John 5:26, every creature receives life from:",
+                          "topic":  "About God \u0026 Trinity"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Regeneration of man",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Sanctification of born-again souls",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Creating the physical universe alone",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Empowering believers — Acts 1:8",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  16,
+                          "question":  "The work of the Holy Spirit DOES NOT include:",
+                          "topic":  "About God \u0026 Trinity"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "A great prophet only",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "God revealed in flesh — John 1:14",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "An angel sent from heaven",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "A created being",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  17,
+                          "question":  "Jesus Christ is described in the course material as:",
+                          "topic":  "About God \u0026 Trinity"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "The Lord Jesus Christ, God, and the Holy Spirit",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "The Father, Moses, and the Holy Spirit",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Jesus, the angels, and the church",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "God, the prophets, and the apostles",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  18,
+                          "question":  "The benediction in 2 Corinthians 13:14 references all three persons of the Trinity. Which is CORRECTLY listed?",
+                          "topic":  "About God \u0026 Trinity"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "A simple truth that everyone understands",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "A man-made doctrine",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Only relevant to theologians",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "A great mystery and a revealed truth — Deuteronomy 29:29",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  19,
+                          "question":  "According to the course, the doctrine of the Trinity is described as:",
+                          "topic":  "About God \u0026 Trinity"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "39",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "20",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "27",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "33",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  20,
+                          "question":  "How many books are in the New Testament?",
+                          "topic":  "About God \u0026 Trinity"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Beelzebub",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Lucifer",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Apollyon",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Abaddon",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  21,
+                          "question":  "What was the original name of the devil when he was an archangel in Heaven?",
+                          "topic":  "About the Devil"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Pride",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Lying",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Stealing",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Disobedience to creation orders",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  22,
+                          "question":  "According to the course, the devil was expelled from Heaven because of:",
+                          "topic":  "About the Devil"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "7 years",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "100 years",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "1,000 years",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Eternity immediately",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  23,
+                          "question":  "According to Revelation 20:1-3, the devil will be chained in the bottomless pit for:",
+                          "topic":  "About the Devil"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "A murderer",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "A deceiver",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "A tempter",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "An all-powerful being",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  24,
+                          "question":  "The Bible describes the devil as all of the following EXCEPT:",
+                          "topic":  "About the Devil"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Submit to God and resist the devil",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Ignore the devil completely",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Pray and fast for 40 days",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Consult a spiritual leader",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  25,
+                          "question":  "According to James 4:7, how should a believer deal with the devil?",
+                          "topic":  "About the Devil"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "A wolf in sheep\u0027s clothing",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "A roaring lion seeking whom he may devour",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "A thief in the night",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "A snake in the grass",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  26,
+                          "question":  "According to 1 Peter 5:8, the devil walks about as:",
+                          "topic":  "About the Devil"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Death only",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Sin only",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Sin, sickness, and death — John 10:10",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Poverty and failure only",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  27,
+                          "question":  "The devil is described as the author of:",
+                          "topic":  "About the Devil"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "A third part",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Half",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "A quarter",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Two thirds",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  28,
+                          "question":  "What fraction of the angels rebelled with Lucifer in Heaven?",
+                          "topic":  "About the Devil"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Mind, heart, and body",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Body, soul, and spirit",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Flesh, blood, and bone",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Reason, emotion, and will",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  29,
+                          "question":  "According to Genesis 2:7, man is made up of which three parts?",
+                          "topic":  "About Man"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Worship God alone",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Build the church",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Write the scriptures",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Take control over all other creatures on God\u0027s behalf — Genesis 1:26-28",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  30,
+                          "question":  "Man is described in the course as God\u0027s ambassador on earth to:",
+                          "topic":  "About Man"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "First day",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Third day",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Eighth day — Luke 2:21",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Fortieth day",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  31,
+                          "question":  "According to the course, a child should be named on which day after birth?",
+                          "topic":  "About Man"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Godly sorrow for sin with a decision to abstain from them",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Going to confession in church",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Performing religious rituals",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Reading the Bible daily",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  32,
+                          "question":  "Repentance is defined in the course as:",
+                          "topic":  "Personal Transformation"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "As saints who have suffered",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "As though we have never sinned",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "With our good works as evidence",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Through the merit of our ancestors",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  33,
+                          "question":  "Justification means being declared righteous such that we stand before God:",
+                          "topic":  "Personal Transformation"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Water baptism in a river",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Attending Bible school",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Total separation from sin and worldliness unto God",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Becoming a church elder",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  34,
+                          "question":  "Sanctification means:",
+                          "topic":  "Personal Transformation"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Being religious or churchy",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Keeping the Law",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Being educated and cultured",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Receiving God\u0027s life and righteousness by faith",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  35,
+                          "question":  "According to the course, ALL of the following are UNSCRIPTURAL meanings of the New Birth EXCEPT:",
+                          "topic":  "Personal Transformation"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "2 Corinthians 5:17",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "John 3:16",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Romans 8:1",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Acts 4:12",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  36,
+                          "question":  "The memory verse for Understanding the New Birth (Study II) is found in:",
+                          "topic":  "Personal Transformation"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Only physical death entering the world",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Sin entering into all men",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "The loss of the scriptures",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "The creation of angels",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  37,
+                          "question":  "According to Romans 5:12, the fall of man through Adam resulted in:",
+                          "topic":  "Personal Transformation"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "A changed life",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "An overcoming life",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Witness of the Spirit",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Speaking in tongues immediately at conversion",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  38,
+                          "question":  "Which of the following is NOT listed as an evidence of the New Birth?",
+                          "topic":  "Personal Transformation"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "One",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Two",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Three",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Four",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  39,
+                          "question":  "How many types of baptism must every true believer undergo according to the course?",
+                          "topic":  "Baptism"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "The Holy Spirit",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "The pastor",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "The elders of the church",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "The believer himself",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  40,
+                          "question":  "The agent who carries out baptism INTO CHRIST at salvation is:",
+                          "topic":  "Baptism"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "To sprinkle",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "To submerge or immerse",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "To pour",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "To anoint",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  41,
+                          "question":  "The Greek word for baptism \u0027Baptizo\u0027 means:",
+                          "topic":  "Baptism"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Jesus only",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "The Holy Spirit only",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "The Father, the Son, and the Holy Spirit — Matthew 28:19",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "The local church authority",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  42,
+                          "question":  "Water baptism is to be carried out in the name of:",
+                          "topic":  "Baptism"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Falling under the power",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Weeping and crying",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Visions and dreams",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Speaking in tongues",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  43,
+                          "question":  "What is the immediate outward sign of Holy Spirit baptism according to Acts 2:4?",
+                          "topic":  "Baptism"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Jesus Christ — John 14:16-17",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "The pastor",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "The elders",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "The angels",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  44,
+                          "question":  "The agent of the Holy Spirit baptism is:",
+                          "topic":  "Baptism"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Fast for 40 days",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Obey God",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Pay their tithes",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Attend church consistently",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  45,
+                          "question":  "According to Acts 5:32, the Holy Spirit is given to those who:",
+                          "topic":  "Baptism"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Optional for believers",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "A means of salvation",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "A command — not optional so long as a believer is alive after conversion",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Only for ordained ministers",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  46,
+                          "question":  "Water baptism is described in the course as:",
+                          "topic":  "Baptism"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Divine communication and fellowship with God",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "A religious ceremony in church",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Repeating memorised words",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Singing hymns and praises only",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  47,
+                          "question":  "Prayer is defined in the course as:",
+                          "topic":  "Prayer \u0026 Fasting"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Fasting only",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Prayer and fasting",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Prayer alone",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "The laying on of hands",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  48,
+                          "question":  "According to Mark 9:29, some things can only come forth by:",
+                          "topic":  "Prayer \u0026 Fasting"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Intercession",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Thanksgiving",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Supplication",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Meditation",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  49,
+                          "question":  "Which of the following is NOT listed as a type of prayer in the course?",
+                          "topic":  "Prayer \u0026 Fasting"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Reducing food intake",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Eating only fruits and vegetables",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Abstaining from food and drinks for a period",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Fasting from social media",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  50,
+                          "question":  "Biblical fasting means:",
+                          "topic":  "Prayer \u0026 Fasting"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Renewing of strength",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Instant answers to all prayers",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Healing of all diseases",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Financial breakthrough",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  51,
+                          "question":  "According to Isaiah 40:31, one of the advantages of fasting and waiting on the Lord is:",
+                          "topic":  "Prayer \u0026 Fasting"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Church tradition",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "1 Corinthians 7:5",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Leviticus 27:30",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Genesis 2:24",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  52,
+                          "question":  "During fasting, married couples are instructed to abstain from sexual relations based on:",
+                          "topic":  "Prayer \u0026 Fasting"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Only on Sundays",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Three times a day",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "During crises only",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Without ceasing",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  53,
+                          "question":  "According to 1 Thessalonians 5:17, believers are commanded to pray:",
+                          "topic":  "Prayer \u0026 Fasting"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "1 Corinthians 14:2,4,14-18 and Jude 20",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "James 5:14",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Romans 10:9",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Acts 2:38",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  54,
+                          "question":  "Which requirement for effective prayer involves praying in other tongues?",
+                          "topic":  "Prayer \u0026 Fasting"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Eating only once a day",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Abstaining from meat only",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Abstaining from food and water for a stipulated period",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Fasting for 40 days without exception",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  55,
+                          "question":  "An \u0027Absolute Fast\u0027 is defined as:",
+                          "topic":  "Prayer \u0026 Fasting"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Our prayers and fasting",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "The stripes of Jesus Christ",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "The anointing oil",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "The laying on of hands by elders",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  56,
+                          "question":  "According to 1 Peter 2:24, our healing was purchased through:",
+                          "topic":  "Divine Healing"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Satan — Job 2:1-9; Luke 13:16",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "God\u0027s judgment only",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Natural causes alone",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Generational curses only",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  57,
+                          "question":  "The force behind sickness according to the course is:",
+                          "topic":  "Divine Healing"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Sin",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Curses and demonic attack",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Malnutrition",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Failure to attend church regularly",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  58,
+                          "question":  "Which of the following is NOT listed as a source of illness in the course?",
+                          "topic":  "Divine Healing"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Church policy",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Common sense",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Matthew 10:8 — \u0027Freely you have received, freely give\u0027",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "The decision of church elders",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  59,
+                          "question":  "The course instructs that healing should be received free of charge based on:",
+                          "topic":  "Divine Healing"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Mark 16:18 only",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "James 5:14-15",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Acts 28:8 only",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "1 Corinthians 12:9",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  60,
+                          "question":  "Anointing the sick with oil and prayer of faith by elders is based on:",
+                          "topic":  "Divine Healing"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Biblical — Matthew 4:23; Psalm 103:3",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Dangerous and unscriptural",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Only for special ministers",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Limited to the apostolic age",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  61,
+                          "question":  "Healing without medicine is described in the course as:",
+                          "topic":  "Divine Healing"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Receiving healing from God",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Paying offerings in the church",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Breaking evil covenants",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "A mark of true repentance — payment or restoration of what is damaged",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  62,
+                          "question":  "Restitution in the course context is described as:",
+                          "topic":  "Divine Healing"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Setting someone free",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Breaking of yokes",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Performing elaborate rituals with water and candles",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Expelling demons",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  63,
+                          "question":  "Deliverance is described as including all of the following EXCEPT:",
+                          "topic":  "Deliverance"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Yes, if the Christian is weak",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "No — the spirit is recreated at new birth and is the abode of God",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Only under severe spiritual attack",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Yes, if the Christian is backslidden",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  64,
+                          "question":  "According to the course, can a Christian\u0027s SPIRIT be inhabited by demons?",
+                          "topic":  "Deliverance"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Covenants, curses, and sins",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Poverty, sickness, and ignorance",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Pride, envy, and hatred",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Unbelief, doubt, and fear",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  65,
+                          "question":  "The three major doorways that give Satan authority in a person\u0027s life are:",
+                          "topic":  "Deliverance"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Permission from God",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "The man being very sinful",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "A cause",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "The man being unaware",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  66,
+                          "question":  "According to Proverbs 26:2, demons cannot possess or oppress a man without:",
+                          "topic":  "Deliverance"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Living a holy life",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Studying the Bible",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Fellowship with Christians",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Isolating yourself from other people",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  67,
+                          "question":  "To stay delivered, the course recommends all of the following EXCEPT:",
+                          "topic":  "Deliverance"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "The blood of Jesus wears off over time",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "The new birth is a rebirth of the spirit, not the soul",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Christians are not fully protected",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Prayer is not always effective",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  68,
+                          "question":  "The soul of a Christian CAN be oppressed by demons because:",
+                          "topic":  "Deliverance"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Pleading the blood of Jesus and speaking in tongues",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Special ritual washing in a river",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Burning candles and holy water",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Wearing a cross or special garment",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  69,
+                          "question":  "Which of the following methods of deliverance is listed in the course?",
+                          "topic":  "Deliverance"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "John 8:32",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Obadiah 1:17",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Romans 12:1-2",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Isaiah 10:27",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  70,
+                          "question":  "The memory verse for Deliverance II is found in:",
+                          "topic":  "Deliverance"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Silent prayer in church",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Time set aside regularly to meet with God and communicate through the Living Word",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Reading the Bible in bed at night",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Attending midweek service",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  71,
+                          "question":  "Quiet time is defined as:",
+                          "topic":  "Quiet Time"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "At least once a day",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Once a week",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Every Sunday",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Whenever convenient",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  72,
+                          "question":  "According to Daniel 6:10, how often should a believer observe quiet time at minimum?",
+                          "topic":  "Quiet Time"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "The power of God",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Spiritual gifts",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "The sincere milk of the word to grow",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Eternal life",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  73,
+                          "question":  "The memory verse for Quiet Time is 1 Peter 2:2, which describes the desire for:",
+                          "topic":  "Quiet Time"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "A Holy Bible",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "A notebook and biro",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "A list of prayer points",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "A special prayer garment",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  74,
+                          "question":  "Which of the following is NOT listed as a material required for quiet time?",
+                          "topic":  "Quiet Time"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Early in the morning",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "At midday",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "In the evening",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "At midnight",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  75,
+                          "question":  "The best time of day recommended for quiet time according to Psalm 63:1 is:",
+                          "topic":  "Quiet Time"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Reading too much of the Bible",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Haste, disturbance, and laziness",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Praying in tongues",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Having too many prayer points",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  76,
+                          "question":  "Which of the following is described as an obstacle to effective quiet time?",
+                          "topic":  "Quiet Time"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Telling lies about others",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Being arrogant and proud",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Having a desire to harm others or ill will",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Failing to pay tithes",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  77,
+                          "question":  "Malice is defined in the course as:",
+                          "topic":  "Character \u0026 Discipline"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Proverbs 20:3",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Proverbs 17:14",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "2 Timothy 2:24",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Titus 3:9",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  78,
+                          "question":  "Which scripture says \u0027It is a honour for a man to desist from strife\u0027?",
+                          "topic":  "Character \u0026 Discipline"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Hindrance to prayers",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Exposure to the devil the tormentor",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Bitterness and revenge",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Increased anointing and spiritual power",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  79,
+                          "question":  "Unforgiveness can result in all the following EXCEPT:",
+                          "topic":  "Character \u0026 Discipline"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Spiritually weak",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Foolish",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Under a curse",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Backslidden",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  80,
+                          "question":  "According to Ecclesiastes 7:9, a person who is easily angry is described as:",
+                          "topic":  "Character \u0026 Discipline"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Love never fails",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Pray without ceasing",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Let all things be done decently and in order",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Be sober and vigilant",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  81,
+                          "question":  "The memory verse for Christian Conduct is 1 Corinthians 14:40 which says:",
+                          "topic":  "Character \u0026 Discipline"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Status and position",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Knowledge and physical endowments",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Spiritual gifts",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Poverty and lack",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  82,
+                          "question":  "Which of the following is NOT listed as a cause of pride in the course?",
+                          "topic":  "Character \u0026 Discipline"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Building stronger relationships",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Betrayal of confidence",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Character assassination",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Separation of friends",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  83,
+                          "question":  "Gossip is described in the course as having all the following consequences EXCEPT:",
+                          "topic":  "Character \u0026 Discipline"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Make restitution to those they stole from",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Fast and pray for forgiveness",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Repent and steal no more but rather work",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Publicly confess in the church",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  84,
+                          "question":  "According to Ephesians 4:28, the instruction given to those who used to steal is to:",
+                          "topic":  "Character \u0026 Discipline"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Half of your income",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "One tenth of your total or gross income",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "A freewill offering",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Whatever amount you choose to give",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  85,
+                          "question":  "Tithe is defined as:",
+                          "topic":  "Money, Tithes \u0026 Offering"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Under a curse from the highest authority",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Under church discipline only",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "In financial difficulty only",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "At risk of losing their job",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  86,
+                          "question":  "According to Malachi 3:9, failure to pay tithes places a person:",
+                          "topic":  "Money, Tithes \u0026 Offering"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Tithes are voluntary while offerings are compulsory",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Offerings are ten percent of income",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Tithe is a fixed tenth while offering is a gift given in addition to tithe",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "There is no difference",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  87,
+                          "question":  "The difference between tithes and offerings is that:",
+                          "topic":  "Money, Tithes \u0026 Offering"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "A mortgage for a home",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "A business loan",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Church building fund contributions",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "The debt of love — Romans 13:8",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  88,
+                          "question":  "According to the course, the only Bible-recommended debt for a Christian is:",
+                          "topic":  "Money, Tithes \u0026 Offering"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "An optional act of worship",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Not a sacrifice but returning to God what belongs to Him",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "A means of earning God\u0027s favour",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Only relevant under the Old Testament law",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  89,
+                          "question":  "Paying of tithes is described in the course as:",
+                          "topic":  "Money, Tithes \u0026 Offering"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Is common but not acceptable to God",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Is permissible before marriage",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Is only physical and has no spiritual consequences",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Is covered by God\u0027s grace automatically",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  90,
+                          "question":  "Fornication is defined in the course material as a sin that:",
+                          "topic":  "Money, Tithes \u0026 Offering"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "There is persistent poverty or hardship",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "The couple no longer loves each other",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "A life partner has committed adultery — Matthew 5:31-32",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "The marriage was contracted outside the church",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  91,
+                          "question":  "According to the course, divorce is permissible ONLY when:",
+                          "topic":  "Relationship \u0026 Marriage"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Someone from a different tribe",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Unbelievers — 2 Corinthians 6:14-17",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Someone of a different denomination",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Someone without a university degree",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  92,
+                          "question":  "The course states that no marriage should be contracted with:",
+                          "topic":  "Relationship \u0026 Marriage"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Honourable in all",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "A necessary obligation",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "A secular arrangement",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Optional for ministers",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  93,
+                          "question":  "According to Hebrews 13:4, marriage is described as:",
+                          "topic":  "Relationship \u0026 Marriage"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "One stage",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Two stages",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Three stages",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Four stages",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  94,
+                          "question":  "The second coming of Christ will occur in how many stages?",
+                          "topic":  "End Times"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "The battle of Armageddon",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "The White Throne Judgment",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "The rapture of the saints to meet Christ in the sky",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "The millennial reign beginning immediately",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  95,
+                          "question":  "The first phase of Christ\u0027s return involves:",
+                          "topic":  "End Times"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "Seven years",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "Three and a half years",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "One thousand years",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Forty-two days",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  96,
+                          "question":  "The Great Tribulation following the rapture will last for how long?",
+                          "topic":  "End Times"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "7 years",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "100 years",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Forever",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "1,000 years — Revelation 20:1-6",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "D",
+                          "id":  97,
+                          "question":  "The Millennial Reign of Christ will last for:",
+                          "topic":  "End Times"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "The angels who fell",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "All the wicked dead from Adam to the end of the millennium",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "Believers who did not tithe",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "Church leaders who failed in ministry",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "B",
+                          "id":  98,
+                          "question":  "The Great White Throne Judgment is for:",
+                          "topic":  "End Times"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "After the millennial reign",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "At the moment of death",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "During the 7-year period between rapture and the second advent",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "At the Great White Throne",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "C",
+                          "id":  99,
+                          "question":  "The judgment seat of Christ (for believers) takes place:",
+                          "topic":  "End Times"
+                      },
+                      {
+                          "options":  [
+                                          {
+                                              "text":  "A new Heaven and a new Earth",
+                                              "letter":  "A"
+                                          },
+                                          {
+                                              "text":  "A restored version of the current earth",
+                                              "letter":  "B"
+                                          },
+                                          {
+                                              "text":  "An improved Garden of Eden",
+                                              "letter":  "C"
+                                          },
+                                          {
+                                              "text":  "A spiritual realm only",
+                                              "letter":  "D"
+                                          }
+                                      ],
+                          "correctAnswer":  "A",
+                          "id":  100,
+                          "question":  "According to 2 Peter 3:10-13, after the final judgment God will create:",
+                          "topic":  "End Times"
+                      }
+                  ],
+    "examTitle":  "ENVOYS SIT  STARTER PACK"
+}
