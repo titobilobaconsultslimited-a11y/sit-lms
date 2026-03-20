@@ -550,13 +550,27 @@
         });
 
         function loadUser() {
-            const saved = localStorage.getItem('sitUser');
+            const saved = localStorage.getItem('sitCurrentUser');
             if (saved) {
                 currentUser = JSON.parse(saved);
                 showDashboard();
             } else {
                 showLogin();
             }
+        }
+
+        function getAllUsers() {
+            const saved = localStorage.getItem('sitAllUsers');
+            return saved ? JSON.parse(saved) : [];
+        }
+
+        function saveAllUsers(users) {
+            localStorage.setItem('sitAllUsers', JSON.stringify(users));
+        }
+
+        function findUserByEmail(email) {
+            const users = getAllUsers();
+            return users.find(u => u.email === email.trim().toLowerCase());
         }
 
         function setupEventListeners() {
@@ -581,14 +595,26 @@
         function createAccount(e) {
             e.preventDefault();
             const name = document.getElementById('fullName').value.trim();
-            const email = document.getElementById('email').value.trim();
+            const email = document.getElementById('email').value.trim().toLowerCase();
 
             if (!name || !email) {
                 alert('Please fill in all fields');
                 return;
             }
 
-            currentUser = {
+            // Check if user already exists
+            const existingUser = findUserByEmail(email);
+            if (existingUser) {
+                // User already has an account, log them in
+                currentUser = existingUser;
+                localStorage.setItem('sitCurrentUser', JSON.stringify(currentUser));
+                alert(`Welcome back! Your enrollment ID is: ${currentUser.enrollmentId}`);
+                showDashboard();
+                return;
+            }
+
+            // New user - create account with new enrollment ID
+            const newUser = {
                 id: Date.now(),
                 name: name,
                 email: email,
@@ -598,13 +624,21 @@
                 bestScore: 0
             };
 
-            localStorage.setItem('sitUser', JSON.stringify(currentUser));
+            // Save to all users database
+            const users = getAllUsers();
+            users.push(newUser);
+            saveAllUsers(users);
+
+            // Set as current user
+            currentUser = newUser;
+            localStorage.setItem('sitCurrentUser', JSON.stringify(currentUser));
+            alert(`Account created! Your enrollment ID is: ${currentUser.enrollmentId}`);
             showDashboard();
         }
 
         function logout() {
             currentUser = null;
-            localStorage.removeItem('sitUser');
+            localStorage.removeItem('sitCurrentUser');
             answers = {};
             currentQuestionIndex = 0;
             showLogin();
@@ -762,7 +796,17 @@
             if (percentage > currentUser.bestScore) {
                 currentUser.bestScore = percentage;
             }
-            localStorage.setItem('sitUser', JSON.stringify(currentUser));
+            
+            // Update current user
+            localStorage.setItem('sitCurrentUser', JSON.stringify(currentUser));
+            
+            // Update in users database
+            const users = getAllUsers();
+            const userIndex = users.findIndex(u => u.email === currentUser.email);
+            if (userIndex !== -1) {
+                users[userIndex] = currentUser;
+                saveAllUsers(users);
+            }
 
             showResults(correct, incorrect, unanswered, percentage, detailedResults);
         }
