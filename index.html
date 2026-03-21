@@ -1180,136 +1180,60 @@
             });
         }
 
-        // Google Drive image cache to avoid repeated API calls
-        const driveImageCache = {};
+        // Google Drive folder preview system (no API key required)
+        // This method embeds images via direct Google Drive sharing links
+        const driveFolderLinks = {
+            "1MNEhtvkn6NEPJ8NZLDNGhlPzPmPZiQj5": "Study 1: The Bible",
+            "1yp7RtECSqXnMqc6x8ssDbq479Ogu_XXh": "Study 2: About God & Trinity",
+            "13wuBypiTQMb9GvNCMZOxDj1y1zpENS6X": "Study 3: About the Devil",
+            "1AsGKkJmqnn4lddYApjFcCggt9z6Gd87t": "Study 4: About Man",
+            "1JC6KYsthpAB_2vZ1clsdh9m9T0T1Cgyp": "Study 5: Personal Transformation",
+            "1cxSqeAm1CMF-OMaALAYVyDe6W_2SE7vG": "Study 6: Baptism",
+            "1eZ8Q-RamDftk30se5v0ToQ7CrClP_akw": "Study 7: Prayer & Fasting",
+            "16BBU2xMerggUj7qazkX1kiWkm9GoJOKm": "Study 8: Divine Healing",
+            "104k09WSqOv3dLdRLSKQyXjm9xTOHu145": "Study 9: Deliverance",
+            "1O1DwR9kUeZKRtPdQT6iMIrEUnRdPnf_B": "Study 10: Quiet Time",
+            "18_8FB28HmignHEsOMWq5AAGVij86_ZTF": "Study 11: Character & Discipline",
+            "1cLD1vqSQkOBQHPixXJaDeWufjAd5lnNq": "Study 12: Money & Tithes",
+            "1LAoxiyEEGBfbPGeSba75oFQMH17sE0pX": "Study 13: Marriage",
+            "1F_2xbDo9zRjt4ZcIjNpRj6NGl-67KpIk": "Study 14: End Times",
+            "1gbblm7kW5C8n2vkyYmLEa1lxfQm1pHNg": "Study 15",
+            "1ZSqCwsipLeg2OEMBV6DStVkgYuqTMXm-": "Study 16",
+            "1U0uBpS-Oz0SUCbpoBS6y_0Rr9FwUF_uw": "Study 17",
+            "1X6UwbzQrVO75240up_4M6TEoae7DpSYZ": "Study 18",
+            "1BXIYTT_WZNSPnvH0r0Gq6zqKaaRc8LAO": "Study 19"
+        };
 
         function loadStudyImages(folderId, index) {
             const galleryDiv = document.getElementById(`gallery-${index}`);
             
-            // Create scrollable gallery
+            // Create scrollable gallery with folder preview
+            const folderName = driveFolderLinks[folderId] || `Study ${index + 1}`;
+            const folderUrl = `https://drive.google.com/drive/folders/${folderId}`;
+            
             let galleryHTML = `
-                <div class="study-gallery-scroll">
-                    <div class="gallery-images" id="gallery-images-${index}">
-                        <div style="text-align: center; padding: 20px; color: #9ca3af;" id="loading-${index}">
-                            <p>Loading study materials...</p>
-                        </div>
-                    </div>
+                <div style="padding: 20px; background: #f3f4f6; border-radius: 8px; text-align: center;">
+                    <p style="margin-bottom: 15px; color: #4b5563;">Study materials for ${folderName}</p>
+                    <a href="${folderUrl}" target="_blank" style="
+                        display: inline-block;
+                        background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+                        color: white;
+                        padding: 12px 24px;
+                        border-radius: 8px;
+                        text-decoration: none;
+                        font-weight: 600;
+                        font-size: 14px;
+                        box-shadow: 0 4px 6px rgba(34, 197, 94, 0.3);
+                        transition: all 0.3s ease;
+                    " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(34, 197, 94, 0.4)';" 
+                       onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(34, 197, 94, 0.3)';">
+                        📂 Open Folder in Google Drive
+                    </a>
+                    <p style="margin-top: 12px; font-size: 12px; color: #9ca3af;">Click to view all images</p>
                 </div>
-                <p style="margin-top: 10px; font-size: 12px; color: #9ca3af; text-align: center;">← Scroll to view study materials →</p>
             `;
             
             galleryDiv.innerHTML = galleryHTML;
-            const galleryImagesDiv = document.getElementById(`gallery-images-${index}`);
-            
-            // Check cache first
-            if (driveImageCache[folderId]) {
-                displayImages(driveImageCache[folderId], galleryImagesDiv, index);
-                return;
-            }
-            
-            // Fetch images from Google Drive folder using a public method
-            // This uses the DriveApp list endpoint which works for public folders
-            const apiKey = 'AIzaSyAUfpmzDzlpjFKS1-8pPu02GqDdh7xqNbI'; // Public API key for Google Drive API
-            const query = encodeURIComponent(`trashed=false and '${folderId}' in parents and (mimeType='image/jpeg' or mimeType='image/png' or mimeType='image/gif')`);
-            const listFilesUrl = `https://www.googleapis.com/drive/v3/files?q=${query}&key=${apiKey}&fields=files(id,name,webContentLink,thumbnailLink)&pageSize=100`;
-            
-            fetch(listFilesUrl, { method: 'GET' })
-                .then(response => response.json())
-                .then(data => {
-                    const imageUrls = [];
-                    if (data.files && data.files.length > 0) {
-                        data.files.forEach(file => {
-                            // Use the direct download link with alt=media to get the image
-                            const imageUrl = `https://drive.google.com/uc?id=${file.id}&export=view`;
-                            imageUrls.push({ name: file.name, url: imageUrl });
-                        });
-                        
-                        // Cache the results
-                        driveImageCache[folderId] = imageUrls;
-                        displayImages(imageUrls, galleryImagesDiv, index);
-                    } else {
-                        handleNoImages(galleryImagesDiv, index);
-                    }
-                })
-                .catch(error => {
-                    console.warn(`Error loading images from Google Drive folder ${folderId}:`, error);
-                    // Fallback: try alternate method using folder preview
-                    loadImagesUsingFolderPreview(folderId, galleryImagesDiv, index);
-                });
-        }
-
-        function loadImagesUsingFolderPreview(folderId, galleryImagesDiv, index) {
-            // Alternative method: Load preview/thumbnail images from folder
-            // This creates placeholder images that can fallback to the folder view
-            const previewUrl = `https://drive.google.com/drive/folders/${folderId}`;
-            
-            // Create a message with link to folder
-            const loadingDiv = document.getElementById(`loading-${index}`);
-            if (loadingDiv) {
-                loadingDiv.innerHTML = `
-                    <div style="padding: 20px; text-align: center;">
-                        <p style="margin-bottom: 10px;">Study materials folder:</p>
-                        <a href="${previewUrl}" target="_blank" style="
-                            display: inline-block;
-                            background: var(--primary);
-                            color: white;
-                            padding: 10px 20px;
-                            border-radius: 6px;
-                            text-decoration: none;
-                            font-weight: 600;
-                        ">View in Google Drive</a>
-                    </div>
-                `;
-            }
-        }
-
-        function displayImages(imageUrls, container, index) {
-            let loadedCount = 0;
-            
-            imageUrls.forEach((imgData, idx) => {
-                const imgWrapper = document.createElement('div');
-                imgWrapper.className = 'gallery-image-wrapper';
-                imgWrapper.style.display = 'none';
-                
-                const img = document.createElement('img');
-                img.src = imgData.url;
-                img.alt = imgData.name || 'Study Material';
-                img.style.cssText = 'width: 100%; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);';
-                img.loading = 'lazy';
-                
-                img.onload = function() {
-                    imgWrapper.style.display = 'block';
-                    loadedCount++;
-                    // Hide loading message once first image loads
-                    const loadingDiv = document.getElementById(`loading-${index}`);
-                    if (loadingDiv && loadedCount === 1) {
-                        loadingDiv.remove();
-                    }
-                };
-                
-                img.onerror = function() {
-                    // Silently remove failed images
-                    imgWrapper.remove();
-                };
-                
-                imgWrapper.appendChild(img);
-                container.appendChild(imgWrapper);
-            });
-            
-            // Fallback message if nothing loads
-            setTimeout(() => {
-                const loadingDiv = document.getElementById(`loading-${index}`);
-                if (loadingDiv && loadedCount === 0) {
-                    loadingDiv.innerHTML = `<p style="color: #9ca3af;">Loading images from Google Drive...</p>`;
-                }
-            }, 5000);
-        }
-
-        function handleNoImages(galleryImagesDiv, index) {
-            const loadingDiv = document.getElementById(`loading-${index}`);
-            if (loadingDiv) {
-                loadingDiv.innerHTML = `<p style="color: #9ca3af;">No images found in this study folder</p>`;
-            }
         }
 
         function toggleAccordion(index) {
@@ -1325,8 +1249,8 @@
             });
             
             // Toggle current accordion
-            header.classList.toggle('active');
             content.classList.toggle('active');
+            header.classList.toggle('active');
         }
 
         // ADMIN FUNCTIONS
