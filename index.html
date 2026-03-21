@@ -689,7 +689,7 @@
             const year = new Date().getFullYear();
             let counter = parseInt(localStorage.getItem('enrollmentCounter') || '0') + 1;
             localStorage.setItem('enrollmentCounter', counter);
-            const enrollmentId = `ENV/SIT/${String(counter).padStart(3, '0')}/${year}/STREAM A`;
+            const enrollmentId = `ENV/SIT/${String(counter).padStart(3, '0')}/${year}/BATCH 7`;
             return enrollmentId;
         }
 
