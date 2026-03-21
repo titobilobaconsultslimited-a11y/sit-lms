@@ -1110,27 +1110,27 @@
             elements.forEach(el => document.querySelector(el).style.display = 'none');
         }
 
-        // STUDY MATERIALS FUNCTIONS
+        // STUDY MATERIALS FUNCTIONS - Google Drive Configuration
         const studyTopics = [
-            { id: 1, title: "The Bible", imageFolder: "study 1" },
-            { id: 2, title: "About God & Trinity", imageFolder: "study 2" },
-            { id: 3, title: "About the Devil", imageFolder: "study 3" },
-            { id: 4, title: "About Man", imageFolder: "study 4" },
-            { id: 5, title: "Personal Transformation", imageFolder: "study 5" },
-            { id: 6, title: "Baptism", imageFolder: "study 6" },
-            { id: 7, title: "Prayer & Fasting", imageFolder: "study 7" },
-            { id: 8, title: "Divine Healing", imageFolder: "study 8" },
-            { id: 9, title: "Deliverance", imageFolder: "study 9" },
-            { id: 10, title: "Quiet Time", imageFolder: "study 10" },
-            { id: 11, title: "Character & Discipline", imageFolder: "study 11" },
-            { id: 12, title: "Money & Tithes", imageFolder: "study 12" },
-            { id: 13, title: "Marriage", imageFolder: "study 13" },
-            { id: 14, title: "End Times", imageFolder: "study 14" },
-            { id: 15, title: "Study Topic 15", imageFolder: "study 15" },
-            { id: 16, title: "Study Topic 16", imageFolder: "study 16" },
-            { id: 17, title: "Study Topic 17", imageFolder: "study 17" },
-            { id: 18, title: "Study Topic 18", imageFolder: "study 18" },
-            { id: 19, title: "Study Topic 19", imageFolder: "study 19" }
+            { id: 1, title: "The Bible", googleDriveFolderId: "1MNEhtvkn6NEPJ8NZLDNGhlPzPmPZiQj5" },
+            { id: 2, title: "About God & Trinity", googleDriveFolderId: "1yp7RtECSqXnMqc6x8ssDbq479Ogu_XXh" },
+            { id: 3, title: "About the Devil", googleDriveFolderId: "13wuBypiTQMb9GvNCMZOxDj1y1zpENS6X" },
+            { id: 4, title: "About Man", googleDriveFolderId: "1AsGKkJmqnn4lddYApjFcCggt9z6Gd87t" },
+            { id: 5, title: "Personal Transformation", googleDriveFolderId: "1JC6KYsthpAB_2vZ1clsdh9m9T0T1Cgyp" },
+            { id: 6, title: "Baptism", googleDriveFolderId: "1cxSqeAm1CMF-OMaALAYVyDe6W_2SE7vG" },
+            { id: 7, title: "Prayer & Fasting", googleDriveFolderId: "1eZ8Q-RamDftk30se5v0ToQ7CrClP_akw" },
+            { id: 8, title: "Divine Healing", googleDriveFolderId: "16BBU2xMerggUj7qazkX1kiWkm9GoJOKm" },
+            { id: 9, title: "Deliverance", googleDriveFolderId: "104k09WSqOv3dLdRLSKQyXjm9xTOHu145" },
+            { id: 10, title: "Quiet Time", googleDriveFolderId: "1O1DwR9kUeZKRtPdQT6iMIrEUnRdPnf_B" },
+            { id: 11, title: "Character & Discipline", googleDriveFolderId: "18_8FB28HmignHEsOMWq5AAGVij86_ZTF" },
+            { id: 12, title: "Money & Tithes", googleDriveFolderId: "1cLD1vqSQkOBQHPixXJaDeWufjAd5lnNq" },
+            { id: 13, title: "Marriage", googleDriveFolderId: "1LAoxiyEEGBfbPGeSba75oFQMH17sE0pX" },
+            { id: 14, title: "End Times", googleDriveFolderId: "1F_2xbDo9zRjt4ZcIjNpRj6NGl-67KpIk" },
+            { id: 15, title: "Study Topic 15", googleDriveFolderId: "1gbblm7kW5C8n2vkyYmLEa1lxfQm1pHNg" },
+            { id: 16, title: "Study Topic 16", googleDriveFolderId: "1ZSqCwsipLeg2OEMBV6DStVkgYuqTMXm-" },
+            { id: 17, title: "Study Topic 17", googleDriveFolderId: "1U0uBpS-Oz0SUCbpoBS6y_0Rr9FwUF_uw" },
+            { id: 18, title: "Study Topic 18", googleDriveFolderId: "1X6UwbzQrVO75240up_4M6TEoae7DpSYZ" },
+            { id: 19, title: "Study Topic 19", googleDriveFolderId: "1BXIYTT_WZNSPnvH0r0Gq6zqKaaRc8LAO" }
         ];
 
         function showStudyMaterials() {
@@ -1176,11 +1176,14 @@
                 accordion.appendChild(item);
                 
                 // Load study images after accordion is created
-                setTimeout(() => loadStudyImages(topic.imageFolder, index), 100);
+                setTimeout(() => loadStudyImages(topic.googleDriveFolderId, index), 100);
             });
         }
 
-        function loadStudyImages(imageFolder, index) {
+        // Google Drive image cache to avoid repeated API calls
+        const driveImageCache = {};
+
+        function loadStudyImages(folderId, index) {
             const galleryDiv = document.getElementById(`gallery-${index}`);
             
             // Create scrollable gallery
@@ -1196,53 +1199,83 @@
             `;
             
             galleryDiv.innerHTML = galleryHTML;
-            
-            // Try to find and load all images from the folder by attempting common patterns
             const galleryImagesDiv = document.getElementById(`gallery-images-${index}`);
+            
+            // Check cache first
+            if (driveImageCache[folderId]) {
+                displayImages(driveImageCache[folderId], galleryImagesDiv, index);
+                return;
+            }
+            
+            // Fetch images from Google Drive folder using a public method
+            // This uses the DriveApp list endpoint which works for public folders
+            const apiKey = 'AIzaSyAUfpmzDzlpjFKS1-8pPu02GqDdh7xqNbI'; // Public API key for Google Drive API
+            const query = encodeURIComponent(`trashed=false and '${folderId}' in parents and (mimeType='image/jpeg' or mimeType='image/png' or mimeType='image/gif')`);
+            const listFilesUrl = `https://www.googleapis.com/drive/v3/files?q=${query}&key=${apiKey}&fields=files(id,name,webContentLink,thumbnailLink)&pageSize=100`;
+            
+            fetch(listFilesUrl, { method: 'GET' })
+                .then(response => response.json())
+                .then(data => {
+                    const imageUrls = [];
+                    if (data.files && data.files.length > 0) {
+                        data.files.forEach(file => {
+                            // Use the direct download link with alt=media to get the image
+                            const imageUrl = `https://drive.google.com/uc?id=${file.id}&export=view`;
+                            imageUrls.push({ name: file.name, url: imageUrl });
+                        });
+                        
+                        // Cache the results
+                        driveImageCache[folderId] = imageUrls;
+                        displayImages(imageUrls, galleryImagesDiv, index);
+                    } else {
+                        handleNoImages(galleryImagesDiv, index);
+                    }
+                })
+                .catch(error => {
+                    console.warn(`Error loading images from Google Drive folder ${folderId}:`, error);
+                    // Fallback: try alternate method using folder preview
+                    loadImagesUsingFolderPreview(folderId, galleryImagesDiv, index);
+                });
+        }
+
+        function loadImagesUsingFolderPreview(folderId, galleryImagesDiv, index) {
+            // Alternative method: Load preview/thumbnail images from folder
+            // This creates placeholder images that can fallback to the folder view
+            const previewUrl = `https://drive.google.com/drive/folders/${folderId}`;
+            
+            // Create a message with link to folder
+            const loadingDiv = document.getElementById(`loading-${index}`);
+            if (loadingDiv) {
+                loadingDiv.innerHTML = `
+                    <div style="padding: 20px; text-align: center;">
+                        <p style="margin-bottom: 10px;">Study materials folder:</p>
+                        <a href="${previewUrl}" target="_blank" style="
+                            display: inline-block;
+                            background: var(--primary);
+                            color: white;
+                            padding: 10px 20px;
+                            border-radius: 6px;
+                            text-decoration: none;
+                            font-weight: 600;
+                        ">View in Google Drive</a>
+                    </div>
+                `;
+            }
+        }
+
+        function displayImages(imageUrls, container, index) {
             let loadedCount = 0;
             
-            // List of possible image file names to try (common patterns)
-            const possibleNames = [];
-            
-            // Try numbered pattern
-            for (let i = 1; i <= 50; i++) {
-                possibleNames.push(`${i}.jpg`, `${i}.jpeg`, `${i}.png`, `${i}.gif`, `${i}.webp`);
-            }
-            
-            // Try with 4-digit zero-padded pattern
-            for (let i = 1; i <= 50; i++) {
-                const padded = String(i).padStart(4, '0');
-                possibleNames.push(`${padded}.jpg`, `${padded}.png`);
-                possibleNames.push(`page-${padded}.jpg`, `page-${padded}.png`);
-            }
-            
-            // Try with common prefixes
-            for (let i = 1; i <= 50; i++) {
-                possibleNames.push(`page-${i}.jpg`, `page-${i}.png`, `image-${i}.jpg`, `image-${i}.png`);
-            }
-            
-            // Try the actual descriptive pattern format with page ranges
-            for (let pageNum = 5; pageNum <= 50; pageNum++) {
-                const pagePadded = String(pageNum).padStart(4, '0');
-                possibleNames.push(`ENVOYS SIT COURSE OUTLINES -ALL (1)_page-${pagePadded}.jpg`);
-                possibleNames.push(`ENVOYS SIT COURSE OUTLINES -ALL (1)_page-${pagePadded}.png`);
-            }
-            
-            // Try to load each possible file with URL encoding
-            possibleNames.forEach((fileName, idx) => {
-                // URL encode the filename to handle spaces and special characters
-                const encodedFileName = encodeURIComponent(fileName);
-                const imgPath = `media/${imageFolder}/${encodedFileName}`;
-                
+            imageUrls.forEach((imgData, idx) => {
                 const imgWrapper = document.createElement('div');
                 imgWrapper.className = 'gallery-image-wrapper';
-                imgWrapper.id = `img-${index}-${idx}`;
                 imgWrapper.style.display = 'none';
                 
                 const img = document.createElement('img');
-                img.src = imgPath;
-                img.alt = 'Study Material';
+                img.src = imgData.url;
+                img.alt = imgData.name || 'Study Material';
                 img.style.cssText = 'width: 100%; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);';
+                img.loading = 'lazy';
                 
                 img.onload = function() {
                     imgWrapper.style.display = 'block';
@@ -1255,20 +1288,28 @@
                 };
                 
                 img.onerror = function() {
+                    // Silently remove failed images
                     imgWrapper.remove();
                 };
                 
                 imgWrapper.appendChild(img);
-                galleryImagesDiv.appendChild(imgWrapper);
+                container.appendChild(imgWrapper);
             });
             
-            // Fallback message if nothing loads after timeout
+            // Fallback message if nothing loads
             setTimeout(() => {
                 const loadingDiv = document.getElementById(`loading-${index}`);
                 if (loadingDiv && loadedCount === 0) {
-                    loadingDiv.innerHTML = `<p style="color: #9ca3af;">No images found in this study folder</p>`;
+                    loadingDiv.innerHTML = `<p style="color: #9ca3af;">Loading images from Google Drive...</p>`;
                 }
-            }, 3000);
+            }, 5000);
+        }
+
+        function handleNoImages(galleryImagesDiv, index) {
+            const loadingDiv = document.getElementById(`loading-${index}`);
+            if (loadingDiv) {
+                loadingDiv.innerHTML = `<p style="color: #9ca3af;">No images found in this study folder</p>`;
+            }
         }
 
         function toggleAccordion(index) {
