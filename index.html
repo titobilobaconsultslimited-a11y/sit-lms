@@ -1183,45 +1183,83 @@
         function loadStudyImages(imageFolder, index) {
             const galleryDiv = document.getElementById(`gallery-${index}`);
             
-            // Try to load many images (1-50) - non-existent ones will be filtered out
-            const maxImagesToTry = 50;
-            const imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
-            const imagesToLoad = [];
-            
-            // Generate all possible image paths to try
-            for (let i = 1; i <= maxImagesToTry; i++) {
-                for (let ext of imageExtensions) {
-                    imagesToLoad.push({
-                        url: `media/${imageFolder}/${i}.${ext}`,
-                        name: `${i}.${ext}`
-                    });
-                }
-            }
-            
             // Create scrollable gallery
             let galleryHTML = `
                 <div class="study-gallery-scroll">
                     <div class="gallery-images" id="gallery-images-${index}">
-            `;
-            
-            imagesToLoad.forEach((img, i) => {
-                galleryHTML += `
-                    <div class="gallery-image-wrapper" id="img-${index}-${i}">
-                        <img src="${img.url}" alt="Study Material" 
-                             onload="document.getElementById('img-${index}-${i}').style.display='block'"
-                             onerror="document.getElementById('img-${index}-${i}').style.display='none'"
-                             style="width: 100%; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display:none;">
-                    </div>
-                `;
-            });
-            
-            galleryHTML += `
+                        <div style="text-align: center; padding: 20px; color: #9ca3af;" id="loading-${index}">
+                            <p>Loading study materials...</p>
+                        </div>
                     </div>
                 </div>
                 <p style="margin-top: 10px; font-size: 12px; color: #9ca3af; text-align: center;">← Scroll to view study materials →</p>
             `;
             
             galleryDiv.innerHTML = galleryHTML;
+            
+            // Try to find and load all images from the folder by attempting common patterns
+            const galleryImagesDiv = document.getElementById(`gallery-images-${index}`);
+            let loadedCount = 0;
+            
+            // List of possible image file names to try (common patterns)
+            const possibleNames = [];
+            
+            // Try numbered pattern
+            for (let i = 1; i <= 50; i++) {
+                possibleNames.push(`${i}.jpg`, `${i}.jpeg`, `${i}.png`, `${i}.gif`, `${i}.webp`);
+            }
+            
+            // Try with common prefixes
+            for (let i = 1; i <= 50; i++) {
+                possibleNames.push(`page-${i}.jpg`, `page-${i}.png`, `image-${i}.jpg`, `image-${i}.png`);
+                possibleNames.push(String(i).padStart(4, '0') + '.jpg', String(i).padStart(4, '0') + '.png');
+            }
+            
+            // Also try the actual pattern format
+            for (let i = 1; i <= 50; i++) {
+                for (let suffix of ['0005', '0006', '0007', '0008', '0009', '0010', '0011', '0012', '0013', '0014', '0015']) {
+                    possibleNames.push(`ENVOYS SIT COURSE OUTLINES -ALL (1)_page-${suffix}.jpg`);
+                }
+            }
+            
+            // Try to load each possible file
+            possibleNames.forEach((fileName, idx) => {
+                const imgPath = `media/${imageFolder}/${fileName}`;
+                const imgWrapper = document.createElement('div');
+                imgWrapper.className = 'gallery-image-wrapper';
+                imgWrapper.id = `img-${index}-${idx}`;
+                imgWrapper.style.display = 'none';
+                
+                const img = document.createElement('img');
+                img.src = imgPath;
+                img.alt = 'Study Material';
+                img.style.cssText = 'width: 100%; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);';
+                
+                img.onload = function() {
+                    imgWrapper.style.display = 'block';
+                    loadedCount++;
+                    // Hide loading message once first image loads
+                    const loadingDiv = document.getElementById(`loading-${index}`);
+                    if (loadingDiv && loadedCount === 1) {
+                        loadingDiv.remove();
+                    }
+                };
+                
+                img.onerror = function() {
+                    imgWrapper.remove();
+                };
+                
+                imgWrapper.appendChild(img);
+                galleryImagesDiv.appendChild(imgWrapper);
+            });
+            
+            // Fallback message if nothing loads after timeout
+            setTimeout(() => {
+                const loadingDiv = document.getElementById(`loading-${index}`);
+                if (loadingDiv && loadedCount === 0) {
+                    loadingDiv.innerHTML = `<p style="color: #9ca3af;">No images found in this study folder</p>`;
+                }
+            }, 3000);
         }
 
         function toggleAccordion(index) {
