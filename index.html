@@ -41,6 +41,27 @@
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .header-logo {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-logo img {
+            max-width: 100px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .header-content {
+            flex: 1;
             text-align: center;
         }
 
@@ -303,8 +324,17 @@
                 flex-direction: column;
             }
 
+            header {
+                flex-direction: column;
+                padding: 20px;
+            }
+
             header h1 {
                 font-size: 20px;
+            }
+
+            .header-logo img {
+                max-width: 80px;
             }
 
             .question-text {
@@ -316,8 +346,16 @@
 <body>
     <div class="container">
         <header>
-            <h1>🎓 ENVOYS SIT EXAM PORTAL</h1>
-            <p>ENVOYS Starter Pack Module 1 - 100 Objective Questions on Biblical Studies</p>
+            <div class="header-logo">
+                <img src="media/envoys logo.png" alt="ENVOYS Logo">
+            </div>
+            <div class="header-content">
+                <h1>ENVOYS SIT EXAM PORTAL</h1>
+                <p>ENVOYS Starter Pack Module 1 - 100 Objective Questions on Biblical Studies</p>
+            </div>
+            <div class="header-logo">
+                <img src="media/YP20.jpg" alt="YP20 Logo">
+            </div>
         </header>
 
         <!-- Login Section -->
