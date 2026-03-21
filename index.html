@@ -1209,22 +1209,31 @@
                 possibleNames.push(`${i}.jpg`, `${i}.jpeg`, `${i}.png`, `${i}.gif`, `${i}.webp`);
             }
             
+            // Try with 4-digit zero-padded pattern
+            for (let i = 1; i <= 50; i++) {
+                const padded = String(i).padStart(4, '0');
+                possibleNames.push(`${padded}.jpg`, `${padded}.png`);
+                possibleNames.push(`page-${padded}.jpg`, `page-${padded}.png`);
+            }
+            
             // Try with common prefixes
             for (let i = 1; i <= 50; i++) {
                 possibleNames.push(`page-${i}.jpg`, `page-${i}.png`, `image-${i}.jpg`, `image-${i}.png`);
-                possibleNames.push(String(i).padStart(4, '0') + '.jpg', String(i).padStart(4, '0') + '.png');
             }
             
-            // Also try the actual pattern format
-            for (let i = 1; i <= 50; i++) {
-                for (let suffix of ['0005', '0006', '0007', '0008', '0009', '0010', '0011', '0012', '0013', '0014', '0015']) {
-                    possibleNames.push(`ENVOYS SIT COURSE OUTLINES -ALL (1)_page-${suffix}.jpg`);
-                }
+            // Try the actual descriptive pattern format with page ranges
+            for (let pageNum = 5; pageNum <= 50; pageNum++) {
+                const pagePadded = String(pageNum).padStart(4, '0');
+                possibleNames.push(`ENVOYS SIT COURSE OUTLINES -ALL (1)_page-${pagePadded}.jpg`);
+                possibleNames.push(`ENVOYS SIT COURSE OUTLINES -ALL (1)_page-${pagePadded}.png`);
             }
             
-            // Try to load each possible file
+            // Try to load each possible file with URL encoding
             possibleNames.forEach((fileName, idx) => {
-                const imgPath = `media/${imageFolder}/${fileName}`;
+                // URL encode the filename to handle spaces and special characters
+                const encodedFileName = encodeURIComponent(fileName);
+                const imgPath = `media/${imageFolder}/${encodedFileName}`;
+                
                 const imgWrapper = document.createElement('div');
                 imgWrapper.className = 'gallery-image-wrapper';
                 imgWrapper.id = `img-${index}-${idx}`;
