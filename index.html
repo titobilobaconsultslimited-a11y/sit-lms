@@ -739,6 +739,14 @@
             "questions": allQuestions
         };
 
+        // EXAM CONFIGURATION
+        const EXAM_CONFIG = {
+            availableDate: new Date(2026, 3, 28), // April 28, 2026 (0-indexed months, so 3 = April)
+            timezone: 'Africa/Lagos', // Nigerian Time (WAT - UTC+1)
+            maxAttempts: 1, // Only 1 attempt allowed
+            timerMinutes: 60
+        };
+
         let currentUser = null;
         let currentQuestionIndex = 0;
         let answers = {};
@@ -765,13 +773,19 @@
         }
 
         function migrateEnrollmentIds() {
-            // Automatically migrate existing users from old format to new format
+            // Automatically migrate existing users to include new properties
             let users = getAllUsers();
             let hasMigrated = false;
             
             users = users.map(user => {
                 if (user.enrollmentId && user.enrollmentId.includes('STREAM A')) {
                     user.enrollmentId = user.enrollmentId.replace('STREAM A', 'BATCH 7');
+                    hasMigrated = true;
+                }
+                // Add exam completion tracking to existing users
+                if (user.examCompleted === undefined) {
+                    user.examCompleted = false;
+                    user.examCompletedDate = null;
                     hasMigrated = true;
                 }
                 return user;
@@ -783,15 +797,22 @@
                 currentUser = JSON.parse(currentUserSaved);
                 if (currentUser.enrollmentId && currentUser.enrollmentId.includes('STREAM A')) {
                     currentUser.enrollmentId = currentUser.enrollmentId.replace('STREAM A', 'BATCH 7');
-                    localStorage.setItem('sitCurrentUser', JSON.stringify(currentUser));
                     hasMigrated = true;
+                }
+                if (currentUser.examCompleted === undefined) {
+                    currentUser.examCompleted = false;
+                    currentUser.examCompletedDate = null;
+                    hasMigrated = true;
+                }
+                if (hasMigrated) {
+                    localStorage.setItem('sitCurrentUser', JSON.stringify(currentUser));
                 }
             }
             
             // Save migrated users back if any changes were made
             if (hasMigrated) {
                 saveAllUsers(users);
-                console.log('✅ Enrollment IDs migrated to BATCH 7 format');
+                console.log('✅ Users migrated to latest format');
             }
         }
 
@@ -878,7 +899,9 @@
                 enrollmentId: generateEnrollmentId(),
                 createdAt: new Date().toISOString(),
                 attempts: [],
-                bestScore: 0
+                bestScore: 0,
+                examCompleted: false,
+                examCompletedDate: null
             };
 
             // Save to all users database
@@ -901,6 +924,44 @@
             showLogin();
         }
 
+        // EXAM AVAILABILITY FUNCTIONS
+        function isExamAvailable() {
+            // Get current time in Nigerian timezone (WAT - UTC+1)
+            const nigerianTime = new Date(new Date().toLocaleString('en-US', { timeZone: 'Africa/Lagos' }));
+            const examDate = new Date(EXAM_CONFIG.availableDate);
+            
+            // Make both dates midnight for comparison
+            nigerianTime.setHours(0, 0, 0, 0);
+            examDate.setHours(0, 0, 0, 0);
+            
+            return nigerianTime >= examDate;
+        }
+
+        function getExamStatus() {
+            if (!currentUser) return 'not-logged-in';
+            
+            if (currentUser.examCompleted) {
+                return 'completed';
+            }
+            
+            if (!isExamAvailable()) {
+                return 'not-available';
+            }
+            
+            return 'available';
+        }
+
+        function getExamDateDisplay() {
+            const examDate = new Date(EXAM_CONFIG.availableDate);
+            return examDate.toLocaleDateString('en-US', { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                timeZone: 'Africa/Lagos'
+            });
+        }
+
         function showLogin() {
             hide('#dashboardSection', '#examSection', '#resultsSection');
             show('#loginSection');
@@ -915,9 +976,47 @@
             if (currentUser.bestScore > 0) {
                 document.getElementById('currentScore').textContent = currentUser.bestScore;
             }
+            
+            // Update exam button based on availability and completion status
+            updateExamButtonState();
+        }
+
+        function updateExamButtonState() {
+            const startExamBtn = document.getElementById('startExamBtn');
+            const examStatus = getExamStatus();
+            
+            if (examStatus === 'completed') {
+                startExamBtn.disabled = true;
+                startExamBtn.textContent = `✓ Exam Completed - Score: ${currentUser.bestScore}%`;
+                startExamBtn.style.backgroundColor = '#10b981'; // Green
+                startExamBtn.style.cursor = 'not-allowed';
+            } else if (examStatus === 'not-available') {
+                startExamBtn.disabled = true;
+                const examDateDisplay = getExamDateDisplay();
+                startExamBtn.textContent = `📅 Exam Available: ${examDateDisplay}`;
+                startExamBtn.style.backgroundColor = '#9ca3af'; // Gray
+                startExamBtn.style.cursor = 'not-allowed';
+            } else {
+                startExamBtn.disabled = false;
+                startExamBtn.textContent = '📝 Start Exam (60 mins)';
+                startExamBtn.style.backgroundColor = 'var(--primary)';
+                startExamBtn.style.cursor = 'pointer';
+            }
         }
 
         function startExam() {
+            // Check if exam is available
+            if (!isExamAvailable()) {
+                alert(`❌ Exam is not yet available.\n\nExam will be available on: ${getExamDateDisplay()}\n\n(Nigerian Time - WAT)`);
+                return;
+            }
+            
+            // Check if already completed
+            if (currentUser.examCompleted) {
+                alert('❌ You have already completed this exam.\n\nYou can only take the exam once.\n\nYour Score: ' + currentUser.bestScore + '%');
+                return;
+            }
+            
             examSubmitted = false;
             currentQuestionIndex = 0;
             answers = {};
@@ -1053,6 +1152,10 @@
             if (percentage > currentUser.bestScore) {
                 currentUser.bestScore = percentage;
             }
+            
+            // Mark exam as completed (can only take once)
+            currentUser.examCompleted = true;
+            currentUser.examCompletedDate = new Date().toISOString();
             
             // Update current user
             localStorage.setItem('sitCurrentUser', JSON.stringify(currentUser));
