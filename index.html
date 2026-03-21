@@ -1112,21 +1112,25 @@
 
         // STUDY MATERIALS FUNCTIONS
         const studyTopics = [
-            { id: 1, title: "The Bible", imageFolder: "study-1" },
-            { id: 2, title: "About God & Trinity", imageFolder: "study-2" },
-            { id: 3, title: "About the Devil", imageFolder: "study-3" },
-            { id: 4, title: "About Man", imageFolder: "study-4" },
-            { id: 5, title: "Personal Transformation", imageFolder: "study-5" },
-            { id: 6, title: "Baptism", imageFolder: "study-6" },
-            { id: 7, title: "Prayer & Fasting", imageFolder: "study-7" },
-            { id: 8, title: "Divine Healing", imageFolder: "study-8" },
-            { id: 9, title: "Deliverance", imageFolder: "study-9" },
-            { id: 10, title: "Quiet Time", imageFolder: "study-10" },
-            { id: 11, title: "Character & Discipline", imageFolder: "study-11" },
-            { id: 12, title: "Money & Tithes", imageFolder: "study-12" },
-            { id: 13, title: "Marriage", imageFolder: "study-13" },
-            { id: 14, title: "End Times", imageFolder: "study-14" },
-            { id: 15, title: "Additional Topics", imageFolder: "study-15" }
+            { id: 1, title: "The Bible", imageFolder: "study 1" },
+            { id: 2, title: "About God & Trinity", imageFolder: "study 2" },
+            { id: 3, title: "About the Devil", imageFolder: "study 3" },
+            { id: 4, title: "About Man", imageFolder: "study 4" },
+            { id: 5, title: "Personal Transformation", imageFolder: "study 5" },
+            { id: 6, title: "Baptism", imageFolder: "study 6" },
+            { id: 7, title: "Prayer & Fasting", imageFolder: "study 7" },
+            { id: 8, title: "Divine Healing", imageFolder: "study 8" },
+            { id: 9, title: "Deliverance", imageFolder: "study 9" },
+            { id: 10, title: "Quiet Time", imageFolder: "study 10" },
+            { id: 11, title: "Character & Discipline", imageFolder: "study 11" },
+            { id: 12, title: "Money & Tithes", imageFolder: "study 12" },
+            { id: 13, title: "Marriage", imageFolder: "study 13" },
+            { id: 14, title: "End Times", imageFolder: "study 14" },
+            { id: 15, title: "Study Topic 15", imageFolder: "study 15" },
+            { id: 16, title: "Study Topic 16", imageFolder: "study 16" },
+            { id: 17, title: "Study Topic 17", imageFolder: "study 17" },
+            { id: 18, title: "Study Topic 18", imageFolder: "study 18" },
+            { id: 19, title: "Study Topic 19", imageFolder: "study 19" }
         ];
 
         function showStudyMaterials() {
@@ -1172,27 +1176,34 @@
         function loadStudyImages(imageFolder, index) {
             const galleryDiv = document.getElementById(`gallery-${index}`);
             
-            // Sample image files - update these based on your actual image names
-            // Format: media/study-1/1.png, media/study-1/2.png, etc.
-            const imageUrls = [];
+            // Try to load many images (1-50) - non-existent ones will be filtered out
+            const maxImagesToTry = 50;
+            const imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+            const imagesToLoad = [];
             
-            // Generate image paths (you'll need to adjust based on actual files)
-            for (let i = 1; i <= 5; i++) {
-                imageUrls.push(`media/${imageFolder}/${i}.png`);
+            // Generate all possible image paths to try
+            for (let i = 1; i <= maxImagesToTry; i++) {
+                for (let ext of imageExtensions) {
+                    imagesToLoad.push({
+                        url: `media/${imageFolder}/${i}.${ext}`,
+                        name: `${i}.${ext}`
+                    });
+                }
             }
             
             // Create scrollable gallery
             let galleryHTML = `
                 <div class="study-gallery-scroll">
-                    <div class="gallery-images">
+                    <div class="gallery-images" id="gallery-images-${index}">
             `;
             
-            imageUrls.forEach((url, i) => {
+            imagesToLoad.forEach((img, i) => {
                 galleryHTML += `
-                    <div class="gallery-image-wrapper">
-                        <img src="${url}" alt="Study Material ${i + 1}" 
-                             onerror="this.parentElement.innerHTML='<div style=\\"padding: 20px; text-align: center; color: #9ca3af;\\">Image ${i + 1} not available</div>'"
-                             style="width: 100%; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <div class="gallery-image-wrapper" id="img-${index}-${i}">
+                        <img src="${img.url}" alt="Study Material" 
+                             onload="document.getElementById('img-${index}-${i}').style.display='block'"
+                             onerror="document.getElementById('img-${index}-${i}').style.display='none'"
+                             style="width: 100%; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display:none;">
                     </div>
                 `;
             });
@@ -1200,7 +1211,7 @@
             galleryHTML += `
                     </div>
                 </div>
-                <p style="margin-top: 10px; font-size: 12px; color: #9ca3af; text-align: center;">← Scroll to view more images →</p>
+                <p style="margin-top: 10px; font-size: 12px; color: #9ca3af; text-align: center;">← Scroll to view study materials →</p>
             `;
             
             galleryDiv.innerHTML = galleryHTML;
