@@ -1110,115 +1110,95 @@
             elements.forEach(el => document.querySelector(el).style.display = 'none');
         }
 
-        // STUDY MATERIALS FUNCTIONS - Google Drive Configuration
-        const studyTopics = [
-            { id: 1, title: "The Bible", googleDriveFolderId: "1MNEhtvkn6NEPJ8NZLDNGhlPzPmPZiQj5" },
-            { id: 2, title: "About God & Trinity", googleDriveFolderId: "1yp7RtECSqXnMqc6x8ssDbq479Ogu_XXh" },
-            { id: 3, title: "About the Devil", googleDriveFolderId: "13wuBypiTQMb9GvNCMZOxDj1y1zpENS6X" },
-            { id: 4, title: "About Man", googleDriveFolderId: "1AsGKkJmqnn4lddYApjFcCggt9z6Gd87t" },
-            { id: 5, title: "Personal Transformation", googleDriveFolderId: "1JC6KYsthpAB_2vZ1clsdh9m9T0T1Cgyp" },
-            { id: 6, title: "Baptism", googleDriveFolderId: "1cxSqeAm1CMF-OMaALAYVyDe6W_2SE7vG" },
-            { id: 7, title: "Prayer & Fasting", googleDriveFolderId: "1eZ8Q-RamDftk30se5v0ToQ7CrClP_akw" },
-            { id: 8, title: "Divine Healing", googleDriveFolderId: "16BBU2xMerggUj7qazkX1kiWkm9GoJOKm" },
-            { id: 9, title: "Deliverance", googleDriveFolderId: "104k09WSqOv3dLdRLSKQyXjm9xTOHu145" },
-            { id: 10, title: "Quiet Time", googleDriveFolderId: "1O1DwR9kUeZKRtPdQT6iMIrEUnRdPnf_B" },
-            { id: 11, title: "Character & Discipline", googleDriveFolderId: "18_8FB28HmignHEsOMWq5AAGVij86_ZTF" },
-            { id: 12, title: "Money & Tithes", googleDriveFolderId: "1cLD1vqSQkOBQHPixXJaDeWufjAd5lnNq" },
-            { id: 13, title: "Marriage", googleDriveFolderId: "1LAoxiyEEGBfbPGeSba75oFQMH17sE0pX" },
-            { id: 14, title: "End Times", googleDriveFolderId: "1F_2xbDo9zRjt4ZcIjNpRj6NGl-67KpIk" },
-            { id: 15, title: "Study Topic 15", googleDriveFolderId: "1gbblm7kW5C8n2vkyYmLEa1lxfQm1pHNg" },
-            { id: 16, title: "Study Topic 16", googleDriveFolderId: "1ZSqCwsipLeg2OEMBV6DStVkgYuqTMXm-" },
-            { id: 17, title: "Study Topic 17", googleDriveFolderId: "1U0uBpS-Oz0SUCbpoBS6y_0Rr9FwUF_uw" },
-            { id: 18, title: "Study Topic 18", googleDriveFolderId: "1X6UwbzQrVO75240up_4M6TEoae7DpSYZ" },
-            { id: 19, title: "Study Topic 19", googleDriveFolderId: "1BXIYTT_WZNSPnvH0r0Gq6zqKaaRc8LAO" }
-        ];
+        // STUDY MATERIALS - PDF Configuration
+        const STUDY_MATERIALS_PDF = {
+            fileId: "1niVIOc_3ty2J3V2crdSXPO0MGxxYr3IR",
+            title: "SIT Study Materials",
+            viewUrl: "https://drive.google.com/file/d/1niVIOc_3ty2J3V2crdSXPO0MGxxYr3IR/view?usp=sharing",
+            downloadUrl: "https://drive.google.com/uc?id=1niVIOc_3ty2J3V2crdSXPO0MGxxYr3IR&export=download"
+        };
 
         function showStudyMaterials() {
             hide('#loginSection', '#dashboardSection', '#examSection', '#resultsSection', '#adminLoginSection', '#adminDashboardSection');
             show('#studyMaterialsSection');
-            
-            // Always generate accordion when showing study materials
-            generateAccordion();
+            displayPdfViewer();
         }
 
-        function generateAccordion() {
-            const accordion = document.getElementById('studyAccordion');
-            if (!accordion) {
-                console.error('Study accordion div not found!');
-                return;
-            }
+        function displayPdfViewer() {
+            const pdfSection = document.getElementById('studyMaterialsSection');
+            if (!pdfSection) return;
+
+            const content = pdfSection.querySelector('div') || pdfSection;
             
-            accordion.innerHTML = '';
-            
-            if (!studyTopics || studyTopics.length === 0) {
-                accordion.innerHTML = '<p style="padding: 20px; color: #9ca3af;">No study materials available.</p>';
-                return;
-            }
-            
-            studyTopics.forEach((topic, index) => {
-                const item = document.createElement('div');
-                item.className = 'accordion-item';
-                item.innerHTML = `
-                    <div class="accordion-header" onclick="toggleAccordion(${index})">
-                        <span>Study ${topic.id}: ${topic.title}</span>
-                        <span class="toggle-icon">▼</span>
-                    </div>
-                    <div class="accordion-content" id="content-${index}">
-                        <p><strong>Study ${topic.id}: ${topic.title}</strong></p>
-                        <p>Preview the lesson materials below by scrolling through the images.</p>
-                        <div class="study-gallery" id="gallery-${index}">
-                            <div style="text-align: center; padding: 20px; color: #9ca3af;">
-                                <p>Loading study materials...</p>
-                            </div>
+            content.innerHTML = `
+                <div style="max-width: 600px; margin: 40px auto; padding: 20px;">
+                    <h2 style="text-align: center; color: var(--primary); margin-bottom: 30px;">📚 Study Materials</h2>
+                    
+                    <div style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); padding: 30px; border-radius: 12px; border: 2px solid var(--primary); text-align: center;">
+                        <p style="color: #1f2937; font-size: 16px; margin-bottom: 20px;">
+                            Access comprehensive study materials covering all 19 biblical topics
+                        </p>
+                        
+                        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                            <a href="${STUDY_MATERIALS_PDF.viewUrl}" target="_blank" style="
+                                display: inline-block;
+                                background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+                                color: white;
+                                padding: 14px 32px;
+                                border-radius: 8px;
+                                text-decoration: none;
+                                font-weight: 600;
+                                font-size: 15px;
+                                box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+                                transition: all 0.3s ease;
+                                cursor: pointer;
+                            " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(34, 197, 94, 0.4)';" 
+                               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(34, 197, 94, 0.3)';">
+                                👁️ View PDF
+                            </a>
+                            
+                            <a href="${STUDY_MATERIALS_PDF.downloadUrl}" style="
+                                display: inline-block;
+                                background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+                                color: white;
+                                padding: 14px 32px;
+                                border-radius: 8px;
+                                text-decoration: none;
+                                font-weight: 600;
+                                font-size: 15px;
+                                box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+                                transition: all 0.3s ease;
+                                cursor: pointer;
+                            " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(59, 130, 246, 0.4)';" 
+                               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(59, 130, 246, 0.3)';">
+                                ⬇️ Download PDF
+                            </a>
                         </div>
+                        
+                        <p style="margin-top: 20px; font-size: 13px; color: #6b7280;">
+                            📄 Comprehensive guide to all study topics | 🔍 Searchable content | 📱 Works on all devices
+                        </p>
                     </div>
-                `;
-                accordion.appendChild(item);
-                
-                // Load study images after accordion is created
-                setTimeout(() => loadStudyImages(topic.googleDriveFolderId, index), 100);
-            });
+                </div>
+            `;
         }
 
-        // Google Drive folder preview system (no API key required)
-        // This method embeds images via direct Google Drive sharing links
-        const driveFolderLinks = {
-            "1MNEhtvkn6NEPJ8NZLDNGhlPzPmPZiQj5": "Study 1: The Bible",
-            "1yp7RtECSqXnMqc6x8ssDbq479Ogu_XXh": "Study 2: About God & Trinity",
-            "13wuBypiTQMb9GvNCMZOxDj1y1zpENS6X": "Study 3: About the Devil",
-            "1AsGKkJmqnn4lddYApjFcCggt9z6Gd87t": "Study 4: About Man",
-            "1JC6KYsthpAB_2vZ1clsdh9m9T0T1Cgyp": "Study 5: Personal Transformation",
-            "1cxSqeAm1CMF-OMaALAYVyDe6W_2SE7vG": "Study 6: Baptism",
-            "1eZ8Q-RamDftk30se5v0ToQ7CrClP_akw": "Study 7: Prayer & Fasting",
-            "16BBU2xMerggUj7qazkX1kiWkm9GoJOKm": "Study 8: Divine Healing",
-            "104k09WSqOv3dLdRLSKQyXjm9xTOHu145": "Study 9: Deliverance",
-            "1O1DwR9kUeZKRtPdQT6iMIrEUnRdPnf_B": "Study 10: Quiet Time",
-            "18_8FB28HmignHEsOMWq5AAGVij86_ZTF": "Study 11: Character & Discipline",
-            "1cLD1vqSQkOBQHPixXJaDeWufjAd5lnNq": "Study 12: Money & Tithes",
-            "1LAoxiyEEGBfbPGeSba75oFQMH17sE0pX": "Study 13: Marriage",
-            "1F_2xbDo9zRjt4ZcIjNpRj6NGl-67KpIk": "Study 14: End Times",
-            "1gbblm7kW5C8n2vkyYmLEa1lxfQm1pHNg": "Study 15",
-            "1ZSqCwsipLeg2OEMBV6DStVkgYuqTMXm-": "Study 16",
-            "1U0uBpS-Oz0SUCbpoBS6y_0Rr9FwUF_uw": "Study 17",
-            "1X6UwbzQrVO75240up_4M6TEoae7DpSYZ": "Study 18",
-            "1BXIYTT_WZNSPnvH0r0Gq6zqKaaRc8LAO": "Study 19"
-        };
-
-        function loadStudyImages(folderId, index) {
-            const galleryDiv = document.getElementById(`gallery-${index}`);
+        function toggleAccordion(index) {
+            const header = document.querySelectorAll('.accordion-header')[index];
+            const content = document.getElementById(`content-${index}`);
             
-            // Create scrollable gallery with folder preview
-            const folderName = driveFolderLinks[folderId] || `Study ${index + 1}`;
-            const folderUrl = `https://drive.google.com/drive/folders/${folderId}`;
+            // Close all other accordions
+            document.querySelectorAll('.accordion-content').forEach((item, i) => {
+                if (i !== index) {
+                    item.classList.remove('active');
+                    document.querySelectorAll('.accordion-header')[i].classList.remove('active');
+                }
+            });
             
-            let galleryHTML = `
-                <div style="padding: 20px; background: #f3f4f6; border-radius: 8px; text-align: center;">
-                    <p style="margin-bottom: 15px; color: #4b5563;">Study materials for ${folderName}</p>
-                    <a href="${folderUrl}" target="_blank" style="
-                        display: inline-block;
-                        background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-                        color: white;
-                        padding: 12px 24px;
+            // Toggle current accordion
+            content.classList.toggle('active');
+            header.classList.toggle('active');
+        }
                         border-radius: 8px;
                         text-decoration: none;
                         font-weight: 600;
