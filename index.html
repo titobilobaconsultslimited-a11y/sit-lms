@@ -628,6 +628,7 @@
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
+            migrateEnrollmentIds(); // Update existing users to new format
             loadUser();
             setupEventListeners();
             // Note: In production, load all 100 questions
@@ -640,6 +641,37 @@
                 showDashboard();
             } else {
                 showLogin();
+            }
+        }
+
+        function migrateEnrollmentIds() {
+            // Automatically migrate existing users from old format to new format
+            let users = getAllUsers();
+            let hasMigrated = false;
+            
+            users = users.map(user => {
+                if (user.enrollmentId && user.enrollmentId.includes('STREAM A')) {
+                    user.enrollmentId = user.enrollmentId.replace('STREAM A', 'BATCH 7');
+                    hasMigrated = true;
+                }
+                return user;
+            });
+            
+            // Also update current user if logged in
+            const currentUserSaved = localStorage.getItem('sitCurrentUser');
+            if (currentUserSaved) {
+                currentUser = JSON.parse(currentUserSaved);
+                if (currentUser.enrollmentId && currentUser.enrollmentId.includes('STREAM A')) {
+                    currentUser.enrollmentId = currentUser.enrollmentId.replace('STREAM A', 'BATCH 7');
+                    localStorage.setItem('sitCurrentUser', JSON.stringify(currentUser));
+                    hasMigrated = true;
+                }
+            }
+            
+            // Save migrated users back if any changes were made
+            if (hasMigrated) {
+                saveAllUsers(users);
+                console.log('✅ Enrollment IDs migrated to BATCH 7 format');
             }
         }
 
