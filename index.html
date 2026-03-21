@@ -459,6 +459,52 @@
                 <button id="backToDashboardBtn" class="btn btn-secondary">Back to Dashboard</button>
             </div>
         </div>
+
+        <!-- Admin Login Section -->
+        <div id="adminLoginSection" class="card" style="display: none;">
+            <h2 style="color: var(--primary); margin-bottom: 20px;">Admin Access</h2>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label>Admin Password:</label>
+                    <input type="password" id="adminPassword" required placeholder="Enter admin password">
+                </div>
+                <button type="submit" class="btn">Access Admin Panel</button>
+                <button type="button" id="adminLoginCancelBtn" class="btn btn-secondary" style="margin-left: 10px;">Cancel</button>
+            </form>
+        </div>
+
+        <!-- Admin Dashboard Section -->
+        <div id="adminDashboardSection" class="card" style="display: none;">
+            <h2 style="color: var(--primary); margin-bottom: 20px;">📊 Student Scores Broadsheet</h2>
+            
+            <div style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+                <button id="exportCsvBtn" class="btn" style="background: var(--success);">📥 Export as CSV</button>
+                <button id="exportExcelBtn" class="btn" style="background: #3b82f6;">📊 Export as Excel</button>
+                <button id="refreshDataBtn" class="btn btn-secondary">🔄 Refresh</button>
+                <button id="adminLogoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+
+            <div style="margin-bottom: 20px; padding: 15px; background: #f0fdf4; border-radius: 8px;">
+                <p style="color: var(--primary); font-weight: 600;">Total Students: <span id="totalStudentsCount">0</span></p>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table id="studentsTable" style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                    <thead>
+                        <tr style="background: var(--primary); color: white;">
+                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">S/N</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Student Name</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Email</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Enrollment ID</th>
+                            <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">Best Score (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentsTableBody">
+                        <!-- Rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -620,6 +666,23 @@
             document.getElementById('submitExamBtn').addEventListener('click', submitExam);
             document.getElementById('retakeExamBtn').addEventListener('click', startExam);
             document.getElementById('backToDashboardBtn').addEventListener('click', showDashboard);
+            
+            // Admin event listeners
+            document.getElementById('adminLoginForm').addEventListener('submit', verifyAdminPassword);
+            document.getElementById('adminLoginCancelBtn').addEventListener('click', function() {
+                document.getElementById('adminLoginSection').style.display = 'none';
+                showLogin();
+            });
+            document.getElementById('exportCsvBtn').addEventListener('click', exportToCSV);
+            document.getElementById('exportExcelBtn').addEventListener('click', exportToExcel);
+            document.getElementById('refreshDataBtn').addEventListener('click', loadAdminDashboard);
+            document.getElementById('adminLogoutBtn').addEventListener('click', function() {
+                document.getElementById('adminDashboardSection').style.display = 'none';
+                showLogin();
+            });
+
+            // Add admin access button to header (accessible by keyboard shortcut)
+            setupAdminAccess();
         }
 
         function generateEnrollmentId() {
@@ -889,6 +952,127 @@
 
         function hide(...elements) {
             elements.forEach(el => document.querySelector(el).style.display = 'none');
+        }
+
+        // ADMIN FUNCTIONS
+        const ADMIN_PASSWORD = 'ENVOYS2026'; // Set your admin password here
+
+        function setupAdminAccess() {
+            // Keyboard shortcut: Press 'A' key twice quickly to access admin
+            let keyBuffer = '';
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'a' || e.key === 'A') {
+                    keyBuffer += 'a';
+                    if (keyBuffer === 'aa') {
+                        showAdminLogin();
+                        keyBuffer = '';
+                    }
+                    setTimeout(() => keyBuffer = '', 1000);
+                }
+            });
+        }
+
+        function showAdminLogin() {
+            hide('#loginSection', '#dashboardSection', '#examSection', '#resultsSection', '#adminDashboardSection');
+            show('#adminLoginSection');
+        }
+
+        function verifyAdminPassword(e) {
+            e.preventDefault();
+            const password = document.getElementById('adminPassword').value;
+            
+            if (password === ADMIN_PASSWORD) {
+                document.getElementById('adminPassword').value = '';
+                loadAdminDashboard();
+            } else {
+                alert('Incorrect admin password!');
+                document.getElementById('adminPassword').value = '';
+            }
+        }
+
+        function loadAdminDashboard() {
+            hide('#loginSection', '#dashboardSection', '#examSection', '#resultsSection', '#adminLoginSection');
+            show('#adminDashboardSection');
+
+            const users = getAllUsers();
+            const tbody = document.getElementById('studentsTableBody');
+            tbody.innerHTML = '';
+
+            document.getElementById('totalStudentsCount').textContent = users.length;
+
+            if (users.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" style="padding: 20px; text-align: center; color: #6b7280;">No students yet</td></tr>';
+                return;
+            }
+
+            // Sort by enrollment ID
+            users.sort((a, b) => a.enrollmentId.localeCompare(b.enrollmentId));
+
+            users.forEach((user, index) => {
+                const row = document.createElement('tr');
+                row.style.borderBottom = '1px solid #ddd';
+                row.style.backgroundColor = index % 2 === 0 ? '#f9fafb' : 'white';
+                
+                const scoreColor = user.bestScore >= 80 ? 'var(--success)' : user.bestScore >= 60 ? '#f59e0b' : '#ef4444';
+                
+                row.innerHTML = `
+                    <td style="padding: 12px; border: 1px solid #ddd;">${index + 1}</td>
+                    <td style="padding: 12px; border: 1px solid #ddd;">${user.name}</td>
+                    <td style="padding: 12px; border: 1px solid #ddd;">${user.email}</td>
+                    <td style="padding: 12px; border: 1px solid #ddd; font-weight: 600; color: var(--primary);">${user.enrollmentId}</td>
+                    <td style="padding: 12px; border: 1px solid #ddd; text-align: center; font-weight: 600; color: ${scoreColor};">${user.bestScore}%</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function exportToCSV() {
+            const users = getAllUsers();
+            
+            if (users.length === 0) {
+                alert('No student data to export!');
+                return;
+            }
+
+            let csv = 'S/N,Student Name,Email,Enrollment ID,Best Score (%)\n';
+            
+            users.sort((a, b) => a.enrollmentId.localeCompare(b.enrollmentId)).forEach((user, index) => {
+                csv += `${index + 1},"${user.name}","${user.email}","${user.enrollmentId}",${user.bestScore}\n`;
+            });
+
+            downloadFile(csv, 'ENVOYS_Student_Scores.csv', 'text/csv');
+        }
+
+        function exportToExcel() {
+            const users = getAllUsers();
+            
+            if (users.length === 0) {
+                alert('No student data to export!');
+                return;
+            }
+
+            let html = '<table><thead><tr><th>S/N</th><th>Student Name</th><th>Email</th><th>Enrollment ID</th><th>Best Score (%)</th></tr></thead><tbody>';
+            
+            users.sort((a, b) => a.enrollmentId.localeCompare(b.enrollmentId)).forEach((user, index) => {
+                html += `<tr><td>${index + 1}</td><td>${user.name}</td><td>${user.email}</td><td>${user.enrollmentId}</td><td>${user.bestScore}</td></tr>`;
+            });
+
+            html += '</tbody></table>';
+
+            const excelData = `<html><head><meta charset="UTF-8"></head><body>${html}</body></html>`;
+            downloadFile(excelData, 'ENVOYS_Student_Scores.xls', 'application/vnd.ms-excel');
+        }
+
+        function downloadFile(content, filename, type) {
+            const blob = new Blob([content], { type: type });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
         }
     </script>
 </body>
