@@ -1137,16 +1137,23 @@
             hide('#loginSection', '#dashboardSection', '#examSection', '#resultsSection', '#adminLoginSection', '#adminDashboardSection');
             show('#studyMaterialsSection');
             
-            // Generate accordion if not already done
-            const accordion = document.getElementById('studyAccordion');
-            if (accordion.innerHTML === '') {
-                generateAccordion();
-            }
+            // Always generate accordion when showing study materials
+            generateAccordion();
         }
 
         function generateAccordion() {
             const accordion = document.getElementById('studyAccordion');
+            if (!accordion) {
+                console.error('Study accordion div not found!');
+                return;
+            }
+            
             accordion.innerHTML = '';
+            
+            if (!studyTopics || studyTopics.length === 0) {
+                accordion.innerHTML = '<p style="padding: 20px; color: #9ca3af;">No study materials available.</p>';
+                return;
+            }
             
             studyTopics.forEach((topic, index) => {
                 const item = document.createElement('div');
