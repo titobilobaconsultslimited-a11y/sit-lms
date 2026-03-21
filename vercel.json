@@ -2,7 +2,12 @@
   "buildCommand": "",
   "outputDirectory": ".",
   "public": true,
+  "cleanUrls": true,
   "routes": [
+    {
+      "src": "/media/(.*)",
+      "dest": "/media/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
