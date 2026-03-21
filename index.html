@@ -1199,39 +1199,6 @@
             content.classList.toggle('active');
             header.classList.toggle('active');
         }
-                        border-radius: 8px;
-                        text-decoration: none;
-                        font-weight: 600;
-                        font-size: 14px;
-                        box-shadow: 0 4px 6px rgba(34, 197, 94, 0.3);
-                        transition: all 0.3s ease;
-                    " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(34, 197, 94, 0.4)';" 
-                       onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(34, 197, 94, 0.3)';">
-                        📂 Open Folder in Google Drive
-                    </a>
-                    <p style="margin-top: 12px; font-size: 12px; color: #9ca3af;">Click to view all images</p>
-                </div>
-            `;
-            
-            galleryDiv.innerHTML = galleryHTML;
-        }
-
-        function toggleAccordion(index) {
-            const header = document.querySelectorAll('.accordion-header')[index];
-            const content = document.getElementById(`content-${index}`);
-            
-            // Close all other accordions
-            document.querySelectorAll('.accordion-content').forEach((item, i) => {
-                if (i !== index) {
-                    item.classList.remove('active');
-                    document.querySelectorAll('.accordion-header')[i].classList.remove('active');
-                }
-            });
-            
-            // Toggle current accordion
-            content.classList.toggle('active');
-            header.classList.toggle('active');
-        }
 
         // ADMIN FUNCTIONS
         const ADMIN_PASSWORD = 'ENVOYS2026'; // Set your admin password here
